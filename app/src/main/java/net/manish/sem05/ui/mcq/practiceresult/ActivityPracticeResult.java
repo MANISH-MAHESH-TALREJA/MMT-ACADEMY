@@ -384,38 +384,33 @@ Log.v("DebugCheckSaloni","DebugCheckSaloni ============"+year+",,"+month+examTyp
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.lldipResult:
-                if (!spMonth.getSelectedItem().toString().equals("Month")) {
-                    if (!spYear.getSelectedItem().toString().equals("Year")) {
-                        sum = 0;
-                        if (ProjectUtils.checkConnection(mContext)) {
-                            practiceResultApi();
-                        } else {
-                            Toast.makeText(mContext, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
-                        }
+        int id = v.getId();
+        if (id == R.id.lldipResult) {
+            if (!spMonth.getSelectedItem().toString().equals("Month")) {
+                if (!spYear.getSelectedItem().toString().equals("Year")) {
+                    sum = 0;
+                    if (ProjectUtils.checkConnection(mContext)) {
+                        practiceResultApi();
                     } else {
-                        Toast.makeText(mContext, getResources().getString(R.string.PleaseSelectMonthAndYear), Toast.LENGTH_LONG).show();
+                        Toast.makeText(mContext, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(mContext, getResources().getString(R.string.PleaseSelectMonthAndYear), Toast.LENGTH_LONG).show();
                 }
-                break;
-
-            case R.id.ivBack:
-                finish();
-                break;
-
-            case R.id.btViewChart:
-                linechart.setVisibility(View.VISIBLE);
-                horizonScrollView.setVisibility(View.VISIBLE);
-                selectMonthTextView.setVisibility(View.GONE);
-                rvPracticeResult.setVisibility(View.GONE);
-                filterHeader.setVisibility(View.GONE);
-                tvAverage.setVisibility(View.GONE);
-                btViewChart.setVisibility(View.GONE);
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                break;
+            } else {
+                Toast.makeText(mContext, getResources().getString(R.string.PleaseSelectMonthAndYear), Toast.LENGTH_LONG).show();
+            }
+        } else if (id == R.id.ivBack) {
+            finish();
+        } else if (id == R.id.btViewChart) {
+            linechart.setVisibility(View.VISIBLE);
+            horizonScrollView.setVisibility(View.VISIBLE);
+            selectMonthTextView.setVisibility(View.GONE);
+            rvPracticeResult.setVisibility(View.GONE);
+            filterHeader.setVisibility(View.GONE);
+            tvAverage.setVisibility(View.GONE);
+            btViewChart.setVisibility(View.GONE);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
     }
 

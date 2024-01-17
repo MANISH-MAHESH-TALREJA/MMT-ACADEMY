@@ -267,49 +267,44 @@ public class ActivitySignUp extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case  R.id.tvMove:
-                Intent intent = new Intent(context, ActivityBatch.class);
-                startActivity(intent);
+        int id = view.getId();
+        if (id == R.id.tvMove) {
+            Intent intent = new Intent(context, ActivityBatch.class);
+            startActivity(intent);
+        } else if (id == R.id.loginTv) {
+            startActivity(new Intent(context, ActivityLogin.class));
+        } else if (id == R.id.btnSignup) {
+            if (ProjectUtils.checkConnection(context)) {
 
 
+                if (etUserName.getText().toString().isEmpty()) {
+                    etUserName.setError(getResources().getString(R.string.Please_Enter_name));
+                    etUserName.requestFocus();
+                } else {
+                    if (etUserEmail.getText().toString().isEmpty()) {
+                        etUserEmail.setError("" + getResources().getString(R.string.EnterEmail));
+                        etUserEmail.requestFocus();
 
-            break;
-            case R.id.loginTv:
-                startActivity(new Intent(context, ActivityLogin.class));
-                break;
-            case R.id.btnSignup:
-                if (ProjectUtils.checkConnection(context)) {
-
-
-                    if (etUserName.getText().toString().isEmpty()) {
-                        etUserName.setError(getResources().getString(R.string.Please_Enter_name));
-                        etUserName.requestFocus();
                     } else {
-                        if (etUserEmail.getText().toString().isEmpty()) {
-                            etUserEmail.setError("" + getResources().getString(R.string.EnterEmail));
-                            etUserEmail.requestFocus();
+                        if (etUserMobile.getText().toString().isEmpty()) {
+                            etUserMobile.setError("" + getResources().getString(R.string.EnterMobile));
+                            etUserMobile.requestFocus();
+
 
                         } else {
-                            if (etUserMobile.getText().toString().isEmpty()) {
-                                etUserMobile.setError("" + getResources().getString(R.string.EnterMobile));
-                                etUserMobile.requestFocus();
+                            if (isValidEmail(etUserEmail.getText().toString())) {
+                                if (etUserMobile.getText().toString().length() > 6) {
+                                    FirebaseInstanceId.getInstance().getInstanceId()
+                                            .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                                                @Override
+                                                public void onComplete(Task<InstanceIdResult> task) {
+                                                    if (!task.isSuccessful()) {
 
+                                                        return;
 
-                            } else {
-                                if (isValidEmail(etUserEmail.getText().toString())) {
-                                    if (etUserMobile.getText().toString().length() > 6) {
-                                        FirebaseInstanceId.getInstance().getInstanceId()
-                                                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                                                    @Override
-                                                    public void onComplete(Task<InstanceIdResult> task) {
-                                                        if (!task.isSuccessful()) {
+                                                    }
 
-                                                            return;
-
-                                                        }
-
-                                                        if (getIntent().hasExtra("login")) {
+                                                    if (getIntent().hasExtra("login")) {
                                                         if (getIntent().getStringExtra("login").equalsIgnoreCase("Withoutbatch")) {
 
 
@@ -357,35 +352,33 @@ public class ActivitySignUp extends AppCompatActivity implements View.OnClickLis
 
 
                                                         }
-                                                        } else {
+                                                    } else {
 
-                                                            apiSignUp(task.getResult().getToken());
-                                                        }
-
-
+                                                        apiSignUp(task.getResult().getToken());
                                                     }
-                                                });
 
 
-                                    } else {
-                                        Toast.makeText(context, "" + getResources().getString(R.string.Entervalidnumber), Toast.LENGTH_SHORT).show();
-                                    }
+                                                }
+                                            });
+
+
                                 } else {
-                                    etUserEmail.setError("" + getResources().getString(R.string.InvalidEmail));
-                                    etUserEmail.requestFocus();
+                                    Toast.makeText(context, "" + getResources().getString(R.string.Entervalidnumber), Toast.LENGTH_SHORT).show();
                                 }
-
-
+                            } else {
+                                etUserEmail.setError("" + getResources().getString(R.string.InvalidEmail));
+                                etUserEmail.requestFocus();
                             }
+
+
                         }
                     }
-
-                } else {
-
-                    Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
                 }
-                break;
 
+            } else {
+
+                Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
+            }
         }
 
     }

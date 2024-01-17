@@ -278,55 +278,44 @@ public class ActivityDoubtClasses extends BaseActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.ivBack:
-                onBackPressed();
-                break;
-            case R.id.btSave:
+        int id = view.getId();
+        if (id == R.id.ivBack) {
+            onBackPressed();
+        } else if (id == R.id.btSave) {
+            if (teacherId.isEmpty()) {
+                Toast.makeText(context, "Select Teacher !", Toast.LENGTH_SHORT).show();
+            } else {
 
-                if(teacherId.isEmpty()){
-                    Toast.makeText(context,"Select Teacher !", Toast.LENGTH_SHORT).show();
-                }else{
-
-                    if(subjectId.isEmpty()){
-                        Toast.makeText(context,"Select subject !", Toast.LENGTH_SHORT).show();
-                    }else{
-                        if(topicId.isEmpty()){
-                            Toast.makeText(context,"Select topic !", Toast.LENGTH_SHORT).show();
-                        }else{
-                            dataSaveApi();
-                        }
+                if (subjectId.isEmpty()) {
+                    Toast.makeText(context, "Select subject !", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (topicId.isEmpty()) {
+                        Toast.makeText(context, "Select topic !", Toast.LENGTH_SHORT).show();
+                    } else {
+                        dataSaveApi();
                     }
                 }
-
-
-                break;
-            case R.id.cancel:
-                btApplyForClass.setVisibility(View.VISIBLE);
-                SubjectSpinner.setVisibility(View.VISIBLE);
-                ChapterSpinner.setVisibility(View.VISIBLE);
-                btSave.setVisibility(View.VISIBLE);
-                ChapterName.setVisibility(View.GONE);
-                subjectName.setVisibility(View.GONE);
-                date.setText("");
-                edtDesc.setText("");
-                llApplyClass.setVisibility(View.GONE);
-                llListOfClassHistory.setVisibility(View.VISIBLE);
-                teachersReply.setVisibility(View.GONE);
-                teacherHeading.setVisibility(View.GONE);
-                btApplyForClass.setVisibility(View.VISIBLE);
-                scrollView.smoothScrollTo(0,0);
-                scrollView.fullScroll(View.FOCUS_UP);
-
-
-                break;
-            case R.id.btApplyForClass:
-                llListOfClassHistory.setVisibility(View.GONE);
-                llApplyClass.setVisibility(View.VISIBLE);
-                btApplyForClass.setVisibility(View.GONE);
-                break;
-
-
+            }
+        } else if (id == R.id.cancel) {
+            btApplyForClass.setVisibility(View.VISIBLE);
+            SubjectSpinner.setVisibility(View.VISIBLE);
+            ChapterSpinner.setVisibility(View.VISIBLE);
+            btSave.setVisibility(View.VISIBLE);
+            ChapterName.setVisibility(View.GONE);
+            subjectName.setVisibility(View.GONE);
+            date.setText("");
+            edtDesc.setText("");
+            llApplyClass.setVisibility(View.GONE);
+            llListOfClassHistory.setVisibility(View.VISIBLE);
+            teachersReply.setVisibility(View.GONE);
+            teacherHeading.setVisibility(View.GONE);
+            btApplyForClass.setVisibility(View.VISIBLE);
+            scrollView.smoothScrollTo(0, 0);
+            scrollView.fullScroll(View.FOCUS_UP);
+        } else if (id == R.id.btApplyForClass) {
+            llListOfClassHistory.setVisibility(View.GONE);
+            llApplyClass.setVisibility(View.VISIBLE);
+            btApplyForClass.setVisibility(View.GONE);
         }
 
     }

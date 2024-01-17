@@ -87,47 +87,37 @@ public class ActivityExtraClass extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btNext:
-                btPrevious.setVisibility(View.VISIBLE);
-                btNext.setVisibility(View.GONE);
-                tvHeader.setText(""+getResources().getString(R.string.UpcomingClasses));
-                fabMenu.close(true);
-                getExtraClasses("upcomming");
+        int id = view.getId();
+        if (id == R.id.btNext) {
+            btPrevious.setVisibility(View.VISIBLE);
+            btNext.setVisibility(View.GONE);
+            tvHeader.setText("" + getResources().getString(R.string.UpcomingClasses));
+            fabMenu.close(true);
+            getExtraClasses("upcomming");
+        } else if (id == R.id.ivBack) {
+            if ("push".equalsIgnoreCase(getIntent().getStringExtra(AppConsts.IS_PUSH))) {
 
-                break;
+                startActivity(new Intent(ActivityExtraClass.this, ActivityHome.class));
+                finish();
+            } else {
 
-            case R.id.ivBack:
-
-                if ("push".equalsIgnoreCase(getIntent().getStringExtra(AppConsts.IS_PUSH))) {
-
-                    startActivity(new Intent(ActivityExtraClass.this, ActivityHome.class));
+                if (tag) {
                     finish();
                 } else {
+                    fabMenu.close(true);
+                    tvHeader.setText("" + getResources().getString(R.string.ExtraClass));
+                    getExtraClasses("upcomming");
 
-                    if (tag) {
-                        finish();
-                    } else {
-                        fabMenu.close(true);
-                        tvHeader.setText(""+getResources().getString(R.string.ExtraClass));
-                        getExtraClasses("upcomming");
-
-                        tag = true;
-                    }
+                    tag = true;
                 }
-
-                break;
-
-
-            case R.id.btPrevious:
-                tag = false;
-                tvHeader.setText(""+getResources().getString(R.string.PreviousClasses));
-                btNext.setVisibility(View.VISIBLE);
-                btPrevious.setVisibility(View.GONE);
-                getExtraClasses("previous");
-                fabMenu.close(true);
-                break;
-
+            }
+        } else if (id == R.id.btPrevious) {
+            tag = false;
+            tvHeader.setText("" + getResources().getString(R.string.PreviousClasses));
+            btNext.setVisibility(View.VISIBLE);
+            btPrevious.setVisibility(View.GONE);
+            getExtraClasses("previous");
+            fabMenu.close(true);
         }
     }
 

@@ -122,42 +122,33 @@ public class ActivitySettingDashboard extends BaseActivity implements View.OnCli
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.llEditProfile:
-                Intent intent = new Intent(mContext, ActivityProfile.class);
-                startActivity(intent);
-                break;
-            case R.id.ivBack:
-                onBackPressed();
-                break;
-            case R.id.llCertificate:
-                Intent intentCertificate = new Intent(mContext, ActivityCertificateAssigned.class);
-                startActivity(intentCertificate);
-                break;
-            case R.id.llApplyLeave:
-                Intent intentApplyLeave = new Intent(mContext, ActivityApplyLeave.class);
-                startActivity(intentApplyLeave);
-                break;
-            case R.id.btnPrivacypolicy:
-                Intent intentP = new Intent(mContext, ActivityPrivacyPolicy.class);
-                intentP.putExtra("WEB_URL", AppConsts.URL_PRIVACY_POLICY);
-                intentP.putExtra("HEADER", "Privacy Policy");
-                startActivity(intentP);
-                break;
-            case R.id.llLogout:
-                logoutAppDialog();
-                break;
-            case R.id.btnAboutApp:
-                Intent intentAboutApp = new Intent(mContext, ActivityAboutApp.class);
-                startActivity(intentAboutApp);
-                break;
-            case R.id.btnOpenSourceLibrary:
-                Intent intentOpenSourceLibrary = new Intent(mContext, ActivityOpenSourceLibrary.class);
-                startActivity(intentOpenSourceLibrary);
-                break;
-            case R.id.llPayment:
-               startActivity(new Intent(mContext, ActivityPaymentHistory.class));
-                break;
+        int id = view.getId();
+        if (id == R.id.llEditProfile) {
+            Intent intent = new Intent(mContext, ActivityProfile.class);
+            startActivity(intent);
+        } else if (id == R.id.ivBack) {
+            onBackPressed();
+        } else if (id == R.id.llCertificate) {
+            Intent intentCertificate = new Intent(mContext, ActivityCertificateAssigned.class);
+            startActivity(intentCertificate);
+        } else if (id == R.id.llApplyLeave) {
+            Intent intentApplyLeave = new Intent(mContext, ActivityApplyLeave.class);
+            startActivity(intentApplyLeave);
+        } else if (id == R.id.btnPrivacypolicy) {
+            Intent intentP = new Intent(mContext, ActivityPrivacyPolicy.class);
+            intentP.putExtra("WEB_URL", AppConsts.URL_PRIVACY_POLICY);
+            intentP.putExtra("HEADER", "Privacy Policy");
+            startActivity(intentP);
+        } else if (id == R.id.llLogout) {
+            logoutAppDialog();
+        } else if (id == R.id.btnAboutApp) {
+            Intent intentAboutApp = new Intent(mContext, ActivityAboutApp.class);
+            startActivity(intentAboutApp);
+        } else if (id == R.id.btnOpenSourceLibrary) {
+            Intent intentOpenSourceLibrary = new Intent(mContext, ActivityOpenSourceLibrary.class);
+            startActivity(intentOpenSourceLibrary);
+        } else if (id == R.id.llPayment) {
+            startActivity(new Intent(mContext, ActivityPaymentHistory.class));
         }
     }
 

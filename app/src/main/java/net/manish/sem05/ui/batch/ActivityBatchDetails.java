@@ -408,48 +408,44 @@ try{
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.ivBack:
-                onBackPressed();
-                break;
-            case R.id.btBuyNow:
-                if(!batchData.isPurchase_condition()) {
-                    if (ProjectUtils.checkConnection(context)) {
+        int id = view.getId();
+        if (id == R.id.ivBack) {
+            onBackPressed();
+        } else if (id == R.id.btBuyNow) {
+            if (!batchData.isPurchase_condition()) {
+                if (ProjectUtils.checkConnection(context)) {
 
-                        if (getIntent().hasExtra("stuId")) {
-                            Intent intent = new Intent(context, ActivityPaymentGateway.class).putExtra
-                                    ("amount", "" + amount).putExtra("BatchId", "" + BatchId).putExtra("paymentType", "" + paymentType);
-                            intent.putExtra("data", batchData).putExtra("directbuy", "directBuy").putExtra("stuId", "" + getIntent().getStringExtra("stuId"));
-                            startActivity(intent);
-
-                        } else {
-                            startActivity(new Intent(context, ActivitySignUp.class).putExtra("data", batchData).putExtra
-                                    ("amount", "" + amount).putExtra("BatchId", "" + BatchId).putExtra("paymentType", "" + paymentType));
-                        }
+                    if (getIntent().hasExtra("stuId")) {
+                        Intent intent = new Intent(context, ActivityPaymentGateway.class).putExtra
+                                ("amount", "" + amount).putExtra("BatchId", "" + BatchId).putExtra("paymentType", "" + paymentType);
+                        intent.putExtra("data", batchData).putExtra("directbuy", "directBuy").putExtra("stuId", "" + getIntent().getStringExtra("stuId"));
+                        startActivity(intent);
 
                     } else {
-                        Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, ActivitySignUp.class).putExtra("data", batchData).putExtra
+                                ("amount", "" + amount).putExtra("BatchId", "" + BatchId).putExtra("paymentType", "" + paymentType));
                     }
-                }else{
-                    Toast.makeText(context, "Already Enrolled!", Toast.LENGTH_SHORT).show();
-                }
-                break;
-            case R.id.previewAvailable:
-                if (showPreview.getVisibility() == View.VISIBLE) {
-                    showPreview.setVisibility(View.GONE);
-                    courseContent.setCompoundDrawablesWithIntrinsicBounds(null,null,context.getResources().getDrawable(com.github.clans.fab.R.drawable.fab_add),null);
-                    for (int l = 0; l < batchData.getBatchSubject().size(); l++) {
-                        LinearLayout chapterLayout = new LinearLayout(context);
-                        chapterLayout.getId();
-                     chapterLayout.setVisibility(View.GONE);
-                    }
-                } else {
-                    showPreview.setVisibility(View.VISIBLE);
-                    scroll.fullScroll(View.FOCUS_DOWN);
-                    courseContent.setCompoundDrawablesWithIntrinsicBounds(null,null,context.getResources().getDrawable(R.drawable.minus),null);
-                }
-                break;
 
+                } else {
+                    Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(context, "Already Enrolled!", Toast.LENGTH_SHORT).show();
+            }
+        } else if (id == R.id.previewAvailable) {
+            if (showPreview.getVisibility() == View.VISIBLE) {
+                showPreview.setVisibility(View.GONE);
+                courseContent.setCompoundDrawablesWithIntrinsicBounds(null, null, context.getResources().getDrawable(com.github.clans.fab.R.drawable.fab_add), null);
+                for (int l = 0; l < batchData.getBatchSubject().size(); l++) {
+                    LinearLayout chapterLayout = new LinearLayout(context);
+                    chapterLayout.getId();
+                    chapterLayout.setVisibility(View.GONE);
+                }
+            } else {
+                showPreview.setVisibility(View.VISIBLE);
+                scroll.fullScroll(View.FOCUS_DOWN);
+                courseContent.setCompoundDrawablesWithIntrinsicBounds(null, null, context.getResources().getDrawable(R.drawable.minus), null);
+            }
         }
 
     }

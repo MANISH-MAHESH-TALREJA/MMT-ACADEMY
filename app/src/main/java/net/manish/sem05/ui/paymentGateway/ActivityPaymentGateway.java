@@ -387,19 +387,15 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-
-            case R.id.tvMove:
-                startActivity(new Intent(context, ActivityMultiBatchHome.class));
-                Toast.makeText(context, getResources().getString(R.string.Welcome) + ", " + modelLogin.getStudentData().getFullName(), Toast.LENGTH_SHORT)
-                        .show();
-                break;
-            case R.id.ivBack:
-                onBackPressed();
-                break;
-            case R.id.tryAgainWhenServerError:
-                successSignUpApi("" + BatchId, "" + tranDoneId, amountForPayment);
-                break;
+        int id = view.getId();
+        if (id == R.id.tvMove) {
+            startActivity(new Intent(context, ActivityMultiBatchHome.class));
+            Toast.makeText(context, getResources().getString(R.string.Welcome) + ", " + modelLogin.getStudentData().getFullName(), Toast.LENGTH_SHORT)
+                    .show();
+        } else if (id == R.id.ivBack) {
+            onBackPressed();
+        } else if (id == R.id.tryAgainWhenServerError) {
+            successSignUpApi("" + BatchId, "" + tranDoneId, amountForPayment);
         }
     }
 
