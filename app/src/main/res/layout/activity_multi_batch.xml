@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+android:background="@color/colorBackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.multibatch.ActivityMultiBatchHome">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_44sdp"
+
+      >
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:id="@+id/menuButton"
+            android:paddingLeft="@dimen/_3sdp"
+            android:src="@drawable/menu"
+            app:tint="@color/colorTexttwo" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search"
+        android:id="@+id/searchBarEditText"
+        android:padding="@dimen/_4sdp"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:background="@drawable/login_edit_grad"
+        android:elevation="@dimen/_6sdp"
+        /></LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_165sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/noResult"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/noresults"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlBatchRecomm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp" />
+    </RelativeLayout></LinearLayout>
+
+
+</RelativeLayout>

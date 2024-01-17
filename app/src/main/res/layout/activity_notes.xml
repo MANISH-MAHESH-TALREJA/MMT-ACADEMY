@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.library.ActivityPdf">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/back_ui"
+        android:orientation="vertical">
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvListpdf"
+        android:layout_margin="@dimen/_12sdp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:id="@+id/noResult"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/noresults"/>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlWebView">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pdfView"
+            android:visibility="gone"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:id="@+id/downloadPercent"
+            android:background="@color/gray"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text=""/>
+    </RelativeLayout>
+
+</LinearLayout>

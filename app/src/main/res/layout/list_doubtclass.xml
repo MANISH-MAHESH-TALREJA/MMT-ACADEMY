@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_4sdp"
+        android:background="@drawable/back_counthome"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:weightSum="4">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                android:id="@+id/subjectTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/subject"
+                android:textColor="@color/text_color" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                android:id="@+id/chapterNameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                android:id="@+id/teacherNameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/NAME"
+                android:textColor="@color/text_color" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                android:id="@+id/statusTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Approve"
+                android:singleLine="true"
+                android:textColor="@color/text_color" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

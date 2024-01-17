@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="9dp"
+    android:padding="2dp"
+    android:background="@drawable/back_counthome"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/tvTeacherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableStart="@drawable/vector_person"
+            android:drawablePadding="16dp"
+
+            android:text=""
+            android:textColor="@color/colorText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/tvSubName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableStart="@drawable/vector_description"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/colorText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textColor="@color/colorText" />
+        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            android:layout_width="match_parent"
+            android:text="@string/more"
+            android:paddingStart="16dp"
+            android:id="@+id/viewMore"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

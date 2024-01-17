@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/back_ui"
+        android:paddingTop="10dp"
+
+        >
+        <ImageView
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:id="@+id/ivBack"
+          android:padding="@dimen/_4sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/left_arrow"
+            app:tint="@color/white"
+            />
+
+    <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_44sdp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="Notifications"
+        android:textColor="@color/white" />
+  </RelativeLayout>
+
+    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearAll"
+        android:paddingEnd="12dp"
+      android:gravity="end"
+android:layout_marginTop="@dimen/_10sdp"
+        android:singleLine="true"
+        android:text="Clear all"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_300sdp"
+    android:padding="@dimen/_37sdp"
+    android:visibility="gone"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:id="@+id/noResults"
+    android:src="@drawable/noresults"
+    />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/batchDta"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backcurve"
+    android:orientation="vertical"
+    tools:context=".ui.mcq.practicepaper.ActivityPracticePaper">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorBackground">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPracticePaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="6dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:paddingEnd="6dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/no_record_found"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/noresults"
+        android:visibility="gone" />
+
+    <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+        android:id="@+id/tvEnable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="your Time and date is wrong please select Automatic update time goto \n  Settings >Time and Date > Enable Automatic date and time ,\n Automatic time Zone "
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+</RelativeLayout>

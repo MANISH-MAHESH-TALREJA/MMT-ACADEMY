@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/back_counthome"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llsublist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="0.5"
+            android:padding="1dp"
+            android:src="@drawable/video_image" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:orientation="vertical">
+            <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+                android:id="@+id/tvVideoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text=""
+                android:textColor="@color/colorText" />
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvVideoDes"
+                android:visibility="gone"
+                android:textSize="@dimen/_10sdp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/viewMore"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:textColor="@color/colorText" />
+    </LinearLayout>
+
+</LinearLayout>

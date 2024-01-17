@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hideLayoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/back_counthome"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="7dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/btDetails"
+            android:layout_height="wrap_content">
+<androidx.appcompat.widget.AppCompatImageView
+    android:layout_width="@dimen/_25sdp"
+    android:layout_height="@dimen/_25sdp"
+    android:layout_gravity="end"
+    android:layout_alignParentEnd="true"
+    android:paddingEnd="@dimen/_5sdp"
+    app:tint="@color/colorPrimaryDark"
+    android:src="@drawable/zm_mm_template_eye_icon"/>
+
+            <com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold
+                android:id="@+id/tvPaperName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorText" /></RelativeLayout>
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvExamDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:text=""
+            android:textAlignment="viewStart"
+        />
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_red"
+            android:layout_marginStart="10dp"
+            android:id="@+id/NotAttempt"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginBottom="9dp"
+        android:background="@color/gray" />
+
+    <com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold
+        android:id="@+id/hideByAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Hide By Admin"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="gone" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/detailLayout"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/StartTime" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvExamTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/TimeTaken" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvTimeTaken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="165dp"
+            android:layout_marginEnd="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/RightAnswers" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvRightAns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="165dp"
+            android:layout_marginEnd="10dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/WrongAnnswers" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvWrongAns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="165dp"
+            android:layout_marginEnd="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/headQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/AttemptQuestions" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvAttemptQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/headQuestions"
+            android:gravity="end" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Negative Marks :" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvNegMarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="10" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/totalMarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/TotalMarks" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvTotalMarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/totalMarks"
+            android:gravity="end" />
+    </RelativeLayout> <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp">
+
+    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        android:id="@+id/negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/NegMarks" />
+
+    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        android:id="@+id/tvNegative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/negative"
+        android:gravity="end" />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/Percentage" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="165dp"
+            android:layout_marginEnd="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Percentage with -ve marking :" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/tvPercentWithNeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+    </RelativeLayout>
+</LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/back_splash_grad"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingTop="@dimen/_7sdp"
+            android:visibility="gone"
+            android:paddingEnd="16dp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:text="@string/ReviewDetails"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

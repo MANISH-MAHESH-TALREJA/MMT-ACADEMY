@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ui.attendance.ActivityAttendance">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/back_ui"
+            android:orientation="vertical">
+
+            <include layout="@layout/header" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selectMonthTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_55sdp"
+            android:layout_marginEnd="@dimen/_22sdp"
+            android:background="@drawable/back_counthome"
+            android:orientation="vertical"
+            android:padding="@dimen/_6sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/select_month_and_year"
+                android:textColor="@color/colorText"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/filterHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:orientation="horizontal"
+                android:padding="@dimen/_3sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_9sdp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="0.25"
+
+                    android:background="@drawable/login_edit_grad"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp">
+
+                    <Spinner
+                        android:id="@+id/spMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:dropDownWidth="80dp">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="0.3"
+
+                    android:background="@drawable/login_edit_grad"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp">
+
+                    <Spinner
+                        android:id="@+id/spYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:dropDownWidth="80dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lldipResult"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="0.18"
+                    android:background="@drawable/back_splash_grad"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ok"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/noResult"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_400sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/noresults"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/back_counthome"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:id="@+id/llTableHeading"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="2dp"
+
+            android:background="@drawable/back_uiattendance"
+
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_7sdp"
+
+            android:paddingBottom="@dimen/_10sdp">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:text="@string/Date"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/Time"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Status"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

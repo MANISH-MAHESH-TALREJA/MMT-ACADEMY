@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimg"
+    android:fillViewport="true"
+    android:scrollbars="none"
+
+    tools:context=".ui.signup.ActivitySignUp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/image_login" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_3sdp"
+                android:text="@string/signupwith"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.pixelnx.eacademy.utils.widgets.CustomEditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/login_edit_grad"
+            android:hint="@string/Name"
+            android:paddingStart="20dp"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="@dimen/_13sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textDirection="locale" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomEditText
+            android:id="@+id/etUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/login_edit_grad"
+            android:hint="@string/email"
+            android:paddingStart="20dp"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="@dimen/_13sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textDirection="locale" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomEditText
+            android:id="@+id/etUserMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/login_edit_grad"
+            android:hint="@string/MobileNumber"
+            android:inputType="number"
+            android:maxLength="18"
+            android:paddingStart="20dp"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="@dimen/_13sdp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorText"
+            android:textDirection="locale" />
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone"
+          />
+
+        <RelativeLayout
+            android:id="@+id/btnSignup"
+            android:layout_width="@dimen/_145sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:elevation="@dimen/_2sdp"
+            android:background="@drawable/back_shade_designmain"
+            android:layout_height="wrap_content">
+
+
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/Signup"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/rlSignup"
+            android:background="@drawable/back_splash_grad"
+            android:layout_height="@dimen/_36sdp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_19sdp"
+                    android:id="@+id/btnSignIn"
+                    android:gravity="center"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/signin"
+                    app:tint="@color/white" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="-1dp"
+                    android:text="@string/Signup"/>
+            </LinearLayout>
+
+            <View android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/tvMove"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_19sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_baseline_home_24"
+                    app:tint="@color/white" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="@string/home"/></LinearLayout>
+            <View android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/loginTv"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_19sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_baseline_login_24"
+                    app:tint="@color/white" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="@string/LOGIN"/></LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

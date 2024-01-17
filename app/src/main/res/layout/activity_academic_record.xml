@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backcurve"
+    android:orientation="vertical"
+    tools:context=".ui.academicrecord.ActivityAcademicRecord">
+
+    <include layout="@layout/header" />
+
+    <LinearLayout
+        android:id="@+id/selectMonthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/back_counthome"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:text="@string/select_month_and_year"
+            android:textColor="@color/colorText"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/filterHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+
+                android:background="@drawable/login_edit_grad">
+
+                <Spinner
+                    android:id="@+id/spMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:dropDownWidth="80dp"
+                    android:dropDownHeight="100dp"
+
+                   />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0.3"
+
+                android:background="@drawable/login_edit_grad">
+
+                <Spinner
+                    android:id="@+id/spYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:dropDownWidth="80dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lldipResult"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/back_splash_grad"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ok"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/back_curve_grey"
+        android:orientation="vertical"
+        android:padding="@dimen/_2sdp">
+
+        <ImageView
+            android:id="@+id/noResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_28sdp"
+            android:src="@drawable/noresults"
+            android:visibility="gone" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barchart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+    </LinearLayout></ScrollView>
+</LinearLayout>

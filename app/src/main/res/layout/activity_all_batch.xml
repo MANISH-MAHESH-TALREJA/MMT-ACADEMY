@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@color/colorBackground"
+    tools:context=".ui.batch.ActivityAllBatch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_gravity="center"
+            android:id="@+id/backIv"
+            android:src="@drawable/ic_backarrow"
+            app:tint="@color/text_color" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:padding="@dimen/_4sdp"
+            android:id="@+id/searchBarEditText"
+            android:textColor="@color/text_color"
+            android:singleLine="true"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:background="@drawable/login_edit_grad"
+            android:elevation="@dimen/_6sdp"
+            />
+
+
+    </LinearLayout>
+    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+        android:layout_width="match_parent"
+        android:id="@+id/subCatName"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_9sdp"
+        android:textSize="@dimen/_14sdp"/>
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/noresults"
+        android:visibility="gone"
+        android:id="@+id/noResultIv"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_centerInParent="true"
+        android:background="@drawable/back_curve_grey">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /></androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

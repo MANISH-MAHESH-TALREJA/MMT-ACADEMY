@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/_16sdp"
+    android:background="@drawable/back_adapter_white"
+android:paddingStart="@dimen/_3sdp"
+    android:orientation="horizontal"
+    android:elevation="4dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_3sdp"
+        android:layout_height="wrap_content">
+    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:minWidth="@dimen/_150sdp"
+        android:singleLine="true"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/text"/>
+    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:maxLines="3"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:layout_below="@+id/text"
+        android:id="@+id/videoDes"/>
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_margin="@dimen/_2sdp"
+        android:id="@+id/showhide"
+android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_play_circle_filled_24"
+        app:tint="@color/colorPrimaryDark" />
+    </RelativeLayout>
+</LinearLayout>

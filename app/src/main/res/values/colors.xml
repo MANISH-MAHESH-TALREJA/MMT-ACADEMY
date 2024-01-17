@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E4AA03</color> //main color of app you can change code here
+    <color name="colorPrimaryDark">#FF6F29</color>  //main color of app you can change code here
+    <color name="colorPrimaryDarkTwo">#F1A986</color>
+    <color name="colorAccent">#FFC82B</color> //main color of app you can change code here
+    <color name="whiteTrans">#FFFFFF</color>
+    <color name="colorBack2">#fff5ee</color>
+    <color name="colorBackground">#E7EFF2</color>
+    <color name="colorText">#55536e</color>
+    <color name="colorText2">#DB676677</color>
+    <color name="colorTexttwo">#fe9d43</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellowish">#FAF9F0</color>
+    <color name="light_blue">#edf5ff</color>
+    <color name="light_blue2">#9087CEFA</color>
+    <color name="color_blue">#257EB1</color>
+    <color name="bg_color_one">#a1c876</color>
+    <color name="gray">#575859</color>
+    <color name="graylyt">#DB818181</color>
+    <color name="text_color">#2F4F4F</color>
+    <color name="text_color_lyt">#424545</color>
+    <color name="light_gray">#10969696</color>
+    <color name="bg_color_two">#a982ed</color>
+    <color name="black">#000000</color>
+    <color name="green">#4B8B3B</color>
+    <color name="light_green">#65B8ECAB</color>
+    <color name="app_red">#ff5a5e</color>
+    <color name="app_lightred">#6AF88A8D</color>
+    <color name="app_gray">#8e9aa6</color>
+    <color name="bgBottomNavigation">#C5B1B3</color>
+    <color name="green_dark">#069F0D</color>
+    <color name="tabbed">#1A04D1</color>
+    <color name="tabbed1">#43eddc</color>
+    <color name="tabbed2">#5fc5ff</color>
+    <color name="tabbed3">#ff9866</color>
+    <color name="tabbed4">#ff6e66</color>
+
+
+
+</resources>

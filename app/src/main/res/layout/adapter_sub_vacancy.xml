@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:elevation="1dp"
+    android:layout_margin="4dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/back_adapter_white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivImg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/vacancies" />
+
+    <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.8"
+        android:textColor="@color/color_blue"
+
+        android:singleLine="true" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url "https://jitpack.io" }
+        maven { url "https://jitpack.io" }
+        /*maven {
+            url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
+        }*/
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://jitpack.io" }
+        maven {
+            url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
+        }
+    }
+}
+
+rootProject.name = "MMT ACADEMY"
+include ':app'
+include ':mobilertc'
+include ':commonlib'
+include ':commonlib'
+

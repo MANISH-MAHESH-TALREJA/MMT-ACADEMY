@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ui.home.ActivityHome">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:paddingTop="8dp"
+
+        />
+
+
+    <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/batchName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_44sdp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="@string/app_name"
+        android:textColor="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/llcount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_31sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_31sdp"
+        android:background="@drawable/back_counthome"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:id="@+id/llExtraClass"
+            android:orientation="vertical">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/extraCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:text="0"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/extra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
+                android:text="@string/ExtraClass"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:id="@+id/llMockPapers"
+            android:orientation="vertical">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/mockCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:text="0"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/mockPapers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:gravity="center"
+                android:text="@string/MockPaper"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.81"
+            android:gravity="center"
+            android:id="@+id/llExams"
+            android:orientation="vertical">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/vacancyCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:text="0"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/vacancy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="-2dp"
+                android:gravity="center"
+                android:text="@string/Exams"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlpro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="start"
+        android:padding="2dp"
+
+        >
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:padding="6dp"
+
+            android:src="@drawable/ic_backarrow"
+
+            android:autoMirrored="true"/>
+
+     <!--   <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="@dimen/_41sdp"
+            android:layout_height="@dimen/_41sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_profile"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <com.qtmtechnology.eacademy.utils.widgets.CustomTextExtraBold
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:visibility="gone" />-->
+
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/llcount">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llcount">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llnotics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical">
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                        android:id="@+id/welcomhead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/WelcomeToday_new_topic"
+                        android:textColor="@color/graylyt"
+                        android:visibility="gone" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                        android:id="@+id/tvTodayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:text="Mon,2-july-2020"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvNotis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginBottom="4dp" />
+                </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutlive"
+    android:layout_below="@+id/llnotics"
+    android:orientation="horizontal">
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:padding="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="@dimen/_600sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+
+            android:paddingEnd="@dimen/_2sdp"
+            android:orientation="horizontal">
+<LinearLayout
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:id="@+id/llLiveclasses2"
+    android:orientation="vertical">
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:id="@+id/tvLiveclasses2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginTop="@dimen/_2sdp"
+           android:visibility="gone"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:text="@string/Live_class"
+                    android:textColor="@color/colorText"
+                    />
+                <LinearLayout
+                    android:id="@+id/llLive2"
+                    android:layout_width="@dimen/_244sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLiveclasses"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/back_counthome"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                 android:visibility="gone"
+
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/liveClassImage2"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_46sdp"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginBottom="1dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_profile" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                            android:id="@+id/nameTv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="fghfhfgh "
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_13sdp"/>
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                            android:id="@+id/tvTopic2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-2dp"
+                            android:textColor="@color/colorText"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:id="@+id/imageView"
+                        android:layout_gravity="end"
+                        android:paddingBottom="@dimen/_5sdp"
+                        />
+
+                </LinearLayout>
+</LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:orientation="vertical">
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:id="@+id/tvLiveclasses"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:paddingEnd="12dp"
+android:text="Zoom class"
+                    android:textColor="@color/colorText"
+                    android:visibility="gone" />
+                <LinearLayout
+                    android:id="@+id/llLive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/back_counthome"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/liveClassImage"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginBottom="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_profile" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                            android:id="@+id/nameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" "
+                            android:textColor="@color/colorText" />
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                            android:id="@+id/tvTopic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-2dp"
+                            android:text=""
+                            android:textColor="@color/colorText"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:id="@+id/imageView1"
+                        android:layout_gravity="end"
+                        android:paddingBottom="@dimen/_5sdp"
+                        />
+
+                </LinearLayout>
+                </LinearLayout></LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutlive"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:orientation="horizontal">
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                            android:id="@+id/tvTop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/Top_Scorer"
+
+                            android:textColor="@color/colorText"
+                            android:visibility="gone" />
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                            android:id="@+id/tvYourScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/See_your_score_here."
+                            android:textColor="@color/colorText"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="2dp"
+
+
+                        />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="1dp"
+
+
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</RelativeLayout>

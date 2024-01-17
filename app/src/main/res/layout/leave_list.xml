@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/subjectTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:singleLine="true"
+
+            android:padding="@dimen/_2sdp"
+            android:text=""
+            android:textColor="@color/colorText" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/dateTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1.2"
+            android:padding="@dimen/_1sdp"
+            android:text=""
+            android:textColor="@color/colorText" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/statusTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:textColor="@color/colorText" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:id="@+id/seeTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:text="@string/see"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+</LinearLayout>

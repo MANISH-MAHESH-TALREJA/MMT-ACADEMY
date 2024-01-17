@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backcurve"
+    android:orientation="vertical"
+    tools:context=".ui.doubtClasses.ActivityDoubtClasses">
+
+    <include
+        android:id="@+id/asdasd"
+        layout="@layout/header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:background="@drawable/back_curve_grey"
+        android:fillViewport="true"
+        android:paddingTop="@dimen/_8sdp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/asdasd"
+            android:layout_marginTop="@dimen/_16sdp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llListOfClassHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/headerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@drawable/back_adapter_white"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="4">
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/subject"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/Apply_Date"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/Teacher"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/Status"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/noResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:src="@drawable/noresults"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:paddingBottom="@dimen/_19sdp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llApplyClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp"
+                android:background="@drawable/back_counthome"
+                android:minHeight="@dimen/_100sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_baseline_close"
+                    app:tint="@color/colorPrimaryDark" />
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/teacherHeading"
+                    android:text="@string/Teachersreply" />
+                <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                    android:id="@+id/teachersReply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/login_edit_grad"
+                    android:minHeight="@dimen/_35sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:supportsRtl="true"
+                    android:textColor="@color/text_color"
+                    android:visibility="gone" />
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/subject" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/login_edit_grad"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical">
+
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:id="@+id/subjectName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/SubjectSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="@dimen/_200sdp" />
+                </LinearLayout>
+
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/Chapter" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/login_edit_grad"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical">
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:id="@+id/ChapterName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/ChapterSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="@dimen/_200sdp" />
+                </LinearLayout>
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/Teacher" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_grad">
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:id="@+id/tvTeacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="20dp" />
+                </LinearLayout>
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/Description" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                    android:id="@+id/edtDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/login_edit_grad"
+                    android:elevation="1dp"
+                    android:gravity="top"
+                    android:hint="@string/EnterDescriptionOptional"
+                    android:maxLength="200"
+                    android:minHeight="@dimen/_35sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="10dp"
+                    android:textDirection="locale" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:supportsRtl="true"
+                    android:textColor="@color/text_color" />
+
+
+                <RelativeLayout
+                    android:id="@+id/btSave"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/back_shade_designmain"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="@dimen/_12sdp">
+
+
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/SAVE"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btApplyForClass"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_14sdp"
+        android:background="@drawable/back_shade_designmain"
+        android:layout_marginTop="1dp">
+
+
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/Apply"
+
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

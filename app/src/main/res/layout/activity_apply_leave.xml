@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backcurve"
+    android:orientation="vertical"
+    tools:context=".ui.applyleave.ActivityApplyLeave">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/back_counthome"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_9sdp">
+
+                <RelativeLayout
+                    android:id="@+id/btApplyForLeave"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/back_shade_designmain"
+                    android:layout_margin="@dimen/_12sdp">
+
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/Apply_Leave"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLeaveHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/leave_history"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_1sdp"
+                            android:text="@string/subject"
+                            android:textColor="@color/colorText" />
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1.2"
+                            android:padding="@dimen/_1sdp"
+                            android:text="@string/Apply_Date"
+                            android:textColor="@color/colorText" />
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/_1sdp"
+                            android:text="@string/Status"
+                            android:textColor="@color/colorText" />
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="0.8"
+                            android:gravity="center"
+                            android:padding="@dimen/_1sdp"
+                            android:text="@string/Action"
+                            android:textColor="@color/colorText" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvListLeaveData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llApplyLeave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/cancel"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_21sdp"
+                        android:layout_gravity="end"
+
+                        android:layoutDirection="locale"
+                        android:src="@drawable/ic_baseline_close"
+                        app:tint="@color/colorPrimaryDark" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/FromDate" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                        android:id="@+id/fromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/login_edit_grad"
+                        android:elevation="1dp"
+                        android:focusable="false"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:hint="@string/Select_Date"
+                        android:paddingStart="20dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="14dp"
+                        android:singleLine="true" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/To_Date_Not_countable" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                        android:id="@+id/toDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/login_edit_grad"
+                        android:elevation="1dp"
+                        android:focusable="false"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:hint="@string/Select_Date"
+                        android:paddingStart="20dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="14dp"
+                        android:singleLine="true" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/subject" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                        android:id="@+id/edtSubject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/login_edit_grad"
+                        android:elevation="1dp"
+                        android:hint="@string/Entersubject"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:maxLength="150"
+                        android:paddingStart="20dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="14dp" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="@string/Message" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                        android:id="@+id/messageBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        android:background="@drawable/login_edit_grad"
+                        android:elevation="1dp"
+                        android:gravity="start"
+                        android:maxLength="350"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:maxLines="20"
+                        android:minHeight="@dimen/_80sdp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="14dp" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                        android:id="@+id/otherDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text=""
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/btApply"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/back_shade_designmain"
+                        android:layout_marginTop="1dp">
+
+
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/Apply"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

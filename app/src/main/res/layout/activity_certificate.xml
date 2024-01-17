@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d1d1d1"
+    android:orientation="vertical"
+    tools:context=".ui.certificate.ActivityCertificate">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@drawable/back_ui"
+        android:orientation="vertical">
+
+
+
+        <include layout="@layout/header" />
+    </RelativeLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_225sdp"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:background="#d1d1d1"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/btDownload"
+        android:layout_width="@dimen/_165sdp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_280sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_90sdp"
+
+            android:src="@drawable/backbutton" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_1sdp"
+
+            android:text="@string/Download"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_1sdp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_below="@+id/btDownload"
+        android:gravity="center_horizontal"
+        android:id="@+id/path"/>
+
+    <ImageView
+        android:id="@+id/noResultTv"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/noresults"
+        android:visibility="gone" />
+</RelativeLayout>

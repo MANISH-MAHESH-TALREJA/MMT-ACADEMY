@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ android:background="@color/colorBackground"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlSignup"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/search"
+               android:padding="@dimen/_5sdp"
+               android:id="@+id/searchBarEditText"
+               android:singleLine="true"
+               android:textColor="@color/text_color"
+               android:layout_marginLeft="@dimen/_7sdp"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:layout_marginRight="@dimen/_7sdp"
+               android:drawableEnd="@drawable/ic_baseline_search_24"
+               android:background="@drawable/login_edit_grad"
+               android:elevation="@dimen/_6sdp"
+               />
+
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/noResultIv"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/noresults"
+            android:visibility="gone" />
+        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/refreshTextView"
+            android:padding="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/text_color"
+
+            android:visibility="gone"
+            android:textSize="@dimen/_13sdp"
+            android:text="@string/Try_again_server_issue"/>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:layout_centerInParent="true"
+            android:background="@drawable/back_curve_grey">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" /></androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+android:id="@+id/rlSignup"
+    android:background="@drawable/back_splash_grad"
+    android:padding="@dimen/_1sdp"
+    android:layout_height="@dimen/_36sdp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/btnSignup"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+android:padding="@dimen/_1sdp"
+        android:gravity="center"
+
+     android:src="@drawable/signin"
+
+        app:tint="@color/white" /> <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/Signup"/></LinearLayout>
+    <View android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/tvMove"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+
+        android:gravity="center"
+        android:src="@drawable/ic_baseline_home_24"
+        app:tint="@color/white" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="-1dp"
+
+        android:text="@string/home"/></LinearLayout>
+<View android:layout_width="0.5dp"
+    android:layout_height="match_parent"
+    android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/loginTv"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_19sdp"
+            android:padding="@dimen/_1sdp"
+            android:gravity="center"
+            android:src="@drawable/ic_baseline_login_24"
+            app:tint="@color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/LOGIN"/>
+    </LinearLayout>
+
+</LinearLayout>
+</RelativeLayout>

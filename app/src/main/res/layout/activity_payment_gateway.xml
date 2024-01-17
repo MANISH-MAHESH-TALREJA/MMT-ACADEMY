@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backcurve"
+    android:orientation="vertical"
+    tools:context=".ui.paymentGateway.ActivityPaymentGateway">
+
+    <include
+        android:id="@+id/asdasd"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/asdasd"
+        android:background="@drawable/back_curve_grey">
+
+
+        <LinearLayout
+            android:id="@+id/llPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLoginDetailsForNewStudents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@color/colorBackground"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:text="@string/Congratulation_you_have_successfully_enrolled_the_course"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                    android:id="@+id/tvEnrollment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_adapter_white"
+                    android:gravity="center"
+                    android:padding="@dimen/_4sdp"
+                    android:textColor="@color/text_color"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:id="@+id/copyId"
+                    android:layout_width="@dimen/_21sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_file_copy_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                    android:id="@+id/tvPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_adapter_white"
+                    android:gravity="center"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/Password"
+                    android:textColor="@color/text_color"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:id="@+id/copyPass"
+                    android:layout_width="@dimen/_21sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_file_copy_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/PleasesaveyourIDandPassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            android:id="@+id/tvMove"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/back_splash_grad"
+            android:gravity="center"
+            android:text="@string/ClickhereToContinue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/paymentDoneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                android:id="@+id/detailsAfterPaymentDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_12sdp"
+                android:background="@drawable/back_adapter_white"
+                android:minHeight="@dimen/_100sdp"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/Transactiondoneon"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:id="@+id/tryAgainWhenServerError"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/_12sdp"
+                android:background="@drawable/back_shade_designmain"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingRight="@dimen/_12sdp"
+                android:text="@string/Continue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

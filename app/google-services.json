@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "739265780197",
+    "project_id": "manish-flutter-workshop",
+    "storage_bucket": "manish-flutter-workshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739265780197:android:ca1921502cb279a207f70c",
+        "android_client_info": {
+          "package_name": "net.manish.sem05"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWtoOpusivkJQJPAKA_DlmubetNNt6xQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

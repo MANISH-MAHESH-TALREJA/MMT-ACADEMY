@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimg"
+    android:fillViewport="true">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:src="@drawable/image_login" />
+
+
+                <LinearLayout
+                    android:id="@+id/llLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/login_back_grad"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:text="@string/welcome"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_18sdp"
+                            android:textStyle="bold" />
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/_18sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                        android:id="@+id/tvLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="-2dp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/Please_login_to_continue"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                        android:id="@+id/tvOrLoginWith"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_22sdp"
+                        android:layout_marginTop="-2dp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/orLoginWith"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_22sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_22sdp"
+                        android:background="@drawable/login_edit_grad"
+                        android:hint="@string/EnrollmentIdEmail"
+                        android:paddingStart="20dp"
+                        android:paddingTop="@dimen/_13sdp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="@dimen/_13sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorText"
+                        android:textDirection="locale" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_22sdp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="@dimen/_22sdp"
+                        android:background="@drawable/login_edit_grad"
+                        android:hint="@string/Password"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/_22sdp"
+                        android:paddingTop="@dimen/_13sdp"
+                        android:paddingEnd="@dimen/_22sdp"
+                        android:paddingBottom="@dimen/_13sdp"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorText"
+                        android:textDirection="locale" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/forgotPass"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                        android:id="@+id/tvContactAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone" />
+                    <RelativeLayout
+                        android:id="@+id/btLogin"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/_12sdp"
+                        android:paddingRight="@dimen/_12sdp"
+                        android:background="@drawable/back_shade_designmain"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_17sdp"
+                        android:layout_marginBottom="@dimen/_39sdp"
+                        android:elevation="@dimen/_2sdp"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/LOGIN"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rlSignup"
+        android:background="@drawable/back_splash_grad"
+        android:layout_height="@dimen/_36sdp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/btnSignIn"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:layout_weight="1"
+            android:src="@drawable/signin"
+            auto:tint="@color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/Signup"/>
+    </LinearLayout>
+        <View android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/tvMove"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_19sdp"
+android:padding="@dimen/_1sdp"
+                android:gravity="center"
+
+                android:src="@drawable/ic_baseline_home_24"
+                auto:tint="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_19sdp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/home"/></LinearLayout>
+        <View android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+     <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+android:padding="@dimen/_1sdp"
+            android:elevation="@dimen/_1sdp"
+            android:gravity="center"
+            android:id="@+id/loginTv"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_login_24"
+            />
+         <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textColor="@color/white"
+             android:layout_marginTop="-1dp"
+             android:textStyle="bold"
+
+         android:text="@string/LOGIN"/>
+     </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

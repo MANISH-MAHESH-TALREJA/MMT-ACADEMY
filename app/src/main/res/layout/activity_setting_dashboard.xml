@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".ui.settingdashboard.ActivitySettingDashboard">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_40sdp"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/colorBackground"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingTop="@dimen/_13sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/editprofile" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/Edit_Profile"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/payment"/>
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/Payment_History"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:id="@+id/llApplyLeave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/leave" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/Apply_Leave"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCertificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/download" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/Download_Certificate"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/btnPrivacypolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/privacypolicy" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/Privacy_Policy"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/btnAboutApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/aboutapp" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/About_App"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnOpenSourceLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/policies_pg" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/Open_Source_Library"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/llLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/back_counthome"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_weight="0.25"
+                    android:src="@drawable/logout" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.55"
+                    android:gravity="center_vertical"
+                    android:text="@string/Logout"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.12"
+                    android:src="@drawable/vector_next"
+                    app:tint="@color/colorText" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/backcurve"
+        android:layout_height="@dimen/_40sdp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+        android:drawableTop="@drawable/ic_baseline_home_24"
+            android:gravity="center"
+android:text="@string/home"
+           android:id="@+id/home"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="@string/my_batches"
+            android:drawableTop="@drawable/ic_baseline_import_contacts_24"
+android:id="@+id/myBatch"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/tvMove"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/white"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_settings_24"
+                app:tint="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="-1dp"
+                android:text="@string/Settings"/></LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

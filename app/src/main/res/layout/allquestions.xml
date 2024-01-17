@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="1dp"
+    android:background="@drawable/back_counthome"
+    android:minWidth="230dp"
+    android:minHeight="350dp"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="9dp"
+        android:orientation="horizontal">
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:drawableEnd="@drawable/ic_cancel"
+            android:drawablePadding="4dp"
+            android:text="@string/TotalQuestions"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAttemptedQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:paddingStart="9dp"
+            android:paddingEnd="9dp" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+            android:id="@+id/ttlAns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingStart="4dp"
+            android:text="@string/TotalAnswered" />
+    </RelativeLayout>
+</LinearLayout>

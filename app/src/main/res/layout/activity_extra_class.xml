@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backcurve"
+    tools:context=".ui.extraclass.ActivityExtraClass">
+
+    <include
+        android:id="@+id/asdasd"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/asdasd"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/back_curve_grey"
+        android:paddingTop="@dimen/_6sdp">
+
+        <ImageView
+            android:id="@+id/ivNoData"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="match_parent"
+
+            android:layout_centerInParent="true"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/noresults" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExtraClass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="10dp"
+            app:menu_animationDelayPerItem="55"
+
+            app:menu_backgroundColor="@android:color/transparent"
+            app:menu_buttonSpacing="0dp"
+            app:menu_colorNormal="@color/colorPrimary"
+            app:menu_colorPressed="@color/colorPrimaryDark"
+            app:menu_colorRipple="#99d4d4d4"
+            app:menu_fab_size="normal"
+            app:menu_icon="@drawable/submit_icon"
+            app:menu_labels_colorNormal="#333"
+            app:menu_labels_colorPressed="#444"
+            app:menu_labels_colorRipple="#66efecec"
+            app:menu_labels_cornerRadius="3dp"
+            app:menu_labels_ellipsize="none"
+            app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+            app:menu_labels_margin="0dp"
+            app:menu_labels_maxLines="-1"
+            app:menu_labels_padding="8dp"
+            app:menu_labels_position="left"
+            app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+            app:menu_labels_showShadow="true"
+            app:menu_labels_singleLine="false"
+            app:menu_labels_textColor="#f2f1f1"
+            app:menu_labels_textSize="15sp"
+            app:menu_openDirection="up"
+            app:menu_shadowColor="#90969696"
+            app:menu_shadowRadius="4dp"
+            app:menu_shadowXOffset="1dp"
+            app:menu_shadowYOffset="4dp"
+            app:menu_showShadow="true">
+
+            <com.github.clans.fab.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/btNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+
+                android:src="@drawable/vector_next"
+                app:fab_colorNormal="@color/colorPrimaryDark"
+                app:fab_colorPressed="@color/colorPrimaryDark"
+                app:fab_colorRipple="@color/colorPrimary"
+                app:fab_label="@string/UpcomingClasses"
+                app:fab_size="mini"
+                app:rippleColor="@color/colorPrimaryDark" />
+
+            <com.github.clans.fab.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/btPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/vector_pre"
+                app:fab_colorNormal="@color/colorPrimaryDark"
+                app:fab_colorPressed="@color/colorPrimaryDark"
+                app:fab_colorRipple="@color/colorPrimary"
+                app:fab_label="@string/PreviousClasses"
+                app:fab_size="mini"
+                app:rippleColor="#3D67EE" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
+</RelativeLayout>

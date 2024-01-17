@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:background="@color/whiteTrans"
+    android:id="@+id/rlNavitem"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/llEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_counthome"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_43sdp"
+            android:id="@+id/ivSide"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/editprofile" />
+
+        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_43sdp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/title"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:gravity="center_vertical"
+            android:text="@string/Edit_Profile"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>

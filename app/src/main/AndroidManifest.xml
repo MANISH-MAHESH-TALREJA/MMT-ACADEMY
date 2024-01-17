@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.manish.sem05">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:theme="@style/Theme.Eacademy"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".ui.batch.ActivityAllBatch"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.syllabus.ActivitySyllabus"
+            android:exported="false" />
+        <activity
+            android:name=".ui.certificate.ActivityCertificateAssigned"
+            android:exported="false" />
+        <activity
+            android:name=".ui.multibatch.ActivityMyBatch"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.paymentGateway.Razorpay"
+            android:exported="false" />
+        <activity
+            android:name=".ui.library.ActivityPdf"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="false" />
+        <activity
+            android:name=".ui.library.ActivityLibrary"
+            android:exported="false" />
+        <activity
+            android:name=".ui.multibatch.ActivityMultiBatchHome"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.galary.galleryvideos.ActivityVimeoVideo"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="false" />
+        <activity
+            android:name=".ui.forgotpassword.ActivityForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ui.batch.ActivityBatchDetails"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.batch.ActivityBatch"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.galary.galleryvideos.ExoplayerVideos"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signup.ActivitySignUp"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.paymentGateway.ActivityPaymentGateway"
+            android:exported="false"
+            android:parentActivityName=".ui.paymentGateway.ActivityPaymentGateway"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payment.ActivityPaymentHistory"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.doubtClasses.ActivityDoubtClasses"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.editProfile.ActivityProfile"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.aboutapp.ActivityOpenSourceLibrary"
+            android:exported="false" />
+        <activity
+            android:name=".ui.aboutapp.ActivityAboutApp"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settingdashboard.ActivitySettingDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".ui.applyleave.ActivityApplyLeave"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.certificate.ActivityCertificate"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.ActivityPrivacyPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".ui.attendance.ActivityAttendance"
+            android:exported="false" />
+        <activity
+            android:name=".ui.academicrecord.ActivityAcademicRecord"
+            android:exported="false" />
+        <activity
+            android:name=".ui.live.ActivityLive"
+            android:exported="false" />
+        <activity
+            android:name=".ui.generatepapers.ActivityGetPapers"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="false" />
+        <activity
+            android:name=".ui.assignment.ActivityAssignment"
+            android:exported="false" />
+        <activity
+            android:name=".ui.paymentGateway.paypal"
+            android:exported="false" />
+        <activity
+            android:name=".ui.extraclass.ActivityExtraClass"
+            android:exported="false" />
+        <activity
+            android:name=".ui.video.ActivityYoutubeVideo"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="false" />
+        <activity
+            android:name=".ui.base.BaseActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.UpcomingExams.ActivitySubVacancy"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mcq.resultquestionlist.ActivityPaperResultList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.galary.galleryvideos.ActivityGalleryVideos"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.noticeAnnouncement.ActivityForFragments"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mcq.generateresult.ActivityGenerateResult"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mcq.practiceresult.ActivityPracticeResult"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".ui.mcq.practicepaper.ActivityPracticePaper"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mcq.ActivityMCQDashboard"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UpcomingExams.ActivityVacancyOrUpcomingExam"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.ActivityHome"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.ActivityLogin"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.live.JitsiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="net.manish.sem05.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- pay pal server decler -->
+        <service
+            android:name=".utils.Firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+</manifest>

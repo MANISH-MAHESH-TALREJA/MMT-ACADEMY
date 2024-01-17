@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:elevation="2dp">
+
+
+    <LinearLayout
+        android:id="@+id/rlBackSupport"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_4sdp"
+        android:layout_weight="0.5"
+        android:elevation="1dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/back_counthome"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/ivTicket"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:src="@drawable/book" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold
+                android:id="@+id/tvTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_12sdp"
+                android:gravity="center"
+                android:textColor="@color/colorText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

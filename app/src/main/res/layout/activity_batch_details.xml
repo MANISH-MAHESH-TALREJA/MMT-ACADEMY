@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".ui.batch.ActivityBatchDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_58sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_backarrow"
+                android:autoMirrored="true"
+                app:tint="@color/colorPrimaryDark"
+                />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_75sdp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_38sdp"
+        android:layout_marginTop="@dimen/_43sdp"
+        android:id="@+id/scroll"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:orientation="vertical"
+            >
+
+
+                <ImageView
+                    android:id="@+id/ivBatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_190sdp"
+                    android:src="@drawable/noimage"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:minHeight="@dimen/_100sdp"
+                    android:minWidth="@dimen/_100sdp"
+                    />
+
+
+            <LinearLayout
+                android:id="@+id/llPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                    android:id="@+id/tvOfferPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_13sdp" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:id="@+id/batchPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_13sdp" />
+
+
+            </LinearLayout>
+
+
+            <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+                android:id="@+id/tvDiscriptionHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Description"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_20sdp" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/graylyt"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/readMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:text="@string/Viewmore"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="@dimen/_6sdp"
+android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@color/graylyt" />
+            <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16sdp"
+                android:id="@+id/headFeature"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:text="@string/Feature"/>
+
+            <LinearLayout
+                android:id="@+id/dynamicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@color/graylyt" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/BatchTiming"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/_18sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:text="@string/Startson"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:id="@+id/startOn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1.4"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:text="@string/Endson"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:id="@+id/endOn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1.4"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:orientation="horizontal">
+
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:text="@string/Timing"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    android:id="@+id/timing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1.4"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@color/graylyt" />
+
+            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                android:id="@+id/previewAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:drawableTint="@color/white"
+                android:drawableEnd="@drawable/fab_add"
+                android:drawablePadding="@dimen/_2sdp"
+                android:background="@drawable/back_shade_designmain"
+                android:text="@string/CourseContent"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textSize="@dimen/_14sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/showPreview"
+
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+        android:id="@+id/btBuyNow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back_splash_grad"
+        android:gravity="center"
+        android:text="@string/BuyNow"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp" />
+</RelativeLayout>

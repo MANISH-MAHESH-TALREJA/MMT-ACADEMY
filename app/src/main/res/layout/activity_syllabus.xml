@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backcurve"
+    android:orientation="vertical"
+    tools:context=".ui.syllabus.ActivitySyllabus">
+
+    <include layout="@layout/header" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_curve_grey"
+        android:paddingTop="@dimen/_6sdp"
+
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:gravity="center_vertical"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:elevation="@dimen/_2sdp"
+                    android:background="@drawable/ans_details_back_right_grad"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+android:layout_marginLeft="@dimen/_12sdp"
+    android:text="Completed"
+    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:id="@+id/rvListSyllabus"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imgNoSyl"
+                android:visibility="gone"
+                android:padding="@dimen/_26sdp"
+                android:src="@drawable/noresults"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
