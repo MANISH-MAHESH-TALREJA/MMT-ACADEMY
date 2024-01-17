@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.batch;
+package net.manish.sem05.ui.batch;
 
 import android.app.Activity;
 import android.content.Context;
@@ -25,11 +25,11 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.androidnetworking.interfaces.StringRequestListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
+import net.manish.sem05.R;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomSmallText;
 
 import org.json.JSONException;
 import org.json.JSONObject;

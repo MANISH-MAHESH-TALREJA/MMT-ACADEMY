@@ -8,7 +8,7 @@
     android:layout_marginRight="@dimen/_10sdp"
     android:layout_marginTop="@dimen/_2sdp"
     android:layout_height="wrap_content">
-    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+    <net.manish.sem05.utils.widgets.CustomeTextRegular
         android:id="@+id/SubjectName"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_38sdp"

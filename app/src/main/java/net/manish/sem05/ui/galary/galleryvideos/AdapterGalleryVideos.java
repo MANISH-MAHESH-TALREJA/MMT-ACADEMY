@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.galary.galleryvideos;
+package net.manish.sem05.ui.galary.galleryvideos;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,13 +12,13 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.video.ActivityYoutubeVideo;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegular;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.video.ActivityYoutubeVideo;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomeTextRegular;
 
 import java.util.ArrayList;
 

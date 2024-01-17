@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.library;
+package net.manish.sem05.ui.library;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -37,15 +37,15 @@ import com.karumi.dexter.listener.DexterError;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.PermissionRequestErrorListener;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.home.ActivityHome;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegular;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.home.ActivityHome;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomeTextRegular;
+import net.manish.sem05.utils.widgets.CustomeTextRegularBold;
 
 import java.io.File;
 import java.util.ArrayList;

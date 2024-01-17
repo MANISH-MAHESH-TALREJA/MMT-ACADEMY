@@ -31,7 +31,7 @@
             android:gravity="center_vertical"
             android:layout_marginStart="@dimen/_4sdp"
             android:orientation="vertical">
-            <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+            <net.manish.sem05.utils.widgets.CustomTextExtraBold
                 android:id="@+id/tvVideoName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 android:ellipsize="end"
                 android:text=""
                 android:textColor="@color/colorText" />
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvVideoDes"

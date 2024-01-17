@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.batch;
+package net.manish.sem05.ui.batch;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
+import net.manish.sem05.R;
+import net.manish.sem05.utils.widgets.CustomSmallText;
 
 import java.util.ArrayList;
 

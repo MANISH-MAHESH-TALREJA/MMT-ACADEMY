@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.mcq.generateresult;
+package net.manish.sem05.ui.mcq.generateresult;
 
 
 import android.content.Context;
@@ -8,15 +8,15 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.ui.mcq.ActivityMCQDashboard;
-import com.pixelnx.eacademy.ui.mcq.resultquestionlist.ActivityPaperResultList;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.widgets.CustomButton;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.ui.mcq.ActivityMCQDashboard;
+import net.manish.sem05.ui.mcq.resultquestionlist.ActivityPaperResultList;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.widgets.CustomButton;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomTextNormalBold;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
 
 
 public class ActivityGenerateResult extends BaseActivity {

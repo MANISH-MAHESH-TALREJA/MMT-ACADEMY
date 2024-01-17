@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelnotice;
+package net.manish.sem05.model.modelnotice;
 
 import java.io.Serializable;
 import java.util.ArrayList;

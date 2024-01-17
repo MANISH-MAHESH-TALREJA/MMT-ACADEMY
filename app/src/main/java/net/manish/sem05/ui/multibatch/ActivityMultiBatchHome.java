@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.multibatch;
+package net.manish.sem05.ui.multibatch;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -26,15 +26,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.ui.batch.AdapterCatPage;
-import com.pixelnx.eacademy.ui.batch.ModelCatSubCat;
-import com.pixelnx.eacademy.ui.settingdashboard.ActivitySettingDashboard;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.ui.batch.AdapterCatPage;
+import net.manish.sem05.ui.batch.ModelCatSubCat;
+import net.manish.sem05.ui.settingdashboard.ActivitySettingDashboard;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
 
 import java.util.ArrayList;
 import java.util.Locale;

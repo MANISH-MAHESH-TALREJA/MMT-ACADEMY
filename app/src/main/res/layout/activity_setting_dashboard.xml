@@ -48,7 +48,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/editprofile" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -86,7 +86,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/payment"/>
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -124,7 +124,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/leave" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -162,7 +162,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/download" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -201,7 +201,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/privacypolicy" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -240,7 +240,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/aboutapp" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -278,7 +278,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/policies_pg" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -315,7 +315,7 @@
                     android:layout_weight="0.25"
                     android:src="@drawable/logout" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                <net.manish.sem05.utils.widgets.CustomTextSemiBold
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"

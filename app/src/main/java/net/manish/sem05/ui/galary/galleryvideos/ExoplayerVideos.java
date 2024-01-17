@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.galary.galleryvideos;
+package net.manish.sem05.ui.galary.galleryvideos;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,8 +15,8 @@ import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.util.Util;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.home.ActivityHome;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.home.ActivityHome;
 
 public class ExoplayerVideos extends AppCompatActivity {
     PlayerView playerView;

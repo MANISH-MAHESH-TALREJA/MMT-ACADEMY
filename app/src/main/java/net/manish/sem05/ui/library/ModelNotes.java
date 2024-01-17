@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.library;
+package net.manish.sem05.ui.library;
 
 import java.io.Serializable;
 import java.util.ArrayList;

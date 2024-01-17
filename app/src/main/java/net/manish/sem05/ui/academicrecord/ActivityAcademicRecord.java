@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.academicrecord;
+package net.manish.sem05.ui.academicrecord;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -25,14 +25,14 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.academicrecord.ModelAcademicRecord;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.academicrecord.ModelAcademicRecord;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.extraclass;
+package net.manish.sem05.ui.extraclass;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modelextraClass.ModelExtraClass;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegular;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modelextraClass.ModelExtraClass;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomeTextRegular;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

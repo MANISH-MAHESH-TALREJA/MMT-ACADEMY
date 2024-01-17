@@ -22,7 +22,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:weightSum="4">
 
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:id="@+id/subjectTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
                 android:text="@string/subject"
                 android:textColor="@color/text_color" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:id="@+id/chapterNameTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
                 android:text=""
                 android:textColor="@color/text_color" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:id="@+id/teacherNameTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                 android:text="@string/NAME"
                 android:textColor="@color/text_color" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:id="@+id/statusTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

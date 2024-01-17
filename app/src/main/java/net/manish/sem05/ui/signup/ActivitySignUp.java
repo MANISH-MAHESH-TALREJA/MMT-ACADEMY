@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.signup;
+package net.manish.sem05.ui.signup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,24 +22,24 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.batch.ActivityBatch;
-import com.pixelnx.eacademy.ui.batch.ModelCatSubCat;
-import com.pixelnx.eacademy.ui.login.ActivityLogin;
-import com.pixelnx.eacademy.ui.paymentGateway.ActivityPaymentGateway;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomEditText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.batch.ActivityBatch;
+import net.manish.sem05.ui.batch.ModelCatSubCat;
+import net.manish.sem05.ui.login.ActivityLogin;
+import net.manish.sem05.ui.paymentGateway.ActivityPaymentGateway;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomEditText;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Locale;
 
-import static com.pixelnx.eacademy.utils.AppConsts.IS_REGISTER;
+import static net.manish.sem05.utils.AppConsts.IS_REGISTER;
 
 
 public class ActivitySignUp extends AppCompatActivity implements View.OnClickListener {

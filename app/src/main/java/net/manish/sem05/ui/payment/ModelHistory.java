@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.payment;
+package net.manish.sem05.ui.payment;
 
 import java.io.Serializable;
 import java.util.ArrayList;

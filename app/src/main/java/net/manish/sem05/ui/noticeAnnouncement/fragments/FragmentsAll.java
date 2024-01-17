@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.noticeAnnouncement.fragments;
+package net.manish.sem05.ui.noticeAnnouncement.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,12 +17,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.model.modelnotify.ModelNotify;
-import com.pixelnx.eacademy.ui.noticeAnnouncement.AdapterNotifications;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.model.modelnotify.ModelNotify;
+import net.manish.sem05.ui.noticeAnnouncement.AdapterNotifications;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
 
 import java.util.ArrayList;
 

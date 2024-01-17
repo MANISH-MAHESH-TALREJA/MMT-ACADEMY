@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.video;
+package net.manish.sem05.ui.video;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -17,8 +17,8 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstan
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.home.ActivityHome;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.home.ActivityHome;
 
 
 public class ActivityYoutubeVideo extends AppCompatActivity {

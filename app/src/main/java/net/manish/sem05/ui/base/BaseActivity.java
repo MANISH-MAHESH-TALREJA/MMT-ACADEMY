@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.base;
+package net.manish.sem05.ui.base;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,12 +21,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.login.ActivityLogin;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.login.ActivityLogin;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomeTextRegularBold;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;

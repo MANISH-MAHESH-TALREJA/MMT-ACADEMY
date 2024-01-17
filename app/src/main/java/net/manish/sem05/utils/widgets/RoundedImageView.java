@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.utils.widgets;
+package net.manish.sem05.utils.widgets;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -19,7 +19,7 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.DimenRes;
 import androidx.annotation.DrawableRes;
 
-import com.pixelnx.eacademy.R;
+import net.manish.sem05.R;
 
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedImageView  extends ImageView {

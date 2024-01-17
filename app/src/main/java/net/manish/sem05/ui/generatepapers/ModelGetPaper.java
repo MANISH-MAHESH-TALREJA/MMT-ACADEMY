@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.generatepapers;
+package net.manish.sem05.ui.generatepapers;
 
 import java.io.Serializable;
 import java.util.ArrayList;

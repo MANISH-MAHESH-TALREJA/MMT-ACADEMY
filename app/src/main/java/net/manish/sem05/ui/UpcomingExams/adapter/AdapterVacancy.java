@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.UpcomingExams.adapter;
+package net.manish.sem05.ui.UpcomingExams.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,13 +10,13 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.model.modelvacancies.ModelVacancies;
-import com.pixelnx.eacademy.ui.UpcomingExams.ActivitySubVacancy;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.model.modelvacancies.ModelVacancies;
+import net.manish.sem05.ui.UpcomingExams.ActivitySubVacancy;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
 
 import java.util.ArrayList;
 

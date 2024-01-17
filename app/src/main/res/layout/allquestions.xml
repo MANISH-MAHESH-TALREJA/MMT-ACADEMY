@@ -17,7 +17,7 @@
         android:layout_marginBottom="9dp"
         android:orientation="horizontal">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+        <net.manish.sem05.utils.widgets.CustomTextBold
             android:id="@+id/cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
             android:paddingStart="9dp"
             android:paddingEnd="9dp" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+        <net.manish.sem05.utils.widgets.CustomTextBold
             android:id="@+id/ttlAns"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

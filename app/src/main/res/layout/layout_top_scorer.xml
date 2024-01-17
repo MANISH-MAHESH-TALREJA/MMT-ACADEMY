@@ -31,7 +31,7 @@
             android:background="@drawable/circle_back_grad"
             android:gravity="center">
 
-            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            <net.manish.sem05.utils.widgets.CustomSmallText
                 android:id="@+id/rankText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,14 +53,14 @@
         android:textColor="@color/gray"
         android:textSize="13sp" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:id="@+id/tvPaperName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="12sp" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:id="@+id/tvPercent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

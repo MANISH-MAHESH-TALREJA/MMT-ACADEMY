@@ -50,7 +50,7 @@
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:orientation="horizontal">
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                        <net.manish.sem05.utils.widgets.CustomTextBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingEnd="@dimen/_5sdp"
@@ -59,7 +59,7 @@
                             android:textSize="@dimen/_18sdp"
                             android:textStyle="bold" />
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                        <net.manish.sem05.utils.widgets.CustomTextBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/app_name"
@@ -68,7 +68,7 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    <net.manish.sem05.utils.widgets.CustomSmallText
                         android:id="@+id/tvLogin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
                         android:textSize="@dimen/_16sdp"
                         android:textStyle="bold" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    <net.manish.sem05.utils.widgets.CustomSmallText
                         android:id="@+id/tvOrLoginWith"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                         android:textSize="@dimen/_16sdp"
                         android:textStyle="bold" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                    <net.manish.sem05.utils.widgets.CustomEditText
                         android:id="@+id/etUserName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                         android:textColor="@color/colorText"
                         android:textDirection="locale" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                    <net.manish.sem05.utils.widgets.CustomEditText
                         android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
                         android:textColor="@color/colorText"
                         android:textDirection="locale" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    <net.manish.sem05.utils.widgets.CustomSmallText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/forgotPass"
@@ -142,7 +142,7 @@
                         android:textSize="@dimen/_14sdp"
                         android:textStyle="bold" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    <net.manish.sem05.utils.widgets.CustomTextSemiBold
                         android:id="@+id/tvContactAdmin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
 
 
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                        <net.manish.sem05.utils.widgets.CustomSmallText
                             android:layout_width="@dimen/_90sdp"
                             android:layout_height="wrap_content"
                             android:text="@string/LOGIN"

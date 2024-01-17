@@ -42,7 +42,7 @@
         android:src="@drawable/noresults"
         android:visibility="gone" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+    <net.manish.sem05.utils.widgets.CustomTextExtraBold
         android:id="@+id/tvEnable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

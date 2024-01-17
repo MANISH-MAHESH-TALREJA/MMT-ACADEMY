@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.utils;
+package net.manish.sem05.utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

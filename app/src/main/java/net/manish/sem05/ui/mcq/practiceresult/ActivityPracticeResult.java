@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.mcq.practiceresult;
+package net.manish.sem05.ui.mcq.practiceresult;
 
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -34,15 +34,15 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.model.modelpractiesresult.ModelPractiesResult;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.model.modelpractiesresult.ModelPractiesResult;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
 
 import java.util.ArrayList;
 import java.util.Calendar;

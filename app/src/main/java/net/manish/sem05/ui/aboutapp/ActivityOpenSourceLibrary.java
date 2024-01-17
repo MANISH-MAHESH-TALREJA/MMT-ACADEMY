@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.aboutapp;
+package net.manish.sem05.ui.aboutapp;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegular;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomeTextRegular;
 
 import java.util.Locale;
 

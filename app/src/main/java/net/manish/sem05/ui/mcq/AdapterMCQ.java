@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.mcq;
+package net.manish.sem05.ui.mcq;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,12 +11,12 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.academicrecord.ActivityAcademicRecord;
-import com.pixelnx.eacademy.ui.mcq.practicepaper.ActivityPracticePaper;
-import com.pixelnx.eacademy.ui.mcq.practiceresult.ActivityPracticeResult;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.academicrecord.ActivityAcademicRecord;
+import net.manish.sem05.ui.mcq.practicepaper.ActivityPracticePaper;
+import net.manish.sem05.ui.mcq.practiceresult.ActivityPracticeResult;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.widgets.CustomeTextRegularBold;
 
 import java.util.ArrayList;
 

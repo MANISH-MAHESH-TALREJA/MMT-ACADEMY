@@ -8,14 +8,14 @@
     android:paddingBottom="@dimen/_8sdp"
     >
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:id="@+id/tvDateAttendance"
         android:layout_width="0dp"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_weight="1.1" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:id="@+id/tvTime"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:gravity="center"
         android:layout_weight="1" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

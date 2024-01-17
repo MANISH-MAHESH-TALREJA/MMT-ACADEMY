@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.utils.Firebase;
+package net.manish.sem05.utils.Firebase;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -15,8 +15,8 @@ import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.splash.SplashActivity;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.splash.SplashActivity;
 
 import org.json.JSONObject;
 

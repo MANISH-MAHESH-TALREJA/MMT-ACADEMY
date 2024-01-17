@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.attendanceModel;
+package net.manish.sem05.model.attendanceModel;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelCertificate;
+package net.manish.sem05.model.modelCertificate;
 
 import java.io.Serializable;
 

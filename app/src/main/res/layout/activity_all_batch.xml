@@ -41,7 +41,7 @@
 
 
     </LinearLayout>
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:layout_width="match_parent"
         android:id="@+id/subCatName"
         android:layout_height="wrap_content"

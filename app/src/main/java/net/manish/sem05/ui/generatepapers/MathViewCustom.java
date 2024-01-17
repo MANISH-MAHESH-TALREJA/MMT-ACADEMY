@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.generatepapers;
+package net.manish.sem05.ui.generatepapers;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,7 +8,7 @@ import android.view.MotionEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import com.pixelnx.eacademy.R;
+import net.manish.sem05.R;
 import com.x5.template.Chunk;
 import com.x5.template.Theme;
 import com.x5.template.providers.AndroidTemplates;

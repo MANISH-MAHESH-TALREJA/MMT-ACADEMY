@@ -1,12 +1,12 @@
-package com.pixelnx.eacademy.ui.noticeAnnouncement;
+package net.manish.sem05.ui.noticeAnnouncement;
 
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.pixelnx.eacademy.ui.noticeAnnouncement.fragments.FragmentsAll;
-import com.pixelnx.eacademy.ui.noticeAnnouncement.fragments.FragmentsPersonal;
+import net.manish.sem05.ui.noticeAnnouncement.fragments.FragmentsAll;
+import net.manish.sem05.ui.noticeAnnouncement.fragments.FragmentsPersonal;
 
 
 public class PagerAdopter extends FragmentStatePagerAdapter {

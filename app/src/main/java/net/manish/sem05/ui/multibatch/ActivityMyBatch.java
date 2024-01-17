@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.multibatch;
+package net.manish.sem05.ui.multibatch;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -41,18 +41,18 @@ import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.OnSuccessListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.ui.batch.ModelBachDetails;
-import com.pixelnx.eacademy.ui.home.ActivityHome;
-import com.pixelnx.eacademy.ui.settingdashboard.ActivitySettingDashboard;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.ui.batch.ModelBachDetails;
+import net.manish.sem05.ui.home.ActivityHome;
+import net.manish.sem05.ui.settingdashboard.ActivitySettingDashboard;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomeTextRegularBold;
 
 import org.json.JSONException;
 import org.json.JSONObject;

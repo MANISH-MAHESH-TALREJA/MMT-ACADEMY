@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.multibatch;
+package net.manish.sem05.ui.multibatch;
 
 import java.io.Serializable;
 import java.util.ArrayList;

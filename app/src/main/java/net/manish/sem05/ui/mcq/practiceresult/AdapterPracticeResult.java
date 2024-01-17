@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.mcq.practiceresult;
+package net.manish.sem05.ui.mcq.practiceresult;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,15 +12,15 @@ import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.model.modelpractiesresult.ModelPractiesResult;
-import com.pixelnx.eacademy.ui.mcq.resultquestionlist.ActivityPaperResultList;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.model.modelpractiesresult.ModelPractiesResult;
+import net.manish.sem05.ui.mcq.resultquestionlist.ActivityPaperResultList;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextNormalBold;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.utils.widgets.CustomeTextRegularBold;
 
 import java.util.ArrayList;
 

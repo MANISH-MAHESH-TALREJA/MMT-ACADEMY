@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.mcq.resultquestionlist;
+package net.manish.sem05.ui.mcq.resultquestionlist;
 
 import android.content.Context;
 import android.util.Log;
@@ -16,10 +16,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modelviewresult.ModelViewResult;
-import com.pixelnx.eacademy.ui.generatepapers.MathViewCustom;
-import com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modelviewresult.ModelViewResult;
+import net.manish.sem05.ui.generatepapers.MathViewCustom;
+import net.manish.sem05.utils.widgets.CustomTextNormalBold;
 
 import org.json.JSONArray;
 import org.json.JSONException;

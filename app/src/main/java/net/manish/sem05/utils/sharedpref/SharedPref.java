@@ -1,12 +1,12 @@
-package com.pixelnx.eacademy.utils.sharedpref;
+package net.manish.sem05.utils.sharedpref;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 import com.google.gson.Gson;
-import com.pixelnx.eacademy.model.ModelSettingRecord;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
+import net.manish.sem05.model.ModelSettingRecord;
+import net.manish.sem05.model.modellogin.ModelLogin;
 
 public class SharedPref {
 

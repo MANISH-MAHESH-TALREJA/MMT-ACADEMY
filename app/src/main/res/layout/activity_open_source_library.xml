@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:padding="@dimen/_4sdp"
         android:scrollbars="none">
-    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+    <net.manish.sem05.utils.widgets.CustomeTextRegular
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/black"

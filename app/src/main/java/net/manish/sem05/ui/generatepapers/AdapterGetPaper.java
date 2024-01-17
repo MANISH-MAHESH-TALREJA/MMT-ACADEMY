@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.generatepapers;
+package net.manish.sem05.ui.generatepapers;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.utils.AppConsts;
+import net.manish.sem05.R;
+import net.manish.sem05.utils.AppConsts;
 
 import org.json.JSONArray;
 import org.json.JSONException;

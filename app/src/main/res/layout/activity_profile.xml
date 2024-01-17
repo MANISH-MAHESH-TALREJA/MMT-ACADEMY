@@ -57,7 +57,7 @@
                         android:src="@drawable/ic_baseline_photo_camera_24" />
                 </RelativeLayout>
 
-                <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                <net.manish.sem05.utils.widgets.CustomeTextRegular
                     android:id="@+id/batchName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -69,7 +69,7 @@
                     android:textColor="@color/colorPrimaryDark" />
             </LinearLayout>
 
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -78,7 +78,7 @@
                 android:text="@string/NAME" />
 
 
-            <com.pixelnx.eacademy.utils.widgets.CustomEditText
+            <net.manish.sem05.utils.widgets.CustomEditText
                 android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                 android:textAlignment="viewStart"
                 android:textColor="@color/app_gray" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomButton
+            <net.manish.sem05.utils.widgets.CustomButton
                 android:id="@+id/btAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
                 android:textSize="16sp"
                 android:visibility="gone" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -120,7 +120,7 @@
                 android:layout_marginEnd="20dp"
                 android:text="@string/PASSWORD" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomEditText
+            <net.manish.sem05.utils.widgets.CustomEditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                 android:textColor="@color/app_gray"
                 android:textDirection="locale" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -150,7 +150,7 @@
                 android:maxLength="18"
                 android:text="@string/CONFIRM_PASSWORD" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomEditText
+            <net.manish.sem05.utils.widgets.CustomEditText
                 android:id="@+id/etRePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
                 android:layout_margin="12dp">
 
 
-                <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                <net.manish.sem05.utils.widgets.CustomeTextRegular
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
@@ -189,7 +189,7 @@
 
             </RelativeLayout>
 
-<com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+<net.manish.sem05.utils.widgets.CustomeTextRegular
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/changeBatch"

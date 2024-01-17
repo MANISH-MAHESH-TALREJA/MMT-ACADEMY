@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.UpcomingExams;
+package net.manish.sem05.ui.UpcomingExams;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -17,15 +17,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.chrisbanes.photoview.PhotoView;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.model.modelvacancies.ModelVacancies;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.model.modelvacancies.ModelVacancies;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

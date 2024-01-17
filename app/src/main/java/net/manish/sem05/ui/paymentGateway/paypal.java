@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.paymentGateway;
+package net.manish.sem05.ui.paymentGateway;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,11 +15,11 @@ import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
 import com.paypal.android.sdk.payments.PaymentActivity;
 import com.paypal.android.sdk.payments.PaymentConfirmation;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.ModelSettingRecord;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
+import net.manish.sem05.R;
+import net.manish.sem05.model.ModelSettingRecord;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
 
 import org.json.JSONException;
 import org.json.JSONObject;

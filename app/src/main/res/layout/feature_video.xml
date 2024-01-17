@@ -12,7 +12,7 @@ android:paddingStart="@dimen/_3sdp"
         android:layout_width="match_parent"
         android:padding="@dimen/_3sdp"
         android:layout_height="wrap_content">
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 android:minWidth="@dimen/_150sdp"
@@ -20,7 +20,7 @@ android:minWidth="@dimen/_150sdp"
         android:layout_marginEnd="@dimen/_18sdp"
         android:textSize="@dimen/_14sdp"
         android:id="@+id/text"/>
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 android:maxLines="3"

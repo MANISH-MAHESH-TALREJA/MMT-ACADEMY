@@ -33,7 +33,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/noimage" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                <net.manish.sem05.utils.widgets.CustomTextBold
                     android:id="@+id/tvOffer"
                     android:layout_width="@dimen/_70sdp"
                     android:layout_height="@dimen/_26sdp"
@@ -61,7 +61,7 @@
 
 
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                    <net.manish.sem05.utils.widgets.CustomTextBold
                         android:id="@+id/tvOfferPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                         android:layout_marginEnd="@dimen/_4sdp"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/_11sdp" />
-                    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                    <net.manish.sem05.utils.widgets.CustomSmallText
                         android:id="@+id/tvPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
 
                 </LinearLayout>
 
-                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                <net.manish.sem05.utils.widgets.CustomSmallText
                     android:id="@+id/batchTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/_12sdp" />
 
-                <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+                <net.manish.sem05.utils.widgets.CustomSmallText
                     android:id="@+id/batchSubTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
 
 
 
-            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            <net.manish.sem05.utils.widgets.CustomSmallText
                 android:layout_width="@dimen/_85sdp"
                 android:layout_height="@dimen/_26sdp"
                 android:id="@+id/btnBuyNow"

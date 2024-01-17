@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.galary.galleryvideos;
+package net.manish.sem05.ui.galary.galleryvideos;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.home.ActivityHome;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.home.ActivityHome;
 
 public class ActivityVimeoVideo extends AppCompatActivity {
     WebView webView;

@@ -43,7 +43,7 @@
 
             android:src="@drawable/backbutton" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+        <net.manish.sem05.utils.widgets.CustomeTextRegular
             android:layout_width="match_parent"
             android:layout_height="@dimen/_70sdp"
             android:layout_centerHorizontal="true"

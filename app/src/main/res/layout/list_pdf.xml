@@ -22,13 +22,13 @@
         android:layout_marginStart="@dimen/_4sdp"
         android:orientation="vertical">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold
+        <net.manish.sem05.utils.widgets.CustomeTextRegularBold
             android:id="@+id/titleTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/text_color"
             android:singleLine="true" />
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+        <net.manish.sem05.utils.widgets.CustomeTextRegular
             android:id="@+id/textTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

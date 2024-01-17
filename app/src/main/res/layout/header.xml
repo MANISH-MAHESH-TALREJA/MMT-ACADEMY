@@ -23,7 +23,7 @@
 
             android:autoMirrored="true"/>
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+        <net.manish.sem05.utils.widgets.CustomTextExtraBold
             android:id="@+id/tvHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

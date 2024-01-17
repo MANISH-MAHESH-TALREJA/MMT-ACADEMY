@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelextraClass;
+package net.manish.sem05.model.modelextraClass;
 
 import java.io.Serializable;
 import java.util.ArrayList;

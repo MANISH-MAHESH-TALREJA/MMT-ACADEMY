@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelLeave;
+package net.manish.sem05.model.modelLeave;
 
 import java.io.Serializable;
 import java.util.ArrayList;

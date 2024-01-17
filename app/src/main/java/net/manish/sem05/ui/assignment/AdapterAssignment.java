@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.assignment;
+package net.manish.sem05.ui.assignment;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modelhomework.ModelHomeWork;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegular;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modelhomework.ModelHomeWork;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomeTextRegular;
 
 import java.util.ArrayList;
 

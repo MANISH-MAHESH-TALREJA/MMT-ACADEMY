@@ -90,7 +90,7 @@
             android:visibility="gone">
 
 
-            <com.pixelnx.eacademy.utils.widgets.CustomButton
+            <net.manish.sem05.utils.widgets.CustomButton
                 android:id="@+id/btViewSheet"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                 android:textColor="@color/white"
                 android:visibility="gone" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomButton
+            <net.manish.sem05.utils.widgets.CustomButton
                 android:id="@+id/btViewSheetResult"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

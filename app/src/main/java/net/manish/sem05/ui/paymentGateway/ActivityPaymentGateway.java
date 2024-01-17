@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.paymentGateway;
+package net.manish.sem05.ui.paymentGateway;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -27,19 +27,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.ModelSettingRecord;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.batch.ModelCatSubCat;
-import com.pixelnx.eacademy.ui.home.ActivityHome;
-import com.pixelnx.eacademy.ui.multibatch.ActivityMultiBatchHome;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegular;
+import net.manish.sem05.R;
+import net.manish.sem05.model.ModelSettingRecord;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.batch.ModelCatSubCat;
+import net.manish.sem05.ui.home.ActivityHome;
+import net.manish.sem05.ui.multibatch.ActivityMultiBatchHome;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomTextBold;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomeTextRegular;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -48,7 +48,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Locale;
 
-import static com.pixelnx.eacademy.utils.AppConsts.IS_REGISTER;
+import static net.manish.sem05.utils.AppConsts.IS_REGISTER;
 
 public class ActivityPaymentGateway extends AppCompatActivity implements View.OnClickListener {
     ImageView ivBack;

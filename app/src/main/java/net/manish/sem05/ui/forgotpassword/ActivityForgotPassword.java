@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.forgotpassword;
+package net.manish.sem05.ui.forgotpassword;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,12 +16,12 @@ import android.widget.Toast;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.widgets.CustomEditText;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.R;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.widgets.CustomEditText;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
 
 import org.json.JSONException;
 import org.json.JSONObject;

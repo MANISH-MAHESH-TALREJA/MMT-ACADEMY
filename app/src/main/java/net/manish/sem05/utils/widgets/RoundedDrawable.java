@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.utils.widgets;
+package net.manish.sem05.utils.widgets;
 
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;

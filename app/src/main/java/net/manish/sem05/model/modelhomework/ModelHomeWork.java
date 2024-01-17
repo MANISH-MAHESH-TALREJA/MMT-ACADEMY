@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelhomework;
+package net.manish.sem05.model.modelhomework;
 
 import java.io.Serializable;
 import java.util.ArrayList;

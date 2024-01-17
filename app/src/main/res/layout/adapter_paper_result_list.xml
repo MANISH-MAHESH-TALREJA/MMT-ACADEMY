@@ -28,7 +28,7 @@
     app:tint="@color/colorPrimaryDark"
     android:src="@drawable/zm_mm_template_eye_icon"/>
 
-            <com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold
+            <net.manish.sem05.utils.widgets.CustomTextNormalBold
                 android:id="@+id/tvPaperName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 android:text=""
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorText" /></RelativeLayout>
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvExamDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:text=""
             android:textAlignment="viewStart"
         />
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/app_red"
@@ -63,7 +63,7 @@
         android:layout_marginBottom="9dp"
         android:background="@color/gray" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold
+    <net.manish.sem05.utils.widgets.CustomTextNormalBold
         android:id="@+id/hideByAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,13 +83,13 @@
         android:layout_marginTop="3dp"
         android:orientation="horizontal">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/StartTime" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvExamTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -104,13 +104,13 @@
         android:layout_marginTop="4dp"
         android:orientation="horizontal">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/TimeTaken" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvTimeTaken"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,13 +125,13 @@
         android:layout_marginTop="4dp"
         android:orientation="horizontal">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/RightAnswers" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvRightAns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,13 +145,13 @@
         android:layout_marginTop="4dp"
         android:orientation="horizontal">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/WrongAnnswers" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvWrongAns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -165,14 +165,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/headQuestions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/AttemptQuestions" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvAttemptQues"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -189,13 +189,13 @@
         android:orientation="horizontal"
         android:visibility="gone">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Negative Marks :" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvNegMarks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -209,14 +209,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/totalMarks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/TotalMarks" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvTotalMarks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -229,14 +229,14 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="4dp">
 
-    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+    <net.manish.sem05.utils.widgets.CustomTextSemiBold
         android:id="@+id/negative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="@string/NegMarks" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+    <net.manish.sem05.utils.widgets.CustomTextSemiBold
         android:id="@+id/tvNegative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -252,13 +252,13 @@
         android:layout_marginBottom="3dp"
         android:orientation="horizontal">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/Percentage" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:id="@+id/tvPercent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -275,13 +275,13 @@
         android:orientation="horizontal"
         android:visibility="gone">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+        <net.manish.sem05.utils.widgets.CustomeTextRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Percentage with -ve marking :" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+        <net.manish.sem05.utils.widgets.CustomeTextRegular
             android:id="@+id/tvPercentWithNeg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -301,7 +301,7 @@
         android:orientation="horizontal">
 
 
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegularBold
+        <net.manish.sem05.utils.widgets.CustomeTextRegularBold
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

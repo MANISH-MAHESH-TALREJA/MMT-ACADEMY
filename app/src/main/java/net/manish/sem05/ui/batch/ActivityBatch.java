@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.batch;
+package net.manish.sem05.ui.batch;
 
 import android.Manifest;
 import android.app.Activity;
@@ -40,14 +40,14 @@ import com.karumi.dexter.listener.DexterError;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.PermissionRequestErrorListener;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.ModelSettingRecord;
-import com.pixelnx.eacademy.ui.login.ActivityLogin;
-import com.pixelnx.eacademy.ui.signup.ActivitySignUp;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
+import net.manish.sem05.R;
+import net.manish.sem05.model.ModelSettingRecord;
+import net.manish.sem05.ui.login.ActivityLogin;
+import net.manish.sem05.ui.signup.ActivitySignUp;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomSmallText;
 
 import org.json.JSONException;
 import org.json.JSONObject;

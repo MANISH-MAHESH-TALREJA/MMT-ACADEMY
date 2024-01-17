@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelpracticepaper;
+package net.manish.sem05.model.modelpracticepaper;
 
 import java.util.ArrayList;
 

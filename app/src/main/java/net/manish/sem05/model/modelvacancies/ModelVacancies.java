@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelvacancies;
+package net.manish.sem05.model.modelvacancies;
 
 import java.io.Serializable;
 import java.util.ArrayList;

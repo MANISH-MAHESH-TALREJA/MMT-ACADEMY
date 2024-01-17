@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.syllabus;
+package net.manish.sem05.ui.syllabus;
 
 import java.io.Serializable;
 import java.util.ArrayList;

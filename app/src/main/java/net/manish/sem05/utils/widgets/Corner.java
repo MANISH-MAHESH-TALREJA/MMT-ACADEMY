@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.utils.widgets;
+package net.manish.sem05.utils.widgets;
 import androidx.annotation.IntDef;
 
 import java.lang.annotation.Retention;

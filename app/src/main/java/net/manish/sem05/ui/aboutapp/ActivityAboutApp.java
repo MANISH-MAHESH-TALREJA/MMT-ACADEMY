@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.aboutapp;
+package net.manish.sem05.ui.aboutapp;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
 
 public class ActivityAboutApp extends BaseActivity implements View.OnClickListener {
     Context context;

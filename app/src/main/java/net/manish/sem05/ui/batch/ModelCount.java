@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.batch;
+package net.manish.sem05.ui.batch;
 
 public class ModelCount {
    int videoid;

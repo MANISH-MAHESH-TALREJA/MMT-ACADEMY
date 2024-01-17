@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.academicrecord;
+package net.manish.sem05.model.academicrecord;
 
 
 

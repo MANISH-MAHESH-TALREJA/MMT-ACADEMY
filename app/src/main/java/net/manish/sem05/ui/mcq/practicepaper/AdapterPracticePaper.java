@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.mcq.practicepaper;
+package net.manish.sem05.ui.mcq.practicepaper;
 
 
 import android.annotation.SuppressLint;
@@ -16,15 +16,15 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.model.modelpracticepaper.ModelPracticePaper;
-import com.pixelnx.eacademy.ui.generatepapers.ActivityGetPapers;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.model.modelpracticepaper.ModelPracticePaper;
+import net.manish.sem05.ui.generatepapers.ActivityGetPapers;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

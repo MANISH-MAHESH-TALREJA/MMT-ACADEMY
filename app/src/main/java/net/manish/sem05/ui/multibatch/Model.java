@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.multibatch;
+package net.manish.sem05.ui.multibatch;
 
 public class Model {
     private String name;

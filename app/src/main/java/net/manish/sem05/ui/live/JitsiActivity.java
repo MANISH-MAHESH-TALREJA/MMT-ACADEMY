@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.live;
+package net.manish.sem05.ui.live;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -14,9 +14,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.facebook.react.modules.core.PermissionListener;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
 
 import org.jitsi.meet.sdk.JitsiMeetActivityDelegate;
 import org.jitsi.meet.sdk.JitsiMeetActivityInterface;

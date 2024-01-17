@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modellogin;
+package net.manish.sem05.model.modellogin;
 
 import androidx.annotation.Keep;
 

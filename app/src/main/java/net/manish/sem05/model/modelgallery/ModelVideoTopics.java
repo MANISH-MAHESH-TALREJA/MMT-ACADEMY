@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelgallery;
+package net.manish.sem05.model.modelgallery;
 
 import java.io.Serializable;
 import java.util.ArrayList;

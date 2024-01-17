@@ -18,7 +18,7 @@
 
 
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:id="@+id/batchName"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

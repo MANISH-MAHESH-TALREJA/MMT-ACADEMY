@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.galary.galleryvideos;
+package net.manish.sem05.ui.galary.galleryvideos;
 
 import java.util.ArrayList;
 

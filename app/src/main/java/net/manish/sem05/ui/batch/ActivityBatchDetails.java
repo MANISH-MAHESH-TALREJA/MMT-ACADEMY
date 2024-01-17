@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.batch;
+package net.manish.sem05.ui.batch;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,18 +19,18 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.ui.galary.galleryvideos.ActivityVimeoVideo;
-import com.pixelnx.eacademy.ui.galary.galleryvideos.ExoplayerVideos;
-import com.pixelnx.eacademy.ui.paymentGateway.ActivityPaymentGateway;
-import com.pixelnx.eacademy.ui.signup.ActivitySignUp;
-import com.pixelnx.eacademy.ui.video.ActivityYoutubeVideo;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextBold;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
-import com.pixelnx.eacademy.utils.widgets.CustomeTextRegular;
+import net.manish.sem05.R;
+import net.manish.sem05.ui.galary.galleryvideos.ActivityVimeoVideo;
+import net.manish.sem05.ui.galary.galleryvideos.ExoplayerVideos;
+import net.manish.sem05.ui.paymentGateway.ActivityPaymentGateway;
+import net.manish.sem05.ui.signup.ActivitySignUp;
+import net.manish.sem05.ui.video.ActivityYoutubeVideo;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomTextBold;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.utils.widgets.CustomeTextRegular;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

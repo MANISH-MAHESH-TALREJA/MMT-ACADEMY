@@ -15,7 +15,7 @@
         android:background="@drawable/circle_back_grad"
         android:gravity="center">
 
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+        <net.manish.sem05.utils.widgets.CustomeTextRegular
             android:id="@+id/questioCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

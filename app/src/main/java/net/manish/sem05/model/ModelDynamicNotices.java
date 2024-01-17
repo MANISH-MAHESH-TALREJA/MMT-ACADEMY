@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model;
+package net.manish.sem05.model;
 
 import java.io.Serializable;
 

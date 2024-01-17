@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modeltopscore;
+package net.manish.sem05.model.modeltopscore;
 
 import java.io.Serializable;
 import java.util.ArrayList;

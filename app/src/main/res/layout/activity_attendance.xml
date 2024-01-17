@@ -147,7 +147,7 @@
 
             android:paddingBottom="@dimen/_10sdp">
 
-            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            <net.manish.sem05.utils.widgets.CustomSmallText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"
@@ -156,7 +156,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14sdp" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            <net.manish.sem05.utils.widgets.CustomSmallText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -166,7 +166,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14sdp" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            <net.manish.sem05.utils.widgets.CustomSmallText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.model.modelliveclassdata;
+package net.manish.sem05.model.modelliveclassdata;
 
 import java.io.Serializable;
 

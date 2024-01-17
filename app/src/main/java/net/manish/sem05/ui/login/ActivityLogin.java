@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.login;
+package net.manish.sem05.ui.login;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -27,18 +27,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.batch.ActivityBatch;
-import com.pixelnx.eacademy.ui.forgotpassword.ActivityForgotPassword;
-import com.pixelnx.eacademy.ui.multibatch.ActivityMultiBatchHome;
-import com.pixelnx.eacademy.ui.signup.ActivitySignUp;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.ProjectUtils;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomEditText;
-import com.pixelnx.eacademy.utils.widgets.CustomSmallText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.batch.ActivityBatch;
+import net.manish.sem05.ui.forgotpassword.ActivityForgotPassword;
+import net.manish.sem05.ui.multibatch.ActivityMultiBatchHome;
+import net.manish.sem05.ui.signup.ActivitySignUp;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.ProjectUtils;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomEditText;
+import net.manish.sem05.utils.widgets.CustomSmallText;
+import net.manish.sem05.utils.widgets.CustomTextSemiBold;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -47,7 +47,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-import static com.pixelnx.eacademy.utils.AppConsts.IS_REGISTER;
+import static net.manish.sem05.utils.AppConsts.IS_REGISTER;
 
 public class ActivityLogin extends AppCompatActivity implements View.OnClickListener {
 

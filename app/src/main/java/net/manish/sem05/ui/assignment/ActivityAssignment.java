@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.assignment;
+package net.manish.sem05.ui.assignment;
 
 
 import android.app.DatePickerDialog;
@@ -19,15 +19,15 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.pixelnx.eacademy.R;
-import com.pixelnx.eacademy.model.modelhomework.ModelHomeWork;
-import com.pixelnx.eacademy.model.modellogin.ModelLogin;
-import com.pixelnx.eacademy.ui.base.BaseActivity;
-import com.pixelnx.eacademy.ui.home.ActivityHome;
-import com.pixelnx.eacademy.utils.AppConsts;
-import com.pixelnx.eacademy.utils.sharedpref.SharedPref;
-import com.pixelnx.eacademy.utils.widgets.CustomEditText;
-import com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold;
+import net.manish.sem05.R;
+import net.manish.sem05.model.modelhomework.ModelHomeWork;
+import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.base.BaseActivity;
+import net.manish.sem05.ui.home.ActivityHome;
+import net.manish.sem05.utils.AppConsts;
+import net.manish.sem05.utils.sharedpref.SharedPref;
+import net.manish.sem05.utils.widgets.CustomEditText;
+import net.manish.sem05.utils.widgets.CustomTextExtraBold;
 
 import java.text.DateFormat;
 import java.text.ParseException;

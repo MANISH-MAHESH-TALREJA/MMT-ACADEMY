@@ -28,7 +28,7 @@
             app:tint="@color/white"
             />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+    <net.manish.sem05.utils.widgets.CustomTextExtraBold
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
@@ -41,7 +41,7 @@
         android:textColor="@color/white" />
   </RelativeLayout>
 
-    <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+    <net.manish.sem05.utils.widgets.CustomSmallText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/clearAll"

@@ -1,4 +1,4 @@
-package com.pixelnx.eacademy.ui.paymentGateway;
+package net.manish.sem05.ui.paymentGateway;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.pixelnx.eacademy.R;
+import net.manish.sem05.R;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 

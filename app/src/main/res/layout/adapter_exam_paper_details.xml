@@ -57,7 +57,7 @@
     </LinearLayout>
 
 
-    <com.pixelnx.eacademy.utils.widgets.CustomTextNormalBold
+    <net.manish.sem05.utils.widgets.CustomTextNormalBold
         android:id="@+id/tvTimeUsed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
                 android:layout_marginStart="10dp"
                 android:src="@drawable/rightans_icon" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomSmallText
+            <net.manish.sem05.utils.widgets.CustomSmallText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"

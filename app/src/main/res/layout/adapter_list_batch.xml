@@ -19,7 +19,7 @@ android:paddingTop="@dimen/_2sdp"
         android:padding="@dimen/_2sdp"
         android:src="@drawable/image_login" />
 
-    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+    <net.manish.sem05.utils.widgets.CustomeTextRegular
         android:id="@+id/batchName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@ android:paddingTop="@dimen/_2sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+            <net.manish.sem05.utils.widgets.CustomeTextRegular
                 android:id="@+id/batchDescriptions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,7 +46,7 @@ android:paddingTop="@dimen/_2sdp"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/_13sdp" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+        <net.manish.sem05.utils.widgets.CustomeTextRegular
             android:id="@+id/batchDetailsPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

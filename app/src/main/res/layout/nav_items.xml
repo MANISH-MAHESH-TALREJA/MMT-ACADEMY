@@ -19,7 +19,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:src="@drawable/editprofile" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
             android:layout_width="match_parent"
             android:layout_height="@dimen/_43sdp"
             android:layout_gravity="center_vertical"

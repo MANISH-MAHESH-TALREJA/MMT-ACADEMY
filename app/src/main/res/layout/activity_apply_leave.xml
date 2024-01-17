@@ -41,7 +41,7 @@
                     android:layout_margin="@dimen/_12sdp">
 
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                    <net.manish.sem05.utils.widgets.CustomeTextRegular
                         android:layout_width="wrap_content"
                         android:layout_height="42dp"
                         android:layout_centerHorizontal="true"
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextBold
+                    <net.manish.sem05.utils.widgets.CustomTextBold
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -79,7 +79,7 @@
                         android:orientation="horizontal"
                         android:weightSum="4">
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        <net.manish.sem05.utils.widgets.CustomeTextRegular
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -88,7 +88,7 @@
                             android:text="@string/subject"
                             android:textColor="@color/colorText" />
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        <net.manish.sem05.utils.widgets.CustomeTextRegular
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -97,7 +97,7 @@
                             android:text="@string/Apply_Date"
                             android:textColor="@color/colorText" />
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        <net.manish.sem05.utils.widgets.CustomeTextRegular
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -107,7 +107,7 @@
                             android:text="@string/Status"
                             android:textColor="@color/colorText" />
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        <net.manish.sem05.utils.widgets.CustomeTextRegular
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -144,13 +144,13 @@
                         android:src="@drawable/ic_baseline_close"
                         app:tint="@color/colorPrimaryDark" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    <net.manish.sem05.utils.widgets.CustomTextSemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_2sdp"
                         android:text="@string/FromDate" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                    <net.manish.sem05.utils.widgets.CustomEditText
                         android:id="@+id/fromDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -167,13 +167,13 @@
                         android:paddingBottom="14dp"
                         android:singleLine="true" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    <net.manish.sem05.utils.widgets.CustomTextSemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_2sdp"
                         android:text="@string/To_Date_Not_countable" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                    <net.manish.sem05.utils.widgets.CustomEditText
                         android:id="@+id/toDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -190,13 +190,13 @@
                         android:paddingBottom="14dp"
                         android:singleLine="true" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    <net.manish.sem05.utils.widgets.CustomTextSemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_2sdp"
                         android:text="@string/subject" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                    <net.manish.sem05.utils.widgets.CustomEditText
                         android:id="@+id/edtSubject"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -212,13 +212,13 @@
                         android:paddingEnd="20dp"
                         android:paddingBottom="14dp" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    <net.manish.sem05.utils.widgets.CustomTextSemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_2sdp"
                         android:text="@string/Message" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomEditText
+                    <net.manish.sem05.utils.widgets.CustomEditText
                         android:id="@+id/messageBody"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
                         android:paddingEnd="20dp"
                         android:paddingBottom="14dp" />
 
-                    <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+                    <net.manish.sem05.utils.widgets.CustomTextSemiBold
                         android:id="@+id/otherDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
 
 
 
-                        <com.pixelnx.eacademy.utils.widgets.CustomeTextRegular
+                        <net.manish.sem05.utils.widgets.CustomeTextRegular
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_centerHorizontal="true"

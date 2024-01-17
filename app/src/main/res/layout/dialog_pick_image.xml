@@ -24,7 +24,7 @@
             android:padding="6dp"
             android:src="@drawable/ic_backarrow" />
 
-        <com.pixelnx.eacademy.utils.widgets.CustomTextExtraBold
+        <net.manish.sem05.utils.widgets.CustomTextExtraBold
             android:id="@+id/tvHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
 
             android:padding="@dimen/_13sdp">
 
-            <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            <net.manish.sem05.utils.widgets.CustomTextSemiBold
                 android:id="@+id/camera"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
@@ -65,7 +65,7 @@
                 android:text="@string/Camera"
                 android:textColor="@color/white" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            <net.manish.sem05.utils.widgets.CustomTextSemiBold
                 android:id="@+id/gallery"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
@@ -75,7 +75,7 @@
                 android:text="@string/Gallery"
                 android:textColor="@color/white" />
 
-            <com.pixelnx.eacademy.utils.widgets.CustomTextSemiBold
+            <net.manish.sem05.utils.widgets.CustomTextSemiBold
                 android:id="@+id/cancel"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
