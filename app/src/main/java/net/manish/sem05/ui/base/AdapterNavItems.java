@@ -84,9 +84,9 @@ public class AdapterNavItems extends BaseAdapter {
         title.setText(navList.get(position));
 
 
-        if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.home))){
+        /*if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.home))){
             ivSide.setImageDrawable(mContext.getResources().getDrawable(R.drawable.homeicons));
-        }
+        }*/
         if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.my_batches))){
             ivSide.setImageDrawable(mContext.getResources().getDrawable(R.drawable.batchesmy));
         }
@@ -114,9 +114,9 @@ public class AdapterNavItems extends BaseAdapter {
         if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.About_App))){
             ivSide.setImageDrawable(mContext.getResources().getDrawable(R.drawable.aboutapp));
         }
-        if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.Open_Source_Library))){
+        /*if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.Open_Source_Library))){
             ivSide.setImageDrawable(mContext.getResources().getDrawable(R.drawable.opensource));
-        }
+        }*/
         if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.Logout))){
             ivSide.setImageDrawable(mContext.getResources().getDrawable(R.drawable.logout));
         }
@@ -152,14 +152,14 @@ public class AdapterNavItems extends BaseAdapter {
                     Intent intentAboutApp = new Intent(mContext, ActivityAboutApp.class);
                     mContext.startActivity(intentAboutApp);
                 }
-                if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.Open_Source_Library))){
+                /*if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.Open_Source_Library))){
                     Intent intentOpenSourceLibrary = new Intent(mContext, ActivityOpenSourceLibrary.class);
                     mContext.startActivity(intentOpenSourceLibrary);
-                }
-                if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.home))){
+                }*/
+                /*if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.home))){
                     Intent intentHome = new Intent(mContext, ActivityMultiBatchHome.class);
                     mContext.startActivity(intentHome);
-                }
+                }*/
                 if(navList.get(position).equalsIgnoreCase( mContext.getResources().getString(R.string.my_batches))){
                     Intent intentMyBatch = new Intent(mContext, ActivityMyBatch.class);
                     mContext.startActivity(intentMyBatch);

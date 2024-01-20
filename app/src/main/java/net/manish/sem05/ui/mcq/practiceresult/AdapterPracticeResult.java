@@ -2,7 +2,6 @@ package net.manish.sem05.ui.mcq.practiceresult;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -98,13 +97,13 @@ public class AdapterPracticeResult extends RecyclerView.Adapter<AdapterPracticeR
                 holder.NotAttempt.setVisibility(View.VISIBLE);
                 holder.tvExamDate.setText(mContext.getResources().getString(R.string.Date)+" : " + data.getDate() +" " + mContext.getResources().getString(R.string.At)+" : " + data.getScheduleTime() +
                         "");
-                holder.NotAttempt.setText(""+mContext.getResources().getString(R.string.Notattempted));
+                holder.NotAttempt.setText(""+mContext.getResources().getString(R.string.NotAttempted));
                 holder.detailLayout.setVisibility(View.GONE);
 
 
             } else {
                 holder.NotAttempt.setVisibility(View.GONE);
-                holder.tvExamDate.setText(mContext.getResources().getString(R.string.Date)+" : " + data.getDate() + "\n"+mContext.getResources().getString(R.string.Notattempted));
+                holder.tvExamDate.setText(mContext.getResources().getString(R.string.Date)+" : " + data.getDate() + "\n"+mContext.getResources().getString(R.string.NotAttempted));
                 holder.detailLayout.setVisibility(View.VISIBLE);
             }
 

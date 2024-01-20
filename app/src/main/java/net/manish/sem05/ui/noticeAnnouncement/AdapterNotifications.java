@@ -64,7 +64,7 @@ public class AdapterNotifications extends RecyclerView.Adapter<AdapterNotificati
                 } else {
                     holder.tvDescription.setText(data.getDescription().substring(0,75)+"..");
                     holder.tvTitle.setMaxLines(1);
-                    holder.viewMore.setText(mContext.getResources().getString(R.string.Viewmore));
+                    holder.viewMore.setText(mContext.getResources().getString(R.string.ViewMore));
                 }
             }
         });

@@ -278,7 +278,7 @@ try{
                             listBatch.addAll(response.getBatchData().get(i).getSubcategory().get(0).getBatchData());
                             if(response.getBatchData().get(i).getSubcategory().get(0).getBatchData().size() < 1)
                             {
-                                Toast.makeText(context, getResources().getString(R.string.NoMoreCoursesfound), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, getResources().getString(R.string.NoMoreCoursesFound), Toast.LENGTH_SHORT).show();
 
                             }
                             adapterCatSubCat.notifyDataSetChanged();

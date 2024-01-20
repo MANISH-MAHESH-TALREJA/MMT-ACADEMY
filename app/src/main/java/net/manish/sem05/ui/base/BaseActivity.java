@@ -78,7 +78,7 @@ public class BaseActivity extends AppCompatActivity {
             Picasso.get().load(modelLogin.getStudentData().getImage()).placeholder(R.drawable.ic_profile).into(profile);
         }
         navItems = new ArrayList<>();
-        navItems.add(mContext.getResources().getString(R.string.home));
+        //navItems.add(mContext.getResources().getString(R.string.home));
         navItems.add(mContext.getResources().getString(R.string.my_batches));
         navItems.add(mContext.getResources().getString(R.string.Edit_Profile));
         navItems.add(mContext.getResources().getString(R.string.Payment_History));
@@ -86,7 +86,7 @@ public class BaseActivity extends AppCompatActivity {
         navItems.add(mContext.getResources().getString(R.string.Download_Certificate));
         navItems.add(mContext.getResources().getString(R.string.Privacy_Policy));
         navItems.add(mContext.getResources().getString(R.string.About_App));
-        navItems.add(mContext.getResources().getString(R.string.Open_Source_Library));
+        //navItems.add(mContext.getResources().getString(R.string.Open_Source_Library));
         navItems.add(mContext.getResources().getString(R.string.Logout));
 
         adapterNavItems = new AdapterNavItems(mContext, navItems,modelLogin.getStudentData().getStudentId());

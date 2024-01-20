@@ -101,7 +101,7 @@
                     android:background="@drawable/back_shade_designmain"
                     android:gravity="center"
                     android:padding="@dimen/_2sdp"
-                    android:text="@string/STARTNOW"
+                    android:text="@string/startNow"
                     android:textColor="@color/white" />
 
                 <net.manish.sem05.utils.widgets.CustomTextSemiBold
@@ -113,7 +113,7 @@
                     android:background="@drawable/back_shade_designmain"
                     android:gravity="center"
                     android:padding="@dimen/_2sdp"
-                    android:text="@string/NOTNOW"
+                    android:text="@string/notNow"
                     android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>

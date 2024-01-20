@@ -42,10 +42,10 @@ dependencies {
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-    implementation 'com.karumi:dexter:6.1.2'
+    implementation 'com.karumi:dexter:6.2.3'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.android.gms:play-services-vision:20.1.2'
@@ -65,7 +65,7 @@ dependencies {
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
-    implementation 'com.razorpay:checkout:1.6.19'
+    implementation 'com.razorpay:checkout:1.6.24'
     implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
     implementation 'io.github.kexanie.library:MathView:0.0.6'
     implementation 'com.google.android.exoplayer:exoplayer-core:2.14.0'

@@ -113,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingEnd="@dimen/_5sdp"
-                    android:text="@string/PleasesaveyourIDandPassword"
+                    android:text="@string/PleaseSaveYourDetails"
                     android:textAlignment="center"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_15sdp"
@@ -130,7 +130,7 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/back_splash_grad"
             android:gravity="center"
-            android:text="@string/ClickhereToContinue"
+            android:text="@string/ClickHereToContinue"
             android:textColor="@color/white"
             android:textSize="@dimen/_15sdp"
             android:visibility="gone" />
@@ -151,7 +151,7 @@
                 android:background="@drawable/back_adapter_white"
                 android:minHeight="@dimen/_100sdp"
                 android:padding="@dimen/_12sdp"
-                android:text="@string/Transactiondoneon"
+                android:text="@string/TransactionDoneOn"
                 android:textColor="@color/text_color" />
 
             <TextView

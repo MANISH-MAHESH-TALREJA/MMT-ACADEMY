@@ -55,7 +55,7 @@ import static net.manish.sem05.utils.AppConsts.IS_REGISTER;
 public class ActivityLogin extends AppCompatActivity implements View.OnClickListener {
 
 
-    RelativeLayout btLogin;
+    net.manish.sem05.utils.widgets.CustomTextBold btLogin;
     Context mContext;
     ModelLogin modelLogin;
     LinearLayout llLogin;

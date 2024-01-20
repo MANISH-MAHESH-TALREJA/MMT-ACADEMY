@@ -276,7 +276,7 @@ public class ActivityPdf extends AppCompatActivity {
                     public void onError(ANError error) {
                         downloadPercent.setVisibility(View.GONE);
                         ProjectUtils.pauseProgressDialog();
-                        Toast.makeText(context, getResources().getString(R.string.Downloadingfailed),
+                        Toast.makeText(context, getResources().getString(R.string.DownloadingFailed),
                                 Toast.LENGTH_SHORT).show();
 
                     }

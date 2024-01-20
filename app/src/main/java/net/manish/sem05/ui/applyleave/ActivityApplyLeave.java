@@ -344,12 +344,12 @@ public class ActivityApplyLeave extends BaseActivity {
                         btApply.setVisibility(View.GONE);
                         otherDetails.setVisibility(View.VISIBLE);
                         if(list.get(i).getStatus().equalsIgnoreCase("0")){
-                        otherDetails.setText(getResources().getString(R.string.Totaldays)+":  "+list.get(i).getTotalDays()+" \n"+getResources().getString(R.string.Status)+":    "+getResources().getString(R.string.Pending));
+                        otherDetails.setText(getResources().getString(R.string.TotalDays)+":  "+list.get(i).getTotalDays()+" \n"+getResources().getString(R.string.Status)+":    "+getResources().getString(R.string.Pending));
                         }else{
                             if (list.get(i).getStatus().equalsIgnoreCase("1")) {
-                                otherDetails.setText(getResources().getString(R.string.Totaldays)+":  "+list.get(i).getTotalDays()+" \n"+getResources().getString(R.string.Status)+":    "+getResources().getString(R.string.Approved));
+                                otherDetails.setText(getResources().getString(R.string.TotalDays)+":  "+list.get(i).getTotalDays()+" \n"+getResources().getString(R.string.Status)+":    "+getResources().getString(R.string.Approved));
                             } else {
-                                otherDetails.setText(getResources().getString(R.string.Totaldays)+":  "+list.get(i).getTotalDays()+" \n"+getResources().getString(R.string.Status)+":    "+getResources().getString(R.string.Decline));
+                                otherDetails.setText(getResources().getString(R.string.TotalDays)+":  "+list.get(i).getTotalDays()+" \n"+getResources().getString(R.string.Status)+":    "+getResources().getString(R.string.Decline));
                             }
 
                         }

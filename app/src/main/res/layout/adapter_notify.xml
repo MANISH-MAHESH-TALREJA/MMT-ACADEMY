@@ -64,7 +64,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/Viewmore"
+            android:text="@string/ViewMore"
             android:textColor="@color/colorPrimaryDark" />
 
         <LinearLayout

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_curve_grey"
     android:orientation="vertical"
     tools:context=".ui.batch.ActivityBatchDetails">
 
@@ -29,6 +28,7 @@
         <ImageView
             android:id="@+id/ivBatch"
             android:layout_width="@dimen/_250sdp"
+            android:scaleType="fitXY"
             android:layout_height="@dimen/_135sdp"
             android:src="@drawable/noimage" />
     </androidx.cardview.widget.CardView>
@@ -101,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_6sdp"
-                android:text="@string/Viewmore"
+                android:text="@string/ViewMore"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/_12sdp" />
 
@@ -145,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_weight="1"
-                    android:text="@string/Startson"
+                    android:text="@string/StartsOn"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_weight="1"
-                    android:text="@string/Endson"
+                    android:text="@string/EndsOn"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
 

@@ -73,7 +73,7 @@ public class AdapterPaperResultList extends RecyclerView.Adapter<AdapterPaperRes
                                 option = mContext.getResources().getString(R.string.Your_Answer) + " " + json.get(3);
                                 holder.tvYourAns.setText("" + option);
                             } else {
-                                option = mContext.getResources().getString(R.string.Your_Answer) + " " + mContext.getResources().getString(R.string.Notattempted);
+                                option = mContext.getResources().getString(R.string.Your_Answer) + " " + mContext.getResources().getString(R.string.NotAttempted);
                                 holder.tvYourAns.setText("" + option);
                             }
                         }

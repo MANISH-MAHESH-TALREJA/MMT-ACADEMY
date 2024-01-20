@@ -2,7 +2,7 @@
 <resources>
 
 
-    <string name="app_name" translatable="false">E Academy</string>        <!--change app name here-->
+    <string name="app_name" translatable="false">MMT Academy</string>        <!--change app name here-->
 
 
     <string name="welcome">आपका स्वागत है</string>
@@ -10,7 +10,7 @@
     <string name="not_assign">सौंपा नहीं गया है</string>
     <string name="home">घर</string>
     <string name="Inactive">निष्क्रिय</string>
-    <string name="NoMoreCoursesfound">कोई और पाठ्यक्रम नहीं मिला!!</string>
+    <string name="NoMoreCoursesFound">कोई और पाठ्यक्रम नहीं मिला!!</string>
     <string name="See_all">सभी देखें</string>
     <string name="search">यहां पाठ्यक्रम खोजें..</string>
     <string name="Enter_your_registered_email">अपना पंजीकृत ईमेल पता नीचे दर्ज करें</string>
@@ -21,11 +21,11 @@
     <string name="BrowseBatches">बैच ब्राउज़ करें</string>
     <string name="SelectNow">अभी चुनें</string>
     <string name="selected">गिने चुने</string>
-    <string name="Clickherefor">के लिए यहां क्लिक करें </string>
+    <string name="ClickHereFor">के लिए यहां क्लिक करें </string>
     <string name="AlreadySelected">पहले से ही चयनित!!</string>
     <string name="AlreadyEnrolled">पहले से ही नामांकित</string>
     <string name="NoRecentNoticeFound">हाल ही का कोई नोटिस नहीं मिला!</string>
-    <string name="NoRecommandedbatchfound">कोई अनुशंसित बैच नहीं मिला!</string>
+    <string name="NoRecommendedBatchFound">कोई अनुशंसित बैच नहीं मिला!</string>
     <string name="File_downloaded_inside">फ़ाइल अंदर डाउनलोड की गई</string>
     <string name="forgot_password">पासवर्ड भूल गए ?</string>
     <string name="forgot_your_password">अपना कूट शब्द भूल गए ?</string>
@@ -37,11 +37,11 @@
     <string name="Mock_Test_Paper">मॉक टेस्ट पेपर</string>
     <string name="Mock_Test_Result">मॉक टेस्ट का रिजल्ट</string>
     <string name="Academic_Record">शैक्षिक रिकॉर्ड</string>
-    <string name="See_your_score_here.">अपना स्कोर यहां देखें...</string>
+    <string name="See_your_score_here.">अपना स्कोर यहां देखें…</string>
     <string name="Top_Scorer">शीर्ष स्कोरर </string>
     <string name="WelcomeToday_new_topic">स्वागत है, आज का नया विषय</string>
-    <string name="Wanttologin">लॉग इन करना चाहते हैं ?</string>
-    <string name="signupwith">इसके साथ साइन अप करें ,</string>
+    <string name="WantToLogin">लॉग इन करना चाहते हैं ?</string>
+    <string name="signUpWith">इसके साथ साइन अप करें ,</string>
     <string name="Apply">आवेदन करना</string>
     <string name="Live_class">लाइव क्लासेस</string>
     <string name="jitsi_class">जित्सी मीट</string>
@@ -83,8 +83,8 @@
     <string name="Gallery">गेलरी</string>
     <string name="Cancel">रद्द करना</string>
     <string name="Continue">जारी रखना</string>
-    <string name="Clickhere">यहाँ क्लिक करें</string>
-    <string name="ClickhereToContinue">जारी रखने के लिए यहां क्लिक करें...</string>
+    <string name="ClickHere">यहाँ क्लिक करें</string>
+    <string name="ClickHereToContinue">जारी रखने के लिए यहां क्लिक करें…</string>
     <string name="MobileNumber">मोबाइल नंबर</string>
     <string name="Signup">साइन अप करें</string>
     <string name="Name">नाम</string>
@@ -109,7 +109,7 @@
     <string name="Books">पुस्तकें</string>
 
     <string name="orLoginWith">या लॉगिन करें</string>
-    <string name="Please_login_to_continue">जारी रखने के लिए कृपया लॉगिन करें...</string>
+    <string name="Please_login_to_continue">जारी रखने के लिए कृपया लॉगिन करें…</string>
     <string name="LOGIN">लॉग इन करें</string>
     <string name="IfEnroll">यदि नामांकित हैं तो कृपया यहां क्लिक करें </string>
     <string name="All">सभी</string>
@@ -133,7 +133,7 @@
     <string name="AttemptQuestions">प्रयास प्रश्न </string>
     <string name="TotalQuestion">कुल प्रश्न</string>
     <string name="ReviewDetails">विवरण की समीक्षा करें</string>
-    <string name="STARTPAPER">स्टार्ट पेपर</string>
+    <string name="startPaper">स्टार्ट पेपर</string>
     <string name="TotalQuestions">कुल सवाल</string>
     <string name="TotalAnswered">कुल उत्तर दिया</string>
     <string name="more">अधिक..</string>
@@ -143,14 +143,14 @@
     <string name="Certificate">प्रमाणपत्र</string>
     <string name="Settings">समायोजन</string>
     <string name="Are_you_sure_you_want_to_logout">क्या आप लॉग आउट करना चाहते हैं?</string>
-    <string name="Viewmore">और देखें...</string>
+    <string name="ViewMore">और देखें…</string>
     <string name="Title">शीर्षक</string>
     <string name="Payment_History">भुगतान इतिहास</string>
     <string name="Do_you_want_to_cancel_this_process">क्या आप इस प्रक्रिया को रद्द करना चाहते हैं?</string>
     <string name="Present">वर्तमान</string>
     <string name="Instructions">निर्देश</string>
-    <string name="STARTNOW">शुरू करें</string>
-    <string name="NOTNOW">अभी नहीं</string>
+    <string name="startNow">शुरू करें</string>
+    <string name="notNow">अभी नहीं</string>
     <string name="Description">विवरण</string>
     <string name="TotalAttempt">कुल प्रयास</string>
     <string name="CorrectAnswers">सही उत्तर</string>
@@ -165,7 +165,7 @@
     <string name="Wrong">गलत</string>
     <string name="Chart">चार्ट</string>
     <string name="PayFees">शुल्क भुगतान करें</string>
-    <string name="WrongAnnswers">गलत उत्तर</string>
+    <string name="WrongAnswers">गलत उत्तर</string>
     <string name="ExtraClass">अतिरिक्त कक्षाएं</string>
     <string name="DoubtClasses">संदेह</string>
     <string name="TotalScore">कुल स्कोर</string>
@@ -186,21 +186,21 @@
     <string name="SKIP">छोडना</string>
     <string name="TotalAmount">कुल राशि</string>
     <string name="Create_now">अब बनाओ</string>
-    <string name="DoyouwanttoContinue">क्या आप जारी रखना चाहते हैं ?</string>
-    <string name="PleasesaveyourIDandPassword">कृपया अपनी आईडी और पासवर्ड सेव करें</string>
-    <string name="YourEnrollmentIdandPasswordis">आपका नामांकन आईडी और पासवर्ड है</string>
+    <string name="DoYouWantToContinue">क्या आप जारी रखना चाहते हैं ?</string>
+    <string name="PleaseSaveYourDetails">कृपया अपनी आईडी और पासवर्ड सेव करें</string>
+    <string name="YourEnrollmentDetails">आपका नामांकन आईडी और पासवर्ड है</string>
     <string name="Congratulation_you_have_successfully_enrolled_the_course">बधाई हो!!\nआपने सफलतापूर्वक नामांकन कर लिया है</string>
-    <string name="Dont_have_an_account">खाता नहीं है?</string>
+    <string name="notHaveAccount">खाता नहीं है?</string>
     <string name="Welcome_Select_Any_Batch">स्वागत है, किसी भी बैच का चयन करें</string>
     <string name="NoClassAvailable">कोई कक्षा उपलब्ध नहीं है</string>
     <string name="NotApproved">अननुमोदित</string>
     <string name="At">पर</string>
     <string name="Message">संदेश</string>
-    <string name="Notattempted">आपके द्वारा प्रयास नहीं किया गया</string>
-    <string name="Teachersreply">शिक्षक का उत्तर</string>
+    <string name="NotAttempted">आपके द्वारा प्रयास नहीं किया गया</string>
+    <string name="TeachersReply">शिक्षक का उत्तर</string>
     <string name="To_Date_Not_countable">आज तक (गिनने योग्य नहीं)</string>
     <string name="FromDate">की तिथि से</string>
-    <string name="Entersubject">विषय दर्ज करें</string>
+    <string name="EnterSubject">विषय दर्ज करें</string>
     <string name="EnterDescriptionOptional"> विवरण जैसे आप इस अध्याय में क्या जानना चाहते थे या किस लिए? (वैकल्पिक)</string>
     <string name="StartDate">आरंभ करने की तिथि</string>
     <string name="EndDate">अंतिम तिथि</string>
@@ -212,16 +212,16 @@
     <string name="EnterEmailHere">यहां ईमेल दर्ज करें</string>
     <string name="EnterMobile"> मोबाइल दर्ज करें</string>
     <string name="InvalidEmail">अमान्य ईमेल</string>
-    <string name="Entervalidnumber">मान्य संख्या दर्ज करें</string>
-    <string name="Downloading...">डाउनलोड हो रहा है...</string>
+    <string name="EnterValidNumber">मान्य संख्या दर्ज करें</string>
+    <string name="Downloading...">डाउनलोड हो रहा है…</string>
     <string name="EnterConfirmPassword">पासवर्ड की पुष्टि दर्ज करें</string>
-    <string name="Passwordnotmatched.">पासवर्ड का मिलान नहीं हुआ।</string>
+    <string name="PasswordNotMatched">पासवर्ड का मिलान नहीं हुआ।</string>
     <string name="Password_must_contain_atleast_3_characters.">पासवर्ड में कम से कम 3 अक्षर होने चाहिए</string>
     <string name="Paper_is_not_available_this_time_please_try_again">इस बार पेपर उपलब्ध नहीं है, कृपया पुनः प्रयास करें</string>
-    <string name="Password_doesnt_contain_spaces">पासवर्ड में स्पेस नहीं है</string>
+    <string name="Password_not_contain_spaces">पासवर्ड में स्पेस नहीं है</string>
     <string name="No_Questions_available">कोई प्रश्न उपलब्ध नहीं है</string>
-    <string name="Please_wait...">कृपया प्रतीक्षा करें...</string>
-    <string name="Payment_Done">कृपया प्रतीक्षा करें...</string>
+    <string name="Please_wait...">कृपया प्रतीक्षा करें…</string>
+    <string name="Payment_Done">कृपया प्रतीक्षा करें…</string>
     <string name="Payment_Cancel">भुगतान रद्द करें</string>
     <string name="Notices">नोटिस</string>
     <string name="This_app_needs_permission">इस ऐप को इस सुविधा का उपयोग करने के लिए अनुमति की आवश्यकता है। आप उन्हें ऐप सेटिंग में दे सकते हैं।</string>
@@ -234,15 +234,15 @@
     <string name="Free">मुक्त</string>
     <string name="Approved">अनुमत</string>
     <string name="Decline">पतन</string>
-    <string name="Totaldays">कुल दिन</string>
-    <string name="Startson">शुरुआत करना</string>
-    <string name="Endson">पर अंत</string>
-    <string name="Downloadingfailed">डाउनलोड करना विफल !!</string>
+    <string name="TotalDays">कुल दिन</string>
+    <string name="StartsOn">शुरुआत करना</string>
+    <string name="EndsOn">पर अंत</string>
+    <string name="DownloadingFailed">डाउनलोड करना विफल !!</string>
     <string name="DownloadCompleted"> डाउनलोड पूरा हुआ !!</string>
     <string name="ErrorOccurred">त्रुटि हुई! </string>
     <string name="Version">संस्करण</string>
     <string name="SelectBatchNow">बैच का चयन करें</string>
-    <string name="TODAYOFFER">आज की पेशकश</string>
+    <string name="todayOffer">आज की पेशकश</string>
     <string name="OFFER">प्रस्ताव</string>
     <string name="Batch">बैच</string>
     <string name="FeaturedCourses">विशेष रुप से प्रदर्शित पाठ्यक्रम</string>
@@ -257,7 +257,7 @@
     <string name="Screenshot_Captured">स्क्रीनशॉट लिया गया!</string>
     <string name="Copied_to_clipboard">क्लिपबोर्ड पर नकल</string>
     <string name="PaidAmount"> चुकाई गई राशि</string>
-    <string name="Transactiondoneon">पर लेन-देन किया</string>
+    <string name="TransactionDoneOn">पर लेन-देन किया</string>
     <string name="PayId">पे-आईडी</string>
     <string name="EmailExist">ईमेल पहले से मौजूद है !!</string>
     <string name="Please_Attempt_Any_Question....">कृपया कोई प्रश्न हल करें....</string>
@@ -268,15 +268,15 @@
     <string name="Error_in_payment">भुगतान में त्रुटि</string>
     <string name="An_invalid_Payment_or_PayPalConfiguration_was_submitted">एक अमान्य भुगतान या पेपैल कॉन्फ़िगरेशन सबमिट किया गया था।</string>
     <string name="PaymentCompleted">भुगतान पूरा हुआ</string>
-    <string name="TransactiondoneId">Transaction Id</string>
+    <string name="TransactionDoneId">Transaction Id</string>
     <string name="Razorpay_Payment_details_missing_from_admin">रेजरपे भुगतान विवरण व्यवस्थापक से गायब है !!</string>
     <string name="Paypal_Payment_details_missing_from_admin">पेपैल भुगतान विवरण व्यवस्थापक से गायब है!!</string>
     <string name="Demo">डेमो ऐप आप कुछ भी नहीं बदल सकते</string>
     <string name="BatchAdded">बैच जोड़ा गया !!</string>
     <string name="BatchChange">बैच परिवर्तन</string>
     <string name="Selected">गिने चुने : </string>
-    <string name="clickChangeBatch">बैच बदलने के लिए यहां क्लिक करें...</string>
-    <string name="Downloading">डाउनलोड हो रहा है... </string>
+    <string name="clickChangeBatch">बैच बदलने के लिए यहां क्लिक करें…</string>
+    <string name="Downloading">डाउनलोड हो रहा है… </string>
     <string name="CourseContent">पाठ्यक्रम सामग्री</string>
     <string name="Subjects">विषयों</string>
     <string name="NewBooks">नई पुस्तकें</string>
@@ -284,7 +284,7 @@
     <string name="OldPapersAdded">पुराने कागजात जोड़े गए</string>
     <string name="TotalMarks">कुल अंक प्राप्त</string>
     <string name="NegMarks">नकारात्मक अंकन</string>
-    <string name="negativemarkinstruct">1. कोई नकारात्मक अंकन नहीं होगा</string>
+    <string name="negativeMarksInstructions">1. कोई नकारात्मक अंकन नहीं होगा</string>
     <string name="ThereWillBe">वहां</string>
 
 

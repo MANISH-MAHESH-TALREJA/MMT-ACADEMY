@@ -51,7 +51,7 @@ import java.util.Locale;
 
 
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 3000;
     Context mContext;
     SharedPref sharedPref;
     ModelLogin modelLogin;
@@ -104,53 +104,8 @@ public class SplashActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if ("true".equalsIgnoreCase(jsonObject.getString("status"))) {
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("arabic")) {
-                            //for rtl
-                            Configuration configuration = getResources().getConfiguration();
-                            configuration.setLayoutDirection(new Locale("fa"));
-                            getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
-                            String languageToLoad = "ar"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-
-                        }
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("french")) {
-                            String languageToLoad = "fr"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-
-
-                        }
                         if (jsonObject.getString("languageName").equalsIgnoreCase("hindi")) {
                             String languageToLoad = "hi"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-                        }
-
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("german")) {
-                            String languageToLoad = "de"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-                        }
-
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("spanish")) {
-                            String languageToLoad = "es"; // your language
                             Locale locale = new Locale(languageToLoad);
                             Locale.setDefault(locale);
                             Configuration config = new Configuration();

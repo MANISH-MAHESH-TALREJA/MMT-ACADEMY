@@ -171,7 +171,7 @@ public class ActivityProfile extends BaseActivity {
                                 if (etPassword.getText().length() > 2) {
 
                                     if (etPassword.getText().toString().contains(" ")) {
-                                        etPassword.setError(getResources().getString(R.string.Password_doesnt_contain_spaces));
+                                        etPassword.setError(getResources().getString(R.string.Password_not_contain_spaces));
                                         etPassword.requestFocus();
                                     } else {
                                         ProjectUtils.showProgressDialog(mContext, false, getResources().getString(R.string.Loading___));
@@ -183,7 +183,7 @@ public class ActivityProfile extends BaseActivity {
                                 }
 
                             } else {
-                                etRePassword.setError(getResources().getString(R.string.Passwordnotmatched_));
+                                etRePassword.setError(getResources().getString(R.string.PasswordNotMatched));
                                 etRePassword.requestFocus();
                             }
                         }

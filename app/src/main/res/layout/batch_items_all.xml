@@ -6,25 +6,22 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-     >
+        android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/_6sdp"
-            android:layout_marginEnd="@dimen/_6sdp"
-            android:background="@drawable/back_counthome"
-            android:layout_marginBottom="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_3sdp"
-            app:cardCornerRadius="@dimen/_9sdp"
-            >
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/back_counthome"
+            app:cardCornerRadius="@dimen/_9sdp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_marginBottom="@dimen/_40sdp"
                 android:layout_height="match_parent"
-                >
+                android:layout_marginBottom="@dimen/_40sdp">
 
                 <ImageView
                     android:id="@+id/ivBatch"
@@ -48,27 +45,26 @@
 
                 <LinearLayout
                     android:id="@+id/llPrice"
-                    android:layout_below="@+id/ivBatch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_below="@+id/ivBatch"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
-
-
 
 
                     <net.manish.sem05.utils.widgets.CustomTextBold
                         android:id="@+id/tvOfferPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_marginEnd="@dimen/_4sdp"
+                        android:gravity="center"
                         android:textColor="@color/colorText"
                         android:textSize="@dimen/_11sdp" />
+
                     <net.manish.sem05.utils.widgets.CustomSmallText
                         android:id="@+id/tvPrice"
                         android:layout_width="wrap_content"
@@ -85,8 +81,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/llPrice"
                     android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="@dimen/_6sdp"
-                    android:layout_marginTop="-4dp"
                     android:gravity="start"
                     android:singleLine="true"
                     android:textAlignment="viewStart"
@@ -99,11 +95,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/batchTitle"
                     android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="-4dp"
                     android:layout_marginEnd="@dimen/_6sdp"
                     android:ellipsize="end"
-                    android:maxLines="1"
-                    android:layout_marginTop="-4dp"
                     android:gravity="start"
+                    android:maxLines="1"
                     android:textAlignment="viewStart"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/_12sdp" />
@@ -121,17 +117,16 @@
             android:elevation="@dimen/_6sdp">
 
 
-
             <net.manish.sem05.utils.widgets.CustomSmallText
+                android:id="@+id/btnBuyNow"
                 android:layout_width="@dimen/_85sdp"
                 android:layout_height="@dimen/_26sdp"
-                android:id="@+id/btnBuyNow"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/back_shade_designmain"
                 android:gravity="center"
                 android:text="@string/BuyNow"
                 android:textColor="@color/white"
-                android:background="@drawable/back_shade_designmain"
                 android:textSize="@dimen/_12sdp" />
 
         </RelativeLayout>

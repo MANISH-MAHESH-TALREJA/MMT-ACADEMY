@@ -163,7 +163,7 @@ public class AdapterPracticePaper extends RecyclerView.Adapter<AdapterPracticePa
         ImageView ivBackDilog = dialog.findViewById(R.id.ivBackDilog);
         CustomTextExtraBold instructions = dialog.findViewById(R.id.instructions);
         if(data.getNegetive().equalsIgnoreCase("0")){
-        instructions.setText(mContext.getResources().getString(R.string.negativemarkinstruct));
+        instructions.setText(mContext.getResources().getString(R.string.negativeMarksInstructions));
         }else{
             instructions.setText("1. "+mContext.getResources().getString(R.string.ThereWillBe)+" "+data.getNegetive()+" "+ mContext.getResources().getString(R.string.NegMarks));
         }

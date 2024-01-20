@@ -203,7 +203,7 @@
                         android:layout_marginBottom="@dimen/_12sdp"
                         android:background="@drawable/login_edit_grad"
                         android:elevation="1dp"
-                        android:hint="@string/Entersubject"
+                        android:hint="@string/EnterSubject"
                         android:textDirection="locale"
                         android:textAlignment="viewStart"
                         android:maxLength="150"

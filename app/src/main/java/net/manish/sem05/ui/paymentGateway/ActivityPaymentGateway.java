@@ -28,7 +28,6 @@ import android.widget.Toast;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.androidnetworking.interfaces.StringRequestListener;
 
 import net.manish.sem05.R;
 import net.manish.sem05.model.ModelSettingRecord;
@@ -455,7 +454,7 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
                         try{
                             if (!transectionId.isEmpty()) {
                                 paymentDoneLayout.setVisibility(View.VISIBLE);
-                                detailsAfterPaymentDone.setText(getResources().getString(R.string.PaymentCompleted) + "\n" + getResources().getString(R.string.TransactiondoneId) + "  :  " + transectionId + "\n" + getResources().getString(R.string.PaidAmount) + "  :  " + amountForPayment + " " + batchData.getCurrencyDecimalCode());
+                                detailsAfterPaymentDone.setText(getResources().getString(R.string.PaymentCompleted) + "\n" + getResources().getString(R.string.TransactionDoneId) + "  :  " + transectionId + "\n" + getResources().getString(R.string.PaidAmount) + "  :  " + amountForPayment + " " + batchData.getCurrencyDecimalCode());
                             }}catch (Exception E){
 
 

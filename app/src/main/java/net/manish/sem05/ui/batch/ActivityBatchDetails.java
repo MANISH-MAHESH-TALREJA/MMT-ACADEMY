@@ -97,7 +97,7 @@ public class ActivityBatchDetails extends AppCompatActivity implements View.OnCl
                         textView.setTextColor(getResources().getColor(R.color.text_color));
                         textView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
                         textView.setText("" + batchData.getBatchFecherd().get(i).getBatchSpecification());
-                        textView.setTextSize(20f);
+                        textView.setTextSize(16f);
                         dynamicLayout.addView(textView);
 
                     }
@@ -106,9 +106,8 @@ public class ActivityBatchDetails extends AppCompatActivity implements View.OnCl
                         if (!jsonArray.get(x).toString().isEmpty()) {
                             LinearLayout parentview = new LinearLayout(context);
                             parentview.setOrientation(LinearLayout.HORIZONTAL);
-
                             TextView textViewFeatures = new CustomTextExtraBold(context);
-                            textViewFeatures.setText(""+ jsonArray.get(x));
+                            textViewFeatures.setText("  "+ jsonArray.get(x));
 
                             ImageView imageView = new ImageView(context);
                             imageView.setImageDrawable(getDrawable(R.drawable.ic_baseline_check_box_24));
@@ -177,11 +176,11 @@ public class ActivityBatchDetails extends AppCompatActivity implements View.OnCl
             readMore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (readMore.getText().toString().equalsIgnoreCase("" + getResources().getString(R.string.Viewmore))) {
+                    if (readMore.getText().toString().equalsIgnoreCase("" + getResources().getString(R.string.ViewMore))) {
                         readMore.setText("" + getResources().getString(R.string.hide__));
                         description.setText("" + batchData.getDescription());
                     } else {
-                        readMore.setText("" + getResources().getString(R.string.Viewmore));
+                        readMore.setText("" + getResources().getString(R.string.ViewMore));
                         description.setText("" + batchData.getDescription().substring(0, 99));
                     }
                 }

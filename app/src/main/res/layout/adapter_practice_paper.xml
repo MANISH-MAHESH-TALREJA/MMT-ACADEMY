@@ -87,7 +87,7 @@
                         android:layout_marginEnd="4dp"
                         android:background="@drawable/back_shade_designmain"
                         android:gravity="center"
-                        android:text="@string/STARTPAPER"
+                        android:text="@string/startPaper"
                         android:textColor="@color/white" />
 
                 </RelativeLayout>

@@ -1,30 +1,30 @@
 <resources>
 
 
-    <string name="app_name" translatable="false">E Academy</string>        <!--change app name here-->
+    <string name="app_name" translatable="false">MMT Academy</string>        <!--change app name here-->
 
-    <string name="show">show</string>
-    <string name="not_assign">Not assign yet</string>
-    <string name="welcome">Welcome to</string>
+    <string name="show">Show</string>
+    <string name="not_assign">Not Assigned</string>
+    <string name="welcome">Welcome To</string>
     <string name="home">Home</string>
     <string name="Inactive">Inactive</string>
-    <string name="NoMoreCoursesfound">No More Courses found!!</string>
+    <string name="NoMoreCoursesFound">No More Courses Found…</string>
 
     <string name="See_all">See all</string>
     <string name="search">Search courses here..</string>
     <string name="Enter_your_registered_email">Enter your registered email address below</string>
     <string name="Syllabus">Syllabus</string>
-    <string name="my_batches">My batches</string>
+    <string name="my_batches">My Batches</string>
     <string name="Your_Answer">Your Answer :  </string>
     <string name="Invalid">Invalid details</string>
     <string name="BrowseBatches">Browse batches</string>
     <string name="SelectNow">Select Now</string>
     <string name="selected">selected</string>
-    <string name="Clickherefor">Click here for </string>
+    <string name="ClickHereFor">Click here for </string>
     <string name="AlreadySelected">Already Selected!!</string>
     <string name="AlreadyEnrolled">Already Enrolled</string>
     <string name="NoRecentNoticeFound">No recent notice found!</string>
-    <string name="NoRecommandedbatchfound">No Recommanded batch found!</string>
+    <string name="NoRecommendedBatchFound">No Recommended batch found!</string>
     <string name="File_downloaded_inside">File downloaded inside </string>
     <string name="forgot_password">Forgot Password ?</string>
     <string name="forgot_your_password">Forgot Your Password ?</string>
@@ -36,11 +36,11 @@
     <string name="Mock_Test_Paper">Mock Test Paper</string>
     <string name="Mock_Test_Result">Mock Test Result</string>
     <string name="Academic_Record">Academic Record</string>
-    <string name="See_your_score_here.">See your score here...</string>
+    <string name="See_your_score_here.">See your score here…</string>
     <string name="Top_Scorer">Top Scorer </string>
     <string name="WelcomeToday_new_topic">Welcome, Today\'s new topic</string>
-    <string name="Wanttologin">Want to login ?</string>
-    <string name="signupwith">Sign Up with ,</string>
+    <string name="WantToLogin">Want to login ?</string>
+    <string name="signUpWith">Sign Up with, </string>
     <string name="Apply">Apply</string>
     <string name="Live_class">Live classes</string>
     <string name="jitsi_class">Jitsi meet</string>
@@ -68,7 +68,7 @@
     <string name="Sir">Sir</string>
     <string name="Attendance">Attendance</string>
     <string name="Do_you_want_to_cancel_registration_process">Do you want to cancel registration process??</string>
-    <string name="Loading...">Loading...</string>
+    <string name="Loading...">Loading…</string>
 
     <string name="Title_of_video">Title of video</string>
     <string name="Subject_required">Subject required</string>
@@ -82,8 +82,8 @@
     <string name="Gallery">Gallery</string>
     <string name="Cancel">Cancel</string>
     <string name="Continue">Continue</string>
-    <string name="Clickhere">Click here</string>
-    <string name="ClickhereToContinue">Click here to continue...</string>
+    <string name="ClickHere">Click here</string>
+    <string name="ClickHereToContinue">Click here to continue…</string>
     <string name="MobileNumber">Mobile Number</string>
     <string name="Signup">Sign Up</string>
     <string name="Name">Name</string>
@@ -106,7 +106,7 @@
     <string name="Books">Books</string>
 
     <string name="orLoginWith">Or Login As</string>
-    <string name="Please_login_to_continue">Please login to continue...</string>
+    <string name="Please_login_to_continue">Please login to continue…</string>
     <string name="LOGIN">Login</string>
     <string name="IfEnroll">If enrolled please click here to </string>
     <string name="All">All</string>
@@ -130,7 +130,7 @@
     <string name="AttemptQuestions">Attempt Questions </string>
     <string name="TotalQuestion">Total Question</string>
     <string name="ReviewDetails">Review Details</string>
-    <string name="STARTPAPER">Start Now</string>
+    <string name="startPaper">Start Now</string>
     <string name="TotalQuestions">Total Questions</string>
     <string name="TotalAnswered">Total Answered</string>
     <string name="more">more..</string>
@@ -140,14 +140,14 @@
     <string name="Certificate">Certificate</string>
     <string name="Settings">Settings</string>
     <string name="Are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
-    <string name="Viewmore">View more...</string>
+    <string name="ViewMore">View more…</string>
     <string name="Title">Title</string>
     <string name="Payment_History">Payment History</string>
     <string name="Do_you_want_to_cancel_this_process">Do you want to cancel this process?</string>
     <string name="Present">Present</string>
     <string name="Instructions">Instructions</string>
-    <string name="STARTNOW">START NOW</string>
-    <string name="NOTNOW">NOT NOW</string>
+    <string name="startNow">START NOW</string>
+    <string name="notNow">NOT NOW</string>
     <string name="Description">Description</string>
     <string name="TotalAttempt">Total Attempt</string>
     <string name="CorrectAnswers">Correct Answers</string>
@@ -162,7 +162,7 @@
     <string name="Wrong">Wrong</string>
     <string name="Chart">Chart</string>
     <string name="PayFees">Pay Fees</string>
-    <string name="WrongAnnswers">Wrong Annswers</string>
+    <string name="WrongAnswers">Wrong Annswers</string>
     <string name="ExtraClass">Extra Classes</string>
     <string name="DoubtClasses">Doubts</string>
     <string name="TotalScore">Total Score</string>
@@ -185,21 +185,21 @@
     <string name="SKIP">SKIP</string>
     <string name="TotalAmount">Total Amount</string>
     <string name="Create_now">Create now</string>
-    <string name="DoyouwanttoContinue">Do you want to Continue ?</string>
-    <string name="PleasesaveyourIDandPassword">Please save your ID and Password</string>
-    <string name="YourEnrollmentIdandPasswordis">Your EnrollmentId and Password is</string>
+    <string name="DoYouWantToContinue">Do you want to Continue ?</string>
+    <string name="PleaseSaveYourDetails">Please save your ID and Password</string>
+    <string name="YourEnrollmentDetails">Your EnrollmentId and Password is</string>
     <string name="Congratulation_you_have_successfully_enrolled_the_course">Congratulation!!\nYou Have Successfully Enrolled</string>
-    <string name="Dont_have_an_account">Don\'t have an account ?</string>
+    <string name="notHaveAccount">Don\'t have an account ?</string>
     <string name="Welcome_Select_Any_Batch">Welcome , Select Any Batch</string>
     <string name="NoClassAvailable">No Class Available</string>
     <string name="NotApproved">Not Approved</string>
     <string name="At">At</string>
     <string name="Message">Message</string>
-    <string name="Notattempted">Not attempted by you</string>
-    <string name="Teachersreply">Teacher\'s reply</string>
+    <string name="NotAttempted">Not attempted by you</string>
+    <string name="TeachersReply">Teacher\'s reply</string>
     <string name="To_Date_Not_countable">To Date (Not countable)</string>
     <string name="FromDate">From Date</string>
-    <string name="Entersubject">Enter subject</string>
+    <string name="EnterSubject">Enter subject</string>
     <string name="EnterDescriptionOptional"> Description Like What you wanted to know in this chapter or for what ? (Optional)</string>
     <string name="StartDate">Start Date</string>
     <string name="EndDate">End Date</string>
@@ -211,15 +211,15 @@
     <string name="EnterEmailHere">Enter Email Here</string>
     <string name="EnterMobile">Enter Mobile</string>
     <string name="InvalidEmail">Invalid Email</string>
-    <string name="Entervalidnumber">Enter valid number</string>
-    <string name="Downloading...">Downloading...</string>
+    <string name="EnterValidNumber">Enter valid number</string>
+    <string name="Downloading...">Downloading…</string>
     <string name="EnterConfirmPassword">Enter Confirm Password</string>
-    <string name="Passwordnotmatched.">Password not matched.</string>
+    <string name="PasswordNotMatched">Password not matched.</string>
     <string name="Password_must_contain_atleast_3_characters.">Password must contain atleast 3 characters</string>
     <string name="Paper_is_not_available_this_time_please_try_again">Paper is not available this time, Please try again</string>
-    <string name="Password_doesnt_contain_spaces">Password doesn\'t contain spaces</string>
+    <string name="Password_not_contain_spaces">Password doesn\'t contain spaces</string>
     <string name="No_Questions_available">No Questions available</string>
-    <string name="Please_wait...">Please wait...</string>
+    <string name="Please_wait...">Please wait…</string>
     <string name="Payment_Done">Payment Done !</string>
     <string name="Payment_Cancel">Payment Cancel</string>
     <string name="Notices">Notices</string>
@@ -233,15 +233,15 @@
     <string name="Free">Free</string>
     <string name="Approved">Approved</string>
     <string name="Decline">Decline</string>
-    <string name="Totaldays">Total days</string>
-    <string name="Startson">Start on</string>
-    <string name="Endson">End on</string>
-    <string name="Downloadingfailed">Downloading failed !!</string>
+    <string name="TotalDays">Total days</string>
+    <string name="StartsOn">Start on</string>
+    <string name="EndsOn">End on</string>
+    <string name="DownloadingFailed">Downloading failed !!</string>
     <string name="DownloadCompleted">Download Completed !!</string>
     <string name="ErrorOccurred">Error occurred! </string>
     <string name="Version">Version</string>
     <string name="SelectBatchNow">Select Batch</string>
-    <string name="TODAYOFFER">TODAY OFFER</string>
+    <string name="todayOffer">TODAY OFFER</string>
     <string name="OFFER">OFFER</string>
     <string name="Batch">Batches</string>
     <string name="FeaturedCourses">Featured Courses</string>
@@ -256,18 +256,18 @@
     <string name="Screenshot_Captured">Screenshot Captured!</string>
     <string name="Copied_to_clipboard">Copied to clipboard</string>
     <string name="PaidAmount"> Paid Amount</string>
-    <string name="Transactiondoneon">Transaction done on</string>
+    <string name="TransactionDoneOn">Transaction done on</string>
     <string name="PayId">Pay-Id</string>
     <string name="EmailExist">Email Exist Already !!</string>
     <string name="Please_Attempt_Any_Question....">Please Attempt Any Question....</string>
-    <string name="Want_to_learn_something_new">Want to learn something?</string>
+    <string name="Want_to_learn_something_new">Explore Highly Technical Courses</string>
     <string name="Payment_Information_Not_Added_By_Admin">Payment Information Not Added By Admin..</string>
     <string name="Are_you_sure_you_want_to_cance_this_test_Once_you_cancel_Yourtestissubmittedautomatically.">Are you sure you want to cancel this test ?
 Once you cancel, Your test is submitted automatically.</string>
     <string name="Error_in_payment">Error in payment</string>
     <string name="An_invalid_Payment_or_PayPalConfiguration_was_submitted">An invalid Payment or PayPalConfiguration was submitted.</string>
     <string name="PaymentCompleted">Payment Completed</string>
-    <string name="TransactiondoneId">Transaction Id</string>
+    <string name="TransactionDoneId">Transaction Id</string>
     <string name="Razorpay_Payment_details_missing_from_admin">Razorpay Payment details missing from admin !!</string>
     <string name="Paypal_Payment_details_missing_from_admin">Paypal Payment details missing from admin !!</string>
     <string name="Demo">Demo App you can\'t change anything</string>
@@ -275,13 +275,13 @@ Once you cancel, Your test is submitted automatically.</string>
     <string name="BatchChange">Batch Change</string>
     <string name="Selected">Selected : </string>
     <string name="clickChangeBatch">Click here to change batch..</string>
-    <string name="Downloading">Downloading... </string>
+    <string name="Downloading">Downloading… </string>
     <string name="CourseContent">Course Content</string>
     <string name="Subjects">Subjects</string>
     <string name="NewBooks">New Books</string>
     <string name="NewNotes">New Notes</string>
     <string name="OldPapersAdded">Old papers added</string>
-    <string name="negativemarkinstruct">1. There will be No Negative marking</string>
+    <string name="negativeMarksInstructions">1. There will be No Negative marking</string>
     <string name="ThereWillBe">There will be</string>
 
     <string name="exam_instructions">2. All questions are compulsory.\n3. Please read questions carefully each questions has separate marking.\n

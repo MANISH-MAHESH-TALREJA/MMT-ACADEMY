@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:visibility="gone"
                     android:id="@+id/teacherHeading"
-                    android:text="@string/Teachersreply" />
+                    android:text="@string/TeachersReply" />
                 <net.manish.sem05.utils.widgets.CustomeTextRegular
                     android:id="@+id/teachersReply"
                     android:layout_width="match_parent"

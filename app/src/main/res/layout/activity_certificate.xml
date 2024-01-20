@@ -15,7 +15,6 @@
         android:orientation="vertical">
 
 
-
         <include layout="@layout/header" />
     </RelativeLayout>
 
@@ -28,14 +27,32 @@
 
         />
 
-    <RelativeLayout
+    <net.manish.sem05.utils.widgets.CustomTextBold
+
+        android:id="@+id/btDownload"
+        android:layout_width="@dimen/_165sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:background="@drawable/back_shade_designmain"
+        android:elevation="@dimen/_2sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_280sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="@string/Download"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp" />
+
+    <!--<RelativeLayout
         android:id="@+id/btDownload"
         android:layout_width="@dimen/_165sdp"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_280sdp"
-        android:paddingEnd="@dimen/_10sdp">
+        android:paddingEnd="@dimen/_10sdp"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="@dimen/_160sdp"
@@ -55,16 +72,17 @@
             android:textColor="@color/white"
             android:textSize="@dimen/_13sdp" />
 
-    </RelativeLayout>
+    </RelativeLayout>-->
+
     <TextView
+        android:id="@+id/path"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btDownload"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/_1sdp"
-        android:textSize="@dimen/_12sdp"
-        android:layout_below="@+id/btDownload"
         android:gravity="center_horizontal"
-        android:id="@+id/path"/>
+        android:textSize="@dimen/_12sdp" />
 
     <ImageView
         android:id="@+id/noResultTv"

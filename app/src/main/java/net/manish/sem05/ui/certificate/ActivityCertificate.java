@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -24,7 +23,6 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.DownloadListener;
 import com.androidnetworking.interfaces.DownloadProgressListener;
-import com.androidnetworking.interfaces.StringRequestListener;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -42,12 +40,8 @@ import net.manish.sem05.utils.ProjectUtils;
 import net.manish.sem05.utils.sharedpref.SharedPref;
 import net.manish.sem05.utils.widgets.CustomTextExtraBold;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.File;
 import java.util.List;
-import java.util.Locale;
 
 public class ActivityCertificate extends BaseActivity {
     Context mContext;
@@ -55,7 +49,7 @@ public class ActivityCertificate extends BaseActivity {
     ImageView ivBack;
     ImageView noResultTv;
     CustomTextExtraBold tvHeader;
-    RelativeLayout btDownload;
+    net.manish.sem05.utils.widgets.CustomTextBold btDownload;
     String baseUrl;
     String fileName;
     SharedPref sharedPref;
@@ -267,7 +261,7 @@ public class ActivityCertificate extends BaseActivity {
                     @Override
                     public void onError(ANError error) {
                         ProjectUtils.pauseProgressDialog();
-                        Toast.makeText(mContext, getResources().getString(R.string.Downloadingfailed) , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, getResources().getString(R.string.DownloadingFailed) , Toast.LENGTH_SHORT).show();
 
                     }
                 });

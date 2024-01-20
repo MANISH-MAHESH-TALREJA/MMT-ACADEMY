@@ -26,7 +26,6 @@ import net.manish.sem05.R;
 import net.manish.sem05.model.modellogin.ModelLogin;
 import net.manish.sem05.ui.batch.ModelBatchDetailsOld;
 import net.manish.sem05.ui.paymentGateway.ActivityPaymentGateway;
-import net.manish.sem05.ui.paymentGateway.paypal;
 import net.manish.sem05.utils.AppConsts;
 import net.manish.sem05.utils.ProjectUtils;
 import net.manish.sem05.utils.sharedpref.SharedPref;
@@ -40,7 +39,7 @@ public class ActivitySignUp extends AppCompatActivity implements View.OnClickLis
 
     Context context;
     CustomEditText etUserName, etUserMobile, etUserEmail;
-    RelativeLayout btnSignup;
+    net.manish.sem05.utils.widgets.CustomTextBold btnSignup;
     ModelLogin modelLogin;
     SharedPref sharedPref;
     String versionCode;
@@ -175,7 +174,7 @@ public class ActivitySignUp extends AppCompatActivity implements View.OnClickLis
 
 
                                 } else {
-                                    Toast.makeText(context, "" + getResources().getString(R.string.Entervalidnumber), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, "" + getResources().getString(R.string.EnterValidNumber), Toast.LENGTH_SHORT).show();
                                 }
                             } else {
                                 etUserEmail.setError("" + getResources().getString(R.string.InvalidEmail));
