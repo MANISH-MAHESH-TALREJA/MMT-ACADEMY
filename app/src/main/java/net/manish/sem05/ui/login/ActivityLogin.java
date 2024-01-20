@@ -1,15 +1,15 @@
 package net.manish.sem05.ui.login;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
+
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -19,7 +19,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+
 import com.androidnetworking.AndroidNetworking;
+
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.androidnetworking.interfaces.StringRequestListener;
@@ -29,10 +31,10 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import net.manish.sem05.R;
 import net.manish.sem05.model.modellogin.ModelLogin;
+
 import net.manish.sem05.ui.batch.ActivityBatch;
 import net.manish.sem05.ui.forgotpassword.ActivityForgotPassword;
-import net.manish.sem05.ui.multibatch.ActivityMultiBatchHome;
-import net.manish.sem05.ui.signup.ActivitySignUp;
+import net.manish.sem05.ui.home.ActivityHome;
 import net.manish.sem05.utils.AppConsts;
 import net.manish.sem05.utils.ProjectUtils;
 import net.manish.sem05.utils.sharedpref.SharedPref;
@@ -47,6 +49,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+
 import static net.manish.sem05.utils.AppConsts.IS_REGISTER;
 
 public class ActivityLogin extends AppCompatActivity implements View.OnClickListener {
@@ -59,13 +62,12 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     SharedPref sharedPref;
     CustomEditText etUserName;
     CustomEditText etPassword;
-
+    LinearLayout tvMove;
     CustomTextSemiBold tvContactAdmin;
     String versionCode = "";
     CustomSmallText tvOrLoginWith, forgotPass;
     SwipeRefreshLayout swipeRefreshLayout;
     static String checkLanguage = "";
-    LinearLayout btnSignIn,tvMove;
 
 
     @Override
@@ -79,7 +81,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
 
 
-
         initial();
     }
 
@@ -87,8 +88,6 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     private void initial() {
 
         btLogin = findViewById(R.id.btLogin);
-        btnSignIn = findViewById(R.id.btnSignIn);
-        btnSignIn.setOnClickListener(this);
         forgotPass = findViewById(R.id.forgotPass);
         forgotPass.setOnClickListener(this);
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
@@ -151,118 +150,72 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
 
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_CHECKLANGUAGE)
                 .build().getAsString(new StringRequestListener() {
-            @Override
-            public void onResponse(String response) {
+                    @Override
+                    public void onResponse(String response) {
 
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    if ("true".equalsIgnoreCase(jsonObject.getString("status"))) {
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("arabic")) {
-                            //for rtl
-                            Configuration configuration = getResources().getConfiguration();
-                            configuration.setLayoutDirection(new Locale("fa"));
-                            getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
-                            String languageToLoad = "ar"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            if ("true".equalsIgnoreCase(jsonObject.getString("status"))) {
+                                if (jsonObject.getString("languageName").equalsIgnoreCase("arabic")) {
+                                    //for rtl
+                                    Configuration configuration = getResources().getConfiguration();
+                                    configuration.setLayoutDirection(new Locale("fa"));
+                                    getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
+                                    String languageToLoad = "ar"; // your language
+                                    Locale locale = new Locale(languageToLoad);
+                                    Locale.setDefault(locale);
+                                    Configuration config = new Configuration();
+                                    config.locale = locale;
+                                    getBaseContext().getResources().updateConfiguration(config,
+                                            getBaseContext().getResources().getDisplayMetrics());
 
-                            if (!checkLanguage.equals("ar")) {
-                                recreate();
+                                    if (!checkLanguage.equals("ar")) {
+                                        recreate();
+                                    }
+                                    checkLanguage = "ar";
+
+                                }
+                                if (jsonObject.getString("languageName").equalsIgnoreCase("french")) {
+                                    String languageToLoad = "fr"; // your language
+                                    Locale locale = new Locale(languageToLoad);
+                                    Locale.setDefault(locale);
+                                    Configuration config = new Configuration();
+                                    config.locale = locale;
+                                    getBaseContext().getResources().updateConfiguration(config,
+                                            getBaseContext().getResources().getDisplayMetrics());
+                                    if (!checkLanguage.equals("fr")) {
+                                        recreate();
+                                    }
+                                    checkLanguage = "fr";
+
+                                }
+                                if (jsonObject.getString("languageName").equalsIgnoreCase("english")) {
+                                    String languageToLoad = "en"; // your language
+                                    Locale locale = new Locale(languageToLoad);
+                                    Locale.setDefault(locale);
+                                    Configuration config = new Configuration();
+                                    config.locale = locale;
+                                    getBaseContext().getResources().updateConfiguration(config,
+                                            getBaseContext().getResources().getDisplayMetrics());
+                                    if (!checkLanguage.equals("en")) {
+                                        recreate();
+                                    }
+                                    checkLanguage = "en";
+
+
+                                }
                             }
-                            checkLanguage = "ar";
-
-                        }
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("french")) {
-                            String languageToLoad = "fr"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-                            if (!checkLanguage.equals("fr")) {
-                                recreate();
-                            }
-                            checkLanguage = "fr";
-
-                        }
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("english")) {
-                            String languageToLoad = "en"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-                            if (!checkLanguage.equals("en")) {
-                                recreate();
-                            }
-                            checkLanguage = "en";
-
-
-                        }
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("hindi")) {
-                            String languageToLoad = "hi"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-                            if (!checkLanguage.equals("hi")) {
-                                recreate();
-                            }
-                            checkLanguage = "hi";
-
-
-                        }
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("german")) {
-                            String languageToLoad = "de"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-                            if (!checkLanguage.equals("de")) {
-                                recreate();
-                            }
-                            checkLanguage = "de";
-
-
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
 
-                        if (jsonObject.getString("languageName").equalsIgnoreCase("spanish")) {
-                            String languageToLoad = "es"; // your language
-                            Locale locale = new Locale(languageToLoad);
-                            Locale.setDefault(locale);
-                            Configuration config = new Configuration();
-                            config.locale = locale;
-                            getBaseContext().getResources().updateConfiguration(config,
-                                    getBaseContext().getResources().getDisplayMetrics());
-                            if (!checkLanguage.equals("es")) {
-                                recreate();
-                            }
-                            checkLanguage = "es";
-
-
-                        }
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
-            }
-
-            @Override
-            public void onError(ANError anError) {
-                swipeRefreshLayout.setRefreshing(false);
-            }
-        });
+                    @Override
+                    public void onError(ANError anError) {
+                        swipeRefreshLayout.setRefreshing(false);
+                    }
+                });
 
 
     }
@@ -270,7 +223,8 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     private void loginApi(String token) {
 
         ProjectUtils.showProgressDialog(mContext, false, getResources().getString(R.string.Loading___));
-        Log.v("saloni","saloni  "+etUserName.getText().toString());
+
+
         AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_LOGIN)
                 .addBodyParameter(AppConsts.USERNAME, etUserName.getText().toString())
                 .addBodyParameter(AppConsts.PASSWORD, etPassword.getText().toString())
@@ -281,7 +235,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                 .getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
                     @Override
                     public void onResponse(ModelLogin response) {
-Log.v("TESTT","saloni  "+response);
+
                         ProjectUtils.pauseProgressDialog();
                         if (AppConsts.TRUE.equals(response.getStatus())) {
 
@@ -295,7 +249,7 @@ Log.v("TESTT","saloni  "+response);
                             Calendar cal = Calendar.getInstance();
                             String format = new SimpleDateFormat("E, MMM d, yyyy").format(cal.getTime());
                             sharedPref.setDate("date", format);
-                            startActivity(new Intent(mContext, ActivityMultiBatchHome.class).putExtra(AppConsts.IS_SPLASH, "true"));
+                            startActivity(new Intent(mContext, ActivityHome.class).putExtra(AppConsts.IS_SPLASH, "true"));
                             infoUpdate();
 
                         } else {
@@ -311,7 +265,6 @@ Log.v("TESTT","saloni  "+response);
 
                     @Override
                     public void onError(ANError anError) {
-                        Log.v("TESTT","saloni  "+anError);
                         tvContactAdmin.setVisibility(View.VISIBLE);
                         String string = "" + getResources().getString(R.string.Try_again_server_issue);
                         Spanned sp = Html.fromHtml(string);
@@ -382,14 +335,11 @@ Log.v("TESTT","saloni  "+response);
             startActivity(new Intent(mContext, ActivityForgotPassword.class));
 
         }
-        if(v.getId() == R.id.btnSignIn) {
-            startActivity(new Intent(mContext, ActivitySignUp.class).putExtra("login","Withoutbatch"));
-        }}
+    }
 
     private void exitAppDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setMessage(getResources().getString(R.string.Are_you_sure_you_want_to_close_this_app))
-
                 .setCancelable(false)
                 .setPositiveButton(getResources().getString(R.string.Yes), new DialogInterface.OnClickListener() {
                     @Override
@@ -440,6 +390,8 @@ Log.v("TESTT","saloni  "+response);
 
                             }
                         } catch (JSONException e) {
+
+
                             e.printStackTrace();
                         }
 

@@ -16,7 +16,7 @@ public interface AppConsts {
 
     void setIdsOfAllSelectedQuestions(HashMap<String, String> hasIdsAns, HashMap<String, String> questionTimeHash);
 
-    String MAIN_URl = "https://kamleshyadav.com/e-academy_app"; //  put your server base url here thanks..
+    String MAIN_URl = "https://academy.manishtalreja.com"; //  put your server base url here thanks..
     String BASE_URL = MAIN_URl + "/api/";
     String URL_PRIVACY_POLICY = MAIN_URl+"/privacyandpolicy";
     String STUDENT_DATA = "student_data";
@@ -37,6 +37,8 @@ public interface AppConsts {
     String API_NOTIFICATION_KBC = "home/notices";
     String API_WELCOME = "home/app_version";
     String API_GET_BATCH_FEE = "home/get_batch_fee";
+
+    String API_GET_BATCH_FEE_OLD = "home/get_batch_fees";
     String API_get_all_data = "home/get_all_data";
     String API_CHANGE_BATCH = "home/changeMyBatch";
     String API_VIEW_SUBJECT_LIST = "home/view_subject_list";

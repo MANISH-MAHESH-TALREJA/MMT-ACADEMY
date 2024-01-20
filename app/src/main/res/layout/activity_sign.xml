@@ -9,9 +9,6 @@
     android:scrollbars="none"
 
     tools:context=".ui.signup.ActivitySignUp">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,14 +36,14 @@
                 android:paddingEnd="@dimen/_3sdp"
                 android:text="@string/signupwith"
                 android:textColor="@color/colorText"
-                android:textSize="@dimen/_17sdp"
+                android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
 
             <net.manish.sem05.utils.widgets.CustomTextBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#fe9d43"
                 android:textSize="@dimen/_17sdp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -106,34 +103,22 @@
             android:textAlignment="viewStart"
             android:textColor="@color/colorText"
             android:textDirection="locale" />
-        <net.manish.sem05.utils.widgets.CustomTextSemiBold
-            android:id="@+id/tvMessage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_18sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_14sdp"
-            android:visibility="gone"
-          />
+
 
         <RelativeLayout
             android:id="@+id/btnSignup"
-            android:layout_width="@dimen/_145sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginBottom="@dimen/_35sdp"
-            android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
-            android:elevation="@dimen/_2sdp"
-            android:background="@drawable/back_shade_designmain"
+            android:layout_width="@dimen/_165sdp"
+
             android:layout_height="wrap_content">
 
-
+            <ImageView
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@drawable/backbutton" />
 
             <net.manish.sem05.utils.widgets.CustomSmallText
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/_35sdp"
+                android:layout_height="@dimen/_75sdp"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:text="@string/Signup"
@@ -141,94 +126,17 @@
                 android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>
-
-
-
-
+        <net.manish.sem05.utils.widgets.CustomTextSemiBold
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone" />
 
 
     </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_alignParentBottom="true"
-            android:id="@+id/rlSignup"
-            android:background="@drawable/back_splash_grad"
-            android:layout_height="@dimen/_36sdp">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_19sdp"
-                    android:id="@+id/btnSignIn"
-                    android:gravity="center"
-                    android:padding="@dimen/_1sdp"
-                    android:src="@drawable/signin"
-                    app:tint="@color/white" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:layout_marginTop="-1dp"
-                    android:text="@string/Signup"/>
-            </LinearLayout>
-
-            <View android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@color/white"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/tvMove"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_19sdp"
-                    android:padding="@dimen/_2sdp"
-                    android:gravity="center"
-                    android:src="@drawable/ic_baseline_home_24"
-                    app:tint="@color/white" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:text="@string/home"/></LinearLayout>
-            <View android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@color/white"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/loginTv"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_19sdp"
-                    android:gravity="center"
-                    android:padding="@dimen/_2sdp"
-                    android:src="@drawable/ic_baseline_login_24"
-                    app:tint="@color/white" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:text="@string/LOGIN"/></LinearLayout>
-
-        </LinearLayout>
-    </RelativeLayout>
 
 </ScrollView>

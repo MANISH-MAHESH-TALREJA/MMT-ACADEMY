@@ -1,16 +1,20 @@
 package net.manish.sem05.ui.paymentGateway;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.media.MediaScannerConnection;
 import android.os.Bundle;
+
 import android.os.Environment;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
@@ -21,25 +25,29 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
+import com.androidnetworking.interfaces.StringRequestListener;
+
 import net.manish.sem05.R;
 import net.manish.sem05.model.ModelSettingRecord;
 import net.manish.sem05.model.modellogin.ModelLogin;
-import net.manish.sem05.ui.batch.ModelCatSubCat;
+import net.manish.sem05.ui.batch.ModelBatchDetailsOld;
 import net.manish.sem05.ui.home.ActivityHome;
-import net.manish.sem05.ui.multibatch.ActivityMultiBatchHome;
 import net.manish.sem05.utils.AppConsts;
 import net.manish.sem05.utils.ProjectUtils;
 import net.manish.sem05.utils.sharedpref.SharedPref;
 import net.manish.sem05.utils.widgets.CustomSmallText;
 import net.manish.sem05.utils.widgets.CustomTextBold;
 import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+
 import net.manish.sem05.utils.widgets.CustomeTextRegular;
+import com.razorpay.Checkout;
+import com.razorpay.PaymentResultListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -48,28 +56,28 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Locale;
 
+
 import static net.manish.sem05.utils.AppConsts.IS_REGISTER;
 
-public class ActivityPaymentGateway extends AppCompatActivity implements View.OnClickListener {
+public class ActivityPaymentGateway extends AppCompatActivity implements View.OnClickListener, PaymentResultListener {
     ImageView ivBack;
     CustomTextExtraBold tvHeader;
     ImageView copyId, copyPass;
     RelativeLayout paymentDoneLayout;
     CustomTextBold tvEnrollment, tvPassword;
     LinearLayout llLoginDetailsForNewStudents, llPayment;
-    static String amountForPayment, BatchId = "", name = "", email = "", mobile = "", token = "", versionCode = "", paymentType = "", amount = "";
+    static String amountForPayment, BatchId = "", name, email, mobile, token, versionCode, paymentType, amount;
     SharedPref sharedPref;
     ModelLogin modelLogin;
     ModelSettingRecord modelSettingRecord;
     Context context;
-    static ModelCatSubCat.batchData.SubCategory.BatchData batchData;
+    static   ModelBatchDetailsOld.batchData batchData;
     CustomSmallText tvMove;
-    static String clientIdPaypal = "", rZPKey = "", tranDoneId = "", stuId = "";
+    static String clientIdPaypal = "", rZPKey = "", tranDoneId = "";
     static String checkLanguage = "";
     static String currencyCode = "";
     TextView tryAgainWhenServerError;
     CustomeTextRegular detailsAfterPaymentDone;
-    static boolean directbuy = false;
 
     @Override
 
@@ -85,167 +93,109 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
         tryAgainWhenServerError.setOnClickListener(this);
         ivBack.setOnClickListener(this);
 
+        try {
+            modelSettingRecord = sharedPref.getSettingInfo(AppConsts.APP_INFO);
+        } catch (Exception e) {
 
-        if (getIntent().hasExtra("login")) {
+        }
+        if (getIntent().hasExtra("name")) {
+
             name = getIntent().getStringExtra("name");
             email = getIntent().getStringExtra("email");
             mobile = getIntent().getStringExtra("mobile");
             versionCode = getIntent().getStringExtra("versionCode");
             token = getIntent().getStringExtra("token");
-            initial();
-            withOutBatchLogin();
-        }else {
-            if (getIntent().hasExtra("directbuy")) {
-                directbuy = true;
-                stuId = getIntent().getStringExtra("stuId");
-                BatchId = getIntent().getStringExtra("BatchId");
-            }
-            try {
-                modelSettingRecord = sharedPref.getSettingInfo(AppConsts.APP_INFO);
-            } catch (Exception e) {
+            amount = getIntent().getStringExtra("amount");
+            BatchId = getIntent().getStringExtra("BatchId");
+            paymentType = getIntent().getStringExtra("paymentType");
 
-            }
-            if (getIntent().hasExtra("name")) {
-                name = getIntent().getStringExtra("name");
-                email = getIntent().getStringExtra("email");
-                mobile = getIntent().getStringExtra("mobile");
-                versionCode = getIntent().getStringExtra("versionCode");
-                token = getIntent().getStringExtra("token");
-                amount = getIntent().getStringExtra("amount");
-                BatchId = getIntent().getStringExtra("BatchId");
-                paymentType = getIntent().getStringExtra("paymentType");
-            }
-            if (getIntent().hasExtra("BatchId")) {
-                amount = getIntent().getStringExtra("amount");
-                BatchId = getIntent().getStringExtra("BatchId");
-                paymentType = getIntent().getStringExtra("paymentType");
-            }
-            if (getIntent().hasExtra("data")) {
 
-                batchData = (ModelCatSubCat.batchData.SubCategory.BatchData) getIntent().getSerializableExtra("data");
-                if (batchData.getBatchType().equals("2")) {
-                    if (batchData.getBatchOfferPrice().isEmpty()) {
-                        amountForPayment = "" + batchData.getBatchPrice();
-                    } else {
-                        amountForPayment = "" + batchData.getBatchOfferPrice();
-                    }
+        }
+        if (getIntent().hasExtra("data")) {
+            batchData = (ModelBatchDetailsOld.batchData) getIntent().getSerializableExtra("data");
+            if (batchData.getBatchType().equals("2")) {
+                if (batchData.getBatchOfferPrice().isEmpty()) {
+                    amountForPayment = "" + batchData.getBatchPrice();
                 } else {
-                    amountForPayment = "Free";
-                    successSignUpApi("" + BatchId, "", "");
-                    initial();
+                    amountForPayment = "" + batchData.getBatchOfferPrice();
                 }
-                currencyCode = "" + batchData.getCurrencyCode();
+            } else {
+                amountForPayment = "Free";
+                successSignUpApi("" + BatchId, "", "");
+                initial();
+            }
+            currencyCode = "" + batchData.getCurrencyCode();
 
-                if (!amountForPayment.equalsIgnoreCase("free")) {
+            if (!amountForPayment.equalsIgnoreCase("free")) {
 
-                    if (modelSettingRecord != null) {
+                if (modelSettingRecord != null) {
 
 
-                        if (paymentType.equalsIgnoreCase("1")) {
-                            //rzp
-                            if (!modelSettingRecord.getData().getRazorpayKeyId().isEmpty()) {
-                                rZPKey = modelSettingRecord.getData().getRazorpayKeyId();
-                                if (!rZPKey.isEmpty()) {
-                                    initial();
-                                    Log.v("saloni12345","saloni--        "+rZPKey+", "+currencyCode+amountForPayment);
-                                    Intent i = new Intent(this, Razorpay.class);
-                                    i.putExtra("rZPKey", "" + rZPKey);
-                                    i.putExtra("amount", "" + amountForPayment);
-                                    i.putExtra("code", "" + currencyCode);
-                                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                    startActivityForResult(i, 111);
-
-                                    //saloni shrivastava
-                                } else {
-                                    Toast.makeText(context, getResources().getString(R.string.Razorpay_Payment_details_missing_from_admin), Toast.LENGTH_SHORT).show();
-                                    finish();
-                                }
-
-                            } else {
-                                Toast.makeText(context, getResources().getString(R.string.Razorpay_Payment_details_missing_from_admin), Toast.LENGTH_SHORT).show();
-                                finish();
-                            }
+                    if (paymentType.equalsIgnoreCase("1")) {
+                        //rzp
+                        if (!modelSettingRecord.getData().getRazorpayKeyId().isEmpty()) {
+                            rZPKey = modelSettingRecord.getData().getRazorpayKeyId();
+                            initial();
+                            Checkout.preload(getApplicationContext());
+                            rzp();
 
                         } else {
-                            //paypal
-                            if (!modelSettingRecord.getData().getPaypalClientId().isEmpty()) {
-                                initial();
-                                clientIdPaypal = modelSettingRecord.getData().getPaypalClientId();
-                                if (clientIdPaypal != null) {
-                                    if (!clientIdPaypal.isEmpty()) {
+                            Toast.makeText(context, getResources().getString(R.string.Razorpay_Payment_details_missing_from_admin), Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
 
-                                        Intent i = new Intent(this, paypal.class);
-                                        i.putExtra("clientId", "" + clientIdPaypal);
-                                        i.putExtra("amount", "" + amountForPayment);
-                                        i.putExtra("code", "" + currencyCode);
-                                        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                        startActivityForResult(i, 000);
-                                    } else {
-                                        Toast.makeText(context, getResources().getString(R.string.Paypal_Payment_details_missing_from_admin), Toast.LENGTH_SHORT).show();
-                                        finish();
-                                    }
+                    } else {
+                        //paypal
+                        if (!modelSettingRecord.getData().getPaypalClientId().isEmpty()) {
+                            initial();
+                            clientIdPaypal = modelSettingRecord.getData().getPaypalClientId();
+                            if (clientIdPaypal != null) {
+                                if (!clientIdPaypal.isEmpty()) {
+
+                                    startActivity(new Intent(this, paypal.class).putExtra("clientId", "" + clientIdPaypal)
+                                            .putExtra("amount", "" + amountForPayment).putExtra("code", "" + currencyCode).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                                    finish();
+
+
                                 } else {
                                     Toast.makeText(context, getResources().getString(R.string.Paypal_Payment_details_missing_from_admin), Toast.LENGTH_SHORT).show();
                                     finish();
                                 }
-
                             } else {
                                 Toast.makeText(context, getResources().getString(R.string.Paypal_Payment_details_missing_from_admin), Toast.LENGTH_SHORT).show();
                                 finish();
                             }
 
-
+                        } else {
+                            Toast.makeText(context, getResources().getString(R.string.Paypal_Payment_details_missing_from_admin), Toast.LENGTH_SHORT).show();
+                            finish();
                         }
 
-                    } else {
-                        siteSettings();
+
                     }
 
+                } else {
+                    siteSettings();
                 }
-            }
-            if (getIntent().hasExtra("paymentdata")) {
-                initial();
-
 
             }
-
-
-            modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
         }
+        if (getIntent().hasExtra("paymentdata")) {
+            initial();
+            if (!amountForPayment.equalsIgnoreCase("free")) {
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.Payment_Done), Toast.LENGTH_SHORT).show();
+            }
+            successSignUpApi("" + BatchId, "" + getIntent().getStringExtra("paymentdata"), "" + getIntent().getStringExtra("amount"));
+
+        }
+
+
+        modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
 
 
     }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-
-        if (requestCode == 000) {
-            if (resultCode == Activity.RESULT_OK) {
-                if (!amountForPayment.equalsIgnoreCase("free")) {
-                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.Payment_Done), Toast.LENGTH_SHORT).show();
-                }
-                successSignUpApi("" + BatchId, "" + data.getStringExtra("paymentdata"), "" + data.getStringExtra("amount"));
-            }
-            if (resultCode == Activity.RESULT_CANCELED) {
-                finish();
-                Toast.makeText(context, getResources().getString(R.string.Cancel), Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            if (requestCode == 111) {
-                try {
-                    successSignUpApi("" + BatchId, "" + data.getStringExtra("paymentdata"), "" + data.getStringExtra("amount"));
-                } catch (Exception e) {
-
-                }
-                if (resultCode == Activity.RESULT_CANCELED) {
-                    finish();
-                }
-            }
-        }
-    }
 
     void siteSettings() {
         ProjectUtils.showProgressDialog(context, false, getResources().getString(R.string.Loading___));
@@ -331,6 +281,8 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
         llPayment = findViewById(R.id.llPayment);
         tvHeader = findViewById(R.id.tvHeader);
         tvHeader.setText("" + getResources().getString(R.string.app_name));
+
+
         copyId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -360,18 +312,38 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
 
     }
 
-    void withOutBatchLogin(){
-        tvMove.setVisibility(View.VISIBLE);
 
-        modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
-        tvEnrollment.setText("" + getResources().getString(R.string.EnrollmentId) + "   " + modelLogin.getStudentData().getEnrollmentId());
-        tvPassword.setText(getResources().getString(R.string.Password) + "    " + modelLogin.getStudentData().getPassword());
+    void rzp() {
+        if (!amountForPayment.isEmpty()) {
 
-        llLoginDetailsForNewStudents.setVisibility(View.VISIBLE);
-        llPayment.setVisibility(View.GONE);
+            startPayment("" + amountForPayment);
+        }
 
-        ivBack.setVisibility(View.GONE);
-        ProjectUtils.pauseProgressDialog();
+    }
+
+    public void startPayment(String payments) {
+
+        Checkout checkout = new Checkout();
+        checkout.setKeyID(rZPKey);
+        final Activity activity = this;
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("name", "" + getResources().getString(R.string.app_name));
+            jsonObject.put("description", "Pay Fee");
+            jsonObject.put("currency", "" + currencyCode);
+            jsonObject.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
+            jsonObject.put("payment_capture", true);
+            String payment = "" + payments;
+            double totalPay = Double.parseDouble(payment);
+            totalPay = totalPay * 100;
+            jsonObject.put("amount", "" + totalPay);
+            checkout.open(activity, jsonObject);
+
+        } catch (JSONException e) {
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.Error_in_payment), Toast.LENGTH_SHORT).show();
+            finish();
+            e.printStackTrace();
+        }
 
 
     }
@@ -389,7 +361,7 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.tvMove) {
-            startActivity(new Intent(context, ActivityMultiBatchHome.class));
+            startActivity(new Intent(context, ActivityHome.class));
             Toast.makeText(context, getResources().getString(R.string.Welcome) + ", " + modelLogin.getStudentData().getFullName(), Toast.LENGTH_SHORT)
                     .show();
         } else if (id == R.id.ivBack) {
@@ -399,55 +371,48 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
         }
     }
 
+    @Override
+    public void onPaymentSuccess(String s) {
+        if (!amountForPayment.equalsIgnoreCase("free")) {
+
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.Payment_Done), Toast.LENGTH_SHORT).show();
+        }
+
+
+        successSignUpApi("" + BatchId, s, amountForPayment);
+    }
+
+    @Override
+    public void onPaymentError(int i, String s) {
+
+        Toast.makeText(getApplicationContext(), getResources().getString(R.string.Payment_Cancel), Toast.LENGTH_SHORT).show();
+        finish();
+
+
+    }
 
     void successSignUpApi(String batchId, String transectionId, String amountt) {
 
         ProjectUtils.showProgressDialog(context, true, getResources().getString(R.string.Loading___));
         tranDoneId = transectionId;
-        if (directbuy) {
-            Log.v("saloni1234","saloni1234 directbuy   "+transectionId+"  "+batchId);
-            AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_CHANGE_BATCH)
-                    .addBodyParameter(AppConsts.STUDENT_ID, "" + stuId)
-                    .addBodyParameter(AppConsts.BATCH_ID, "" + BatchId)
-                    .addBodyParameter(AppConsts.TRANSACTION_ID, "" + transectionId)
-                    .addBodyParameter(AppConsts.AMOUNT, "" + amountt)
-                    .build().getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
-                @Override
-                public void onResponse(ModelLogin response) {
-                    if (AppConsts.TRUE.equals(response.getStatus())) {
-                        sharedPref.setUser(AppConsts.STUDENT_DATA, response);
-                        startActivity(new Intent(context, ActivityHome.class));
-                        Toast.makeText(context, context.getResources().getString(R.string.BatchAdded), Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(context, "" + response.getMsg(), Toast.LENGTH_SHORT).show();
-                    }
-                }
 
-                @Override
-                public void onError(ANError anError) {
-                    Toast.makeText(context, "" + context.getResources().getString(R.string.Try_again_server_issue), Toast.LENGTH_SHORT).show();
+        AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_STUDENT_REGISTRATION)
+                .addBodyParameter(AppConsts.NAME, "" + name)
+                .addBodyParameter(AppConsts.EMAIL, "" + email)
+                .addBodyParameter(AppConsts.MOBILE, "" + mobile)
+                .addBodyParameter(AppConsts.TOKEN, "" + token)
+                .addBodyParameter(AppConsts.TRANSACTION_ID, "" + transectionId)
+                .addBodyParameter(AppConsts.AMOUNT, "" + amountForPayment)
+                .addBodyParameter(AppConsts.BATCH_ID, "" + BatchId)
+                .addBodyParameter(AppConsts.VERSION_CODE, "" + versionCode)
+                .build()
+                .getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
+                    @Override
+                    public void onResponse(ModelLogin response) {
+                        ProjectUtils.pauseProgressDialog();
+                        paymentDoneLayout.setVisibility(View.GONE);
+                        try {
 
-                }
-            });
-        } else {
-            Log.v("saloni1234","with batch idid---  t  "+transectionId+", b "+batchId+" , "+versionCode+name+email+mobile+amountForPayment);
-
-            AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.API_STUDENT_REGISTRATION)
-                    .addBodyParameter(AppConsts.NAME, "" + name)
-                    .addBodyParameter(AppConsts.EMAIL, "" + email)
-                    .addBodyParameter(AppConsts.MOBILE, "" + mobile)
-                    .addBodyParameter(AppConsts.TOKEN, "" + token)
-                    .addBodyParameter(AppConsts.TRANSACTION_ID, "" + transectionId)
-                    .addBodyParameter(AppConsts.AMOUNT, "" + amountForPayment)
-                    .addBodyParameter(AppConsts.BATCH_ID, "" + BatchId)
-                    .addBodyParameter(AppConsts.VERSION_CODE, "" + versionCode)
-                    .build()
-                    .getAsObject(ModelLogin.class, new ParsedRequestListener<ModelLogin>() {
-                        @Override
-                        public void onResponse(ModelLogin response) {
-                            Log.v("saloni1234","with batch idid    "+response.getMsg());
-                            ProjectUtils.pauseProgressDialog();
-                            paymentDoneLayout.setVisibility(View.GONE);
                             if (response.getStatus().equalsIgnoreCase("true")) {
                                 tvMove.setVisibility(View.VISIBLE);
                                 sharedPref.setUser(AppConsts.STUDENT_DATA, response);
@@ -475,25 +440,30 @@ public class ActivityPaymentGateway extends AppCompatActivity implements View.On
                                 ProjectUtils.pauseProgressDialog();
                                 Toast.makeText(context, "" + response.getMsg(), Toast.LENGTH_SHORT).show();
                             }
-                        }
 
-                        @Override
-                        public void onError(ANError anError) {
-                            Toast.makeText(context, getResources().getString(R.string.Try_again), Toast.LENGTH_SHORT).show();
-                            Log.v("saloni1234","saloinin---  "+anError.getErrorDetail());
-                            try {
-                                if (!transectionId.isEmpty()) {
-                                    paymentDoneLayout.setVisibility(View.VISIBLE);
-                                    detailsAfterPaymentDone.setText(getResources().getString(R.string.PaymentCompleted) + "\n" + getResources().getString(R.string.TransactiondoneId) + "  :  " + transectionId + "\n" + getResources().getString(R.string.PaidAmount) + "  :  " + amountForPayment + " " + batchData.getCurrencyDecimalCode());
-                                }
-                            } catch (Exception E) {
-                            }
+
+                        } catch (Exception e) {
                             ProjectUtils.pauseProgressDialog();
+                            e.printStackTrace();
                         }
-                    });
+
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        Toast.makeText(context, getResources().getString(R.string.Try_again), Toast.LENGTH_SHORT).show();
+                        try{
+                            if (!transectionId.isEmpty()) {
+                                paymentDoneLayout.setVisibility(View.VISIBLE);
+                                detailsAfterPaymentDone.setText(getResources().getString(R.string.PaymentCompleted) + "\n" + getResources().getString(R.string.TransactiondoneId) + "  :  " + transectionId + "\n" + getResources().getString(R.string.PaidAmount) + "  :  " + amountForPayment + " " + batchData.getCurrencyDecimalCode());
+                            }}catch (Exception E){
 
 
-        }
+                        }
+                        ProjectUtils.pauseProgressDialog();
+                    }
+                });
+
 
     }
 
