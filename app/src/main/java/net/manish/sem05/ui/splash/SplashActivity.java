@@ -20,8 +20,10 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+/*import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;*/
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import net.manish.sem05.R;
 import net.manish.sem05.model.modellogin.ModelLogin;
 import net.manish.sem05.ui.UpcomingExams.ActivityVacancyOrUpcomingExam;
@@ -142,11 +144,11 @@ public class SplashActivity extends AppCompatActivity {
 
     private void checkLogin() {
 
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
 
                     @Override
-                    public void onComplete(Task<InstanceIdResult> task) {
+                    public void onComplete(Task<String> task) {
                         Log.v("SALONI123","saloni     checkkk ");
                         if (!task.isSuccessful()) {
                             Log.v("SALONI123","saloni     checkkk1 ");
@@ -156,12 +158,12 @@ public class SplashActivity extends AppCompatActivity {
                         if (modelLogin != null) {
                             Log.v("SALONI123","saloni     checkkk 3");
                             if (modelLogin.getStudentData() != null) {
-                                Log.v("SALONI123","saloni     checkkk4 "+task.getResult().getToken());
+                                Log.v("SALONI123","saloni     checkkk4 "+task.getResult());
 
                                 AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.CHECK_LOGIN)
                                         .addBodyParameter(AppConsts.STUDENT_ID, modelLogin.getStudentData().getStudentId())
                                         .addBodyParameter(AppConsts.BATCH_ID, modelLogin.getStudentData().getBatchId())
-                                        .addBodyParameter(AppConsts.TOKEN, task.getResult().getToken())
+                                        .addBodyParameter(AppConsts.TOKEN, task.getResult())
                                         .setTag(AppConsts.CHECK_LOGIN)
                                         .setPriority(Priority.IMMEDIATE)
                                         .build()

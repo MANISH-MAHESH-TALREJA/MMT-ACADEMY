@@ -35,7 +35,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "MMT ACADEMY"
 include ':app'
-include ':mobilertc'
-include ':commonlib'
-include ':commonlib'
+// include ':commonlib'
 
+include ':commonlib'
+include ':mobilertc'

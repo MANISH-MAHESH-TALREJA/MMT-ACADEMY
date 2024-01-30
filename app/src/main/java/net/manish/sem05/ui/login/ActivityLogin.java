@@ -27,8 +27,10 @@ import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+/*import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;*/
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import net.manish.sem05.R;
 import net.manish.sem05.model.modellogin.ModelLogin;
 
@@ -282,10 +284,10 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         if (v.getId() == R.id.btLogin) {
             if (!etUserName.getText().toString().isEmpty()) {
                 if (!etPassword.getText().toString().isEmpty()) {
-                    FirebaseInstanceId.getInstance().getInstanceId()
-                            .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    FirebaseMessaging.getInstance().getToken()
+                            .addOnCompleteListener(new OnCompleteListener<String>() {
                                 @Override
-                                public void onComplete(Task<InstanceIdResult> task) {
+                                public void onComplete(Task<String> task) {
                                     if (!task.isSuccessful()) {
 
                                         return;
@@ -293,7 +295,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
                                     }
                                     if (ProjectUtils.checkConnection(mContext)) {
 
-                                        loginApi(task.getResult().getToken());
+                                        loginApi(task.getResult());
 
 
                                     } else {
@@ -365,8 +367,8 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     @Override
     public void onBackPressed() {
 
-
         exitAppDialog();
+        super.onBackPressed();
     }
 
 

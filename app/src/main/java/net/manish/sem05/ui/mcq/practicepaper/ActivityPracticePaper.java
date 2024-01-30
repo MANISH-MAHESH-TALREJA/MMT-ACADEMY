@@ -21,8 +21,9 @@ import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
+/*import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;*/
 import net.manish.sem05.R;
 import net.manish.sem05.model.modellogin.ModelLogin;
 import net.manish.sem05.model.modelpracticepaper.ModelPracticePaper;
@@ -146,10 +147,10 @@ public class ActivityPracticePaper extends BaseActivity implements View.OnClickL
     private void checkLogin() {
         sharedPref = SharedPref.getInstance(mContext);
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
                     @Override
-                    public void onComplete(Task<InstanceIdResult> task) {
+                    public void onComplete(Task<String> task) {
                         if (!task.isSuccessful()) {
 
                             return;
@@ -161,7 +162,7 @@ public class ActivityPracticePaper extends BaseActivity implements View.OnClickL
                                 AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.CHECK_LOGIN)
                                         .addBodyParameter(AppConsts.STUDENT_ID, modelLogin.getStudentData().getStudentId())
                                         .addBodyParameter(AppConsts.BATCH_ID, modelLogin.getStudentData().getBatchId())
-                                        .addBodyParameter(AppConsts.TOKEN, task.getResult().getToken())
+                                        .addBodyParameter(AppConsts.TOKEN, task.getResult())
                                         .setTag(AppConsts.CHECK_LOGIN)
                                         .setPriority(Priority.IMMEDIATE)
                                         .build()

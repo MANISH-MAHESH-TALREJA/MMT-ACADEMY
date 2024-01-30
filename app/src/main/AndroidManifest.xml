@@ -202,10 +202,12 @@
             android:name="androidx.core.content.FileProvider"
             android:authorities="net.manish.sem05.provider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource"/>
         </provider> <!-- pay pal server decler -->
         <service
             android:name=".utils.Firebase.MyFirebaseMessagingService"
@@ -249,5 +251,9 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 </manifest>

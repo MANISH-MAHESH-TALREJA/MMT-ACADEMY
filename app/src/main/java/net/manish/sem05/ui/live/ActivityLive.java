@@ -41,6 +41,7 @@ import us.zoom.sdk.MeetingService;
 import us.zoom.sdk.MeetingServiceListener;
 import us.zoom.sdk.MeetingStatus;
 import us.zoom.sdk.MeetingViewsOptions;
+import us.zoom.sdk.ZoomAppLocal;
 import us.zoom.sdk.ZoomSDK;
 import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
@@ -58,6 +59,7 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
     ModelLogin modelLogin;
     String numberMeeting = "";
     String passwordMeeting = "";
+    String disName;
 
 
     @Override
@@ -96,16 +98,20 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
         }
 
         Log.v("saloni_bugcheck","saloni 3 ---  "+passwordMeeting+"  "+numberMeeting+"  "+sdkKey+"  "+secretKey);
+        String jwtToken = JwtGenerator.createToken(sdkKey,secretKey,disName);
         initParams = new ZoomSDKInitParams();
 
+
+        initParams.jwtToken = jwtToken;
+        initParams.domain = "zoom.us";
+        initParams.autoRetryVerifyApp = true;
         initParams.enableLog = true;
-        initParams.enableGenerateDump = true;
-
         initParams.logSize = 50;
-        initParams.domain = "" + domain;
-
-        initParams.appSecret = "" + secretKey;
-        initParams.appKey = "" + sdkKey;
+        initParams.enableGenerateDump = true;
+        initParams.appLocal = ZoomAppLocal.ZoomLocale_CN;
+        initParams.audioRawDataMemoryMode = ZoomSDKRawDataMemoryMode.ZoomSDKRawDataMemoryModeStack;
+        initParams.videoRawDataMemoryMode = ZoomSDKRawDataMemoryMode.ZoomSDKRawDataMemoryModeStack;
+        initParams.shareRawDataMemoryMode = ZoomSDKRawDataMemoryMode.ZoomSDKRawDataMemoryModeStack;
 
         initParams.videoRawDataMemoryMode = ZoomSDKRawDataMemoryMode.ZoomSDKRawDataMemoryModeStack;
 
@@ -161,7 +167,7 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
                         ProjectUtils.pauseProgressDialog();
                         try {
                             JSONObject jsonObject = new JSONObject(response);
-
+                            System.out.println("MMT RESPONSE : " + response);
                             if (AppConsts.TRUE.equals("" + jsonObject.getString("status"))) {
                                 JSONArray jsonArray = new JSONArray("" + jsonObject.getString("data"));
                                 JSONObject jsonObject1 = new JSONObject("" + jsonArray.get(0));
@@ -170,6 +176,8 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
                                 passwordMeeting = "" + jsonObject1.getString("meetingPassword");
                                 sdkKey = "" + jsonObject1.getString("sdkKey");
                                 secretKey = "" + jsonObject1.getString("sdkSecret");
+                                System.out.println("sdkKey RESPONSE : " + sdkKey);
+                                System.out.println("secretKey RESPONSE : " + secretKey);
 
                             } else {
                                 Toast.makeText(mContext, getResources().getString(R.string.NoClassAvailable), Toast.LENGTH_SHORT).show();
@@ -193,11 +201,12 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
     @Override
     public void onZoomSDKInitializeResult(int errorCode, int internalErrorCode) {
 
-
+        System.out.println("INT ERROR CODE : " + errorCode);
+        System.out.println("INTERNAL ERROR CODE : " + internalErrorCode);
         meetingService = sdk.getMeetingService();
 
         JoinMeetingParams params = new JoinMeetingParams();
-        String disName = "" + modelLogin.getStudentData().getFullName();
+        disName = "" + modelLogin.getStudentData().getFullName();
         params.displayName = "" + disName;
         params.meetingNo = numberMeeting;
         params.password = passwordMeeting;
@@ -211,8 +220,9 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
                 + MeetingViewsOptions.NO_TEXT_MEETING_ID;
 
         if (meetingService != null) {
-            meetingService.joinMeetingWithParams(this, params, opts);
+            int data = meetingService.joinMeetingWithParams(this, params, opts);
 
+            System.out.println("RAMA : meetingService : " + data);
         }
 
         if(errorCode==2){
@@ -227,6 +237,7 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
 
     @Override
     public void onZoomAuthIdentityExpired() {
+        System.out.println("RAMA : onZoomAuthIdentityExpired");
 
     }
 
@@ -234,12 +245,12 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
     @Override
     public void onMeetingStatusChanged(MeetingStatus meetingStatus, int errorCode,
                                        int internalErrorCode) {
-
+        System.out.println("RAMA : onMeetingStatusChanged + " + meetingStatus.name() + "error code : " + errorCode + " int : " + internalErrorCode);
     }
 
     @Override
     public void onMeetingParameterNotification(MeetingParameter meetingParameter) {
-
+        System.out.println("RAMA : onMeetingParameterNotification");
     }
 
 

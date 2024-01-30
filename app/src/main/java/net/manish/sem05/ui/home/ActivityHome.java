@@ -31,8 +31,8 @@ import com.androidnetworking.interfaces.StringRequestListener;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+/*import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;*/
 import net.manish.sem05.R;
 import net.manish.sem05.model.ModelDynamicNotices;
 import net.manish.sem05.model.ModelNewChanges;
@@ -64,6 +64,8 @@ import net.manish.sem05.utils.sharedpref.SharedPref;
 import net.manish.sem05.utils.widgets.CustomSmallText;
 import net.manish.sem05.utils.widgets.CustomTextBold;
 import net.manish.sem05.utils.widgets.CustomTextExtraBold;
+
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -185,10 +187,10 @@ public class ActivityHome extends BaseActivity {
 
     private void checkLogin() {
 
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
                     @Override
-                    public void onComplete(Task<InstanceIdResult> task) {
+                    public void onComplete(Task<String> task) {
                         if (!task.isSuccessful()) {
 
 
@@ -201,7 +203,7 @@ public class ActivityHome extends BaseActivity {
                                 AndroidNetworking.post(AppConsts.BASE_URL + AppConsts.CHECK_LOGIN)
                                         .addBodyParameter(AppConsts.STUDENT_ID, modelLogin.getStudentData().getStudentId())
                                         .addBodyParameter(AppConsts.BATCH_ID, modelLogin.getStudentData().getBatchId())
-                                        .addBodyParameter(AppConsts.TOKEN, task.getResult().getToken())
+                                        .addBodyParameter(AppConsts.TOKEN, task.getResult())
                                         .setTag(AppConsts.CHECK_LOGIN)
                                         .setPriority(Priority.IMMEDIATE)
                                         .build()
@@ -725,9 +727,11 @@ public class ActivityHome extends BaseActivity {
     @Override
     public void onBackPressed() {
 
+
         Intent intent = new Intent(mContext, ActivityMyBatch.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        super.onBackPressed();
     }
 
 

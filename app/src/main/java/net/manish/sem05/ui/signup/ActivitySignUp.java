@@ -19,8 +19,11 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+/*import com.google.firebase.Firebase;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.iid.InstanceIdResult;*/
+import com.google.firebase.messaging.FirebaseMessaging;
+
 import net.manish.sem05.R;
 
 import net.manish.sem05.model.modellogin.ModelLogin;
@@ -156,17 +159,17 @@ public class ActivitySignUp extends AppCompatActivity implements View.OnClickLis
                         } else {
                             if (isValidEmail(etUserEmail.getText().toString())) {
                                 if (etUserMobile.getText().toString().length() > 6) {
-                                    FirebaseInstanceId.getInstance().getInstanceId()
-                                            .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                                    FirebaseMessaging.getInstance().getToken()
+                                            .addOnCompleteListener(new OnCompleteListener<String>() {
                                                 @Override
-                                                public void onComplete(Task<InstanceIdResult> task) {
+                                                public void onComplete(Task<String> task) {
                                                     if (!task.isSuccessful()) {
 
                                                         return;
 
                                                     }
 
-                                                    apiSignUp(task.getResult().getToken());
+                                                    apiSignUp(task.getResult());
 
 
                                                 }

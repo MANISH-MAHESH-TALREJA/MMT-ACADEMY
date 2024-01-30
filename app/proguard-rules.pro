@@ -1,21 +1,67 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+-dontwarn com.android.billingclient.api.AcknowledgePurchaseResponseListener
+-dontwarn com.android.billingclient.api.BillingClient$Builder
+-dontwarn com.android.billingclient.api.BillingClient
+-dontwarn com.android.billingclient.api.BillingClientStateListener
+-dontwarn com.android.billingclient.api.PurchasesUpdatedListener
+-dontwarn com.android.billingclient.api.SkuDetailsParams$Builder
+-dontwarn com.android.billingclient.api.SkuDetailsParams
+-dontwarn com.android.billingclient.api.SkuDetailsResponseListener
+-dontwarn com.davemorrissey.labs.subscaleview.ImageSource
+-dontwarn com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+-dontwarn com.google.i18n.phonenumbers.NumberParseException$ErrorType
+-dontwarn com.google.i18n.phonenumbers.NumberParseException
+-dontwarn com.google.i18n.phonenumbers.PhoneNumberUtil$MatchType
+-dontwarn com.google.i18n.phonenumbers.PhoneNumberUtil$PhoneNumberFormat
+-dontwarn com.google.i18n.phonenumbers.PhoneNumberUtil$ValidationResult
+-dontwarn com.google.i18n.phonenumbers.PhoneNumberUtil
+-dontwarn com.google.i18n.phonenumbers.Phonemetadata$NumberFormat$Builder
+-dontwarn com.google.i18n.phonenumbers.Phonemetadata$NumberFormat
+-dontwarn com.google.i18n.phonenumbers.Phonenumber$PhoneNumber
+-dontwarn com.google.i18n.phonenumbers.ShortNumberInfo
+-dontwarn com.madrobot.beans.BeanInfo
+-dontwarn com.madrobot.beans.IntrospectionException
+-dontwarn com.madrobot.beans.Introspector
+-dontwarn com.madrobot.beans.PropertyDescriptor
+-dontwarn io.reactivex.Observable
+-dontwarn io.reactivex.ObservableOnSubscribe
+-dontwarn io.reactivex.Scheduler
+-dontwarn io.reactivex.Single
+-dontwarn io.reactivex.SingleObserver
+-dontwarn io.reactivex.SingleOnSubscribe
+-dontwarn io.reactivex.android.schedulers.AndroidSchedulers
+-dontwarn io.reactivex.disposables.CompositeDisposable
+-dontwarn io.reactivex.disposables.Disposable
+-dontwarn io.reactivex.functions.Consumer
+-dontwarn io.reactivex.functions.Function
+-dontwarn io.reactivex.functions.Predicate
+-dontwarn io.reactivex.schedulers.Schedulers
+-dontwarn java.beans.BeanInfo
+-dontwarn java.beans.IntrospectionException
+-dontwarn java.beans.Introspector
+-dontwarn java.beans.PropertyDescriptor
+-dontwarn net.minidev.json.JSONArray
+-dontwarn net.minidev.json.JSONValue
+-dontwarn net.minidev.json.parser.ContainerFactory
+-dontwarn net.minidev.json.parser.JSONParser
+-dontwarn org.cheffo.jeplite.JEP
+-dontwarn org.cheffo.jeplite.ParseException
+-dontwarn org.greenrobot.eventbus.EventBus
+-dontwarn org.greenrobot.eventbus.Subscribe
+-dontwarn org.greenrobot.eventbus.ThreadMode
+-dontwarn proguard.annotation.Keep
+-dontwarn proguard.annotation.KeepClassMembers
+-dontwarn sun.misc.BASE64Encoder
+-dontwarn us.zoom.intunelib.IIntuneLoginAssistant
+-dontwarn us.zoom.intunelib.ZmIntuneLoginManager
+-dontwarn us.zoom.thirdparty.dialog.NoBrowserDialog
+-dontwarn us.zoom.thirdparty.login.LoginType
+-dontwarn us.zoom.thirdparty.login.ThirdPartyLogin
+-dontwarn us.zoom.thirdparty.login.ThirdPartyLoginFactory
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
-
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
-
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-keep class  us.zoom.**{*;}
+-keep class  com.zipow.**{*;}
+-keep class  us.zipow.**{*;}
+-keep class  org.webrtc.**{*;}
+-keep class  us.google.protobuf.**{*;}
+-keep class  com.google.crypto.tink.**{*;}
+-keep class  androidx.security.crypto.**{*;}
