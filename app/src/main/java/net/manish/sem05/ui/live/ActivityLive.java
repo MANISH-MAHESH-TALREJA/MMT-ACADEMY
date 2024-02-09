@@ -7,6 +7,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
@@ -24,6 +25,7 @@ import com.karumi.dexter.listener.PermissionRequestErrorListener;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import net.manish.sem05.R;
 import net.manish.sem05.model.modellogin.ModelLogin;
+import net.manish.sem05.ui.editProfile.ActivityProfile;
 import net.manish.sem05.utils.AppConsts;
 import net.manish.sem05.utils.ProjectUtils;
 import net.manish.sem05.utils.sharedpref.SharedPref;
@@ -73,6 +75,20 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
         sharedPref = SharedPref.getInstance(mContext);
         modelLogin = sharedPref.getUser(AppConsts.STUDENT_DATA);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+        {
+            if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED)
+            {
+                requestPermission();
+            }
+        }
+        else
+        {
+            if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED)
+            {
+                requestPermission();
+            }
+        }
         if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.BLUETOOTH)
                 != PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(mContext, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
@@ -88,16 +104,13 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
         if (numberMeeting.isEmpty()) {
             apiMeetingData();
         }
-        Log.v("saloni_bugcheck","saloni 1 ---  "+passwordMeeting+"  "+numberMeeting+"  "+sdkKey+"  "+secretKey);
         sdk = ZoomSDK.getInstance();
 
-        Log.v("saloni_bugcheck","saloni 2 ---  "+passwordMeeting+"  "+numberMeeting+"  "+sdkKey+"  "+secretKey);
         if (sdk.isInitialized()) {
             ZoomSDK.getInstance().getMeetingService().addListener(this);
             ZoomSDK.getInstance().getMeetingSettingsHelper().enable720p(true);
         }
 
-        Log.v("saloni_bugcheck","saloni 3 ---  "+passwordMeeting+"  "+numberMeeting+"  "+sdkKey+"  "+secretKey);
         String jwtToken = JwtGenerator.createToken(sdkKey,secretKey,disName);
         initParams = new ZoomSDKInitParams();
 
@@ -121,37 +134,58 @@ public class ActivityLive extends AppCompatActivity implements ZoomSDKInitialize
     }
 
 
-    private void requestPermission() {
+    private void requestPermission()
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+        {
+            Dexter.withActivity(ActivityLive.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO, Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.POST_NOTIFICATIONS, Manifest.permission.BLUETOOTH, Manifest.permission.BLUETOOTH_CONNECT).withListener(new MultiplePermissionsListener()
+                    {
+                        @Override
+                        public void onPermissionsChecked(MultiplePermissionsReport report)
+                        {
 
-        Dexter.withActivity((Activity) mContext)
-                .withPermissions(
-                        Manifest.permission.CAMERA,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_EXTERNAL_STORAGE
-                        ,Manifest.permission.BLUETOOTH
-                        ,Manifest.permission.BLUETOOTH_CONNECT)
-                .withListener(new MultiplePermissionsListener() {
-                    @Override
-                    public void onPermissionsChecked(MultiplePermissionsReport report) {
-                        if (report.isAnyPermissionPermanentlyDenied()) {
+                            if (report.isAnyPermissionPermanentlyDenied())
+                            {
 
+                            }
                         }
-                    }
 
-                    @Override
-                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                        token.continuePermissionRequest();
-                    }
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
+                        {
+                            token.continuePermissionRequest();
+                        }
 
-                }).
-                withErrorListener(new PermissionRequestErrorListener() {
-                    @Override
-                    public void onError(DexterError error) {
-                        Toast.makeText(mContext, getResources().getString(R.string.Try_again), Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .onSameThread()
-                .check();
+                    }).
+                    withErrorListener(error -> Toast.makeText(mContext, getResources().getString(R.string.Try_again), Toast.LENGTH_SHORT).show())
+                    .onSameThread()
+                    .check();
+        }
+        else
+        {
+            Dexter.withActivity(ActivityLive.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.BLUETOOTH).withListener(new MultiplePermissionsListener()
+                    {
+                        @Override
+                        public void onPermissionsChecked(MultiplePermissionsReport report)
+                        {
+
+                            if (report.isAnyPermissionPermanentlyDenied())
+                            {
+
+                            }
+                        }
+
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
+                        {
+                            token.continuePermissionRequest();
+                        }
+
+                    }).
+                    withErrorListener(error -> Toast.makeText(mContext, getResources().getString(R.string.Try_again), Toast.LENGTH_SHORT).show())
+                    .onSameThread()
+                    .check();
+        }
 
     }
 

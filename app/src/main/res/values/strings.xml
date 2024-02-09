@@ -54,7 +54,7 @@
     <string name="VideoLectures">Video Lectures</string>
     <string name="Applied_successfully.">Applied successfully.</string>
     <string name="Updated_successfully.">Updated successfully.</string>
-    <string name="Try_again">Try again!</string>
+    <string name="Try_again">Try Again</string>
     <string name="Try_again_server_issue">Something Went Wrong. Try Again !! or restart app</string>
     <string name="PleaseContactAdmin">Please Contact Admin</string>
     <string name="Please_Enter_Password">Please Enter Password</string>
@@ -136,7 +136,7 @@
     <string name="more">more..</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
-    <string name="Please_allow_permissions">Please allow permissions</string>
+    <string name="Please_allow_permissions">KINDLY ALLOW PERMISSIONS</string>
     <string name="Certificate">Certificate</string>
     <string name="Settings">Settings</string>
     <string name="Are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
@@ -162,7 +162,7 @@
     <string name="Wrong">Wrong</string>
     <string name="Chart">Chart</string>
     <string name="PayFees">Pay Fees</string>
-    <string name="WrongAnswers">Wrong Annswers</string>
+    <string name="WrongAnswers">Wrong Answers</string>
     <string name="ExtraClass">Extra Classes</string>
     <string name="DoubtClasses">Doubts</string>
     <string name="TotalScore">Total Score</string>

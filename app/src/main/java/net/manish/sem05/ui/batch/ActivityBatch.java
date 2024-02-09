@@ -13,6 +13,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -48,6 +49,7 @@ import com.squareup.picasso.Picasso;
 
 import net.manish.sem05.R;
 import net.manish.sem05.model.ModelSettingRecord;
+import net.manish.sem05.ui.library.ActivityPdf;
 import net.manish.sem05.ui.login.ActivityLogin;
 import net.manish.sem05.utils.AppConsts;
 import net.manish.sem05.utils.ProjectUtils;
@@ -80,11 +82,23 @@ public class ActivityBatch extends AppCompatActivity {
         sharedPref = SharedPref.getInstance(context);
         context = ActivityBatch.this;
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-            requestPermission();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+        {
+            if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED)
+            {
+                Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
+                requestPermission();
+            }
         }
+        else
+        {
+            if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
+            {
+                Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
+                requestPermission();
+            }
+        }
+
 
         siteSettings();
         init();
@@ -166,43 +180,74 @@ public class ActivityBatch extends AppCompatActivity {
 
     }
 
-    private void requestPermission() {
+    private void requestPermission()
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+        {
+            Dexter.withActivity(ActivityBatch.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO, Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.POST_NOTIFICATIONS).withListener(new MultiplePermissionsListener()
+                    {
+                        @Override
+                        public void onPermissionsChecked(MultiplePermissionsReport report)
+                        {
 
-        Dexter.withActivity((Activity) context)
-                .withPermissions(
-                        Manifest.permission.CAMERA,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_EXTERNAL_STORAGE)
-                .withListener(new MultiplePermissionsListener() {
-                    @Override
-                    public void onPermissionsChecked(MultiplePermissionsReport report) {
-
-
-                        if (report.isAnyPermissionPermanentlyDenied()) {
-
-
-                            openSettingsDialog();
-
-
+                            if (report.isAnyPermissionPermanentlyDenied())
+                            {
+                                openSettingsDialog();
+                            }
                         }
 
-                    }
+
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
+                        {
+                            token.continuePermissionRequest();
+                        }
+
+                    }).
+                    withErrorListener(new PermissionRequestErrorListener()
+                    {
+                        @Override
+                        public void onError(DexterError error)
+                        {
+                            Toast.makeText(context, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .onSameThread()
+                    .check();
+        }
+        else
+        {
+            Dexter.withActivity(ActivityBatch.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).withListener(new MultiplePermissionsListener()
+                    {
+                        @Override
+                        public void onPermissionsChecked(MultiplePermissionsReport report)
+                        {
+                            if (report.isAnyPermissionPermanentlyDenied())
+                            {
+                                openSettingsDialog();
+                            }
+                        }
 
 
-                    @Override
-                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                        token.continuePermissionRequest();
-                    }
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
+                        {
+                            token.continuePermissionRequest();
+                        }
 
-                }).
-                withErrorListener(new PermissionRequestErrorListener() {
-                    @Override
-                    public void onError(DexterError error) {
-                        Toast.makeText(context, getResources().getString(R.string.Try_again), Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .onSameThread()
-                .check();
+                    }).
+                    withErrorListener(new PermissionRequestErrorListener()
+                    {
+                        @Override
+                        public void onError(DexterError error)
+                        {
+                            Toast.makeText(context, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .onSameThread()
+                    .check();
+        }
+
 
     }
 
@@ -291,8 +336,8 @@ public class ActivityBatch extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-
+    public void onBackPressed()
+    {
         exitAppDialog();
     }
 
