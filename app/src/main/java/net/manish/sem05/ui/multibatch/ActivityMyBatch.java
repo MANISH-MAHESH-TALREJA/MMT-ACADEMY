@@ -32,6 +32,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.androidnetworking.interfaces.StringRequestListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -40,7 +41,6 @@ import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
-import com.google.android.play.core.tasks.OnSuccessListener;
 import net.manish.sem05.R;
 import net.manish.sem05.model.modellogin.ModelLogin;
 import net.manish.sem05.ui.base.BaseActivity;
@@ -204,29 +204,25 @@ public class ActivityMyBatch extends BaseActivity {
         Log.v("update_pop","---0");
         appUpdateManager = AppUpdateManagerFactory.create(this);
         appUpdateManager.registerListener(listener);
-        com.google.android.play.core.tasks.Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
-        appUpdateInfoTask.addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
-            @Override
-            public void onSuccess(AppUpdateInfo appUpdateInfo) {
-                Log.v("update_pop","---1"+appUpdateInfo.packageName());
-                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
-                    Log.v("update_pop","---2");
+        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+        appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
+            Log.v("update_pop","---1"+appUpdateInfo.packageName());
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
+                Log.v("update_pop","---2");
+                requestUpdate(appUpdateInfo);
+            } else if (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {
+                Log.v("update_pop","---3");
+                resume();
+            }else{
+                Log.v("update_pop","---4--"+appUpdateInfo.availableVersionCode());
+                Log.v("update_pop","---4-- updateAvailability "+appUpdateInfo.updateAvailability());
+                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE){
+                    Log.v("update_pop","---4-- go "+appUpdateInfo.availableVersionCode());
                     requestUpdate(appUpdateInfo);
-                } else if (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {
-                    Log.v("update_pop","---3");
-                    resume();
-                }else{
-                    Log.v("update_pop","---4--"+appUpdateInfo.availableVersionCode());
-                    Log.v("update_pop","---4-- updateAvailability "+appUpdateInfo.updateAvailability());
-                    if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE){
-                        Log.v("update_pop","---4-- go "+appUpdateInfo.availableVersionCode());
-                        requestUpdate(appUpdateInfo);
 
-                    }
                 }
             }
-        }
-        );
+        });
     }
 
     private static final int MY_REQUEST_UPDATE_CODE = 17326;
