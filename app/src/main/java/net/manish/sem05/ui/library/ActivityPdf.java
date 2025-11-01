@@ -83,18 +83,7 @@ public class ActivityPdf extends AppCompatActivity
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
         {
-            if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED)
-            {
-                requestPermission();
-            }
-            else
-            {
-                init();
-            }
-        }
-        else
-        {
-            if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+            if (ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED)
             {
                 requestPermission();
             }
@@ -107,30 +96,35 @@ public class ActivityPdf extends AppCompatActivity
 
     private void requestPermission()
     {
+        // Check for Android 13 (Tiramisu) and above
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
         {
-            Dexter.withActivity(ActivityPdf.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO, Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.POST_NOTIFICATIONS).withListener(new MultiplePermissionsListener()
+            // Only request CAMERA and POST_NOTIFICATIONS
+            Dexter.withActivity(ActivityPdf.this)
+                    .withPermissions(Manifest.permission.CAMERA, Manifest.permission.POST_NOTIFICATIONS)
+                    .withListener(new MultiplePermissionsListener()
                     {
                         @Override
                         public void onPermissionsChecked(MultiplePermissionsReport report)
                         {
-
                             if (report.areAllPermissionsGranted())
                             {
                                 init();
                             }
                             else
                             {
-                                Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
+                                // A non-storage permission was denied (CAMERA or NOTIFICATIONS)
+                                Toast.makeText(ActivityPdf.this, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
                             }
 
                             if (report.isAnyPermissionPermanentlyDenied())
                             {
+                                // This path should probably block init() if a critical permission (like CAMERA) is denied.
+                                // I'm keeping your original logic but recommend reviewing this part.
                                 init();
                                 openSettingsDialog();
                             }
                         }
-
 
                         @Override
                         public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
@@ -138,42 +132,47 @@ public class ActivityPdf extends AppCompatActivity
                             token.continuePermissionRequest();
                         }
 
-                    }).
-                    withErrorListener(new PermissionRequestErrorListener()
+                    })
+                    .withErrorListener(new PermissionRequestErrorListener()
                     {
                         @Override
                         public void onError(DexterError error)
                         {
-                            Toast.makeText(context, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ActivityPdf.this, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .onSameThread()
                     .check();
         }
+        // Handle Android 12 (S) and below
         else
         {
-            Dexter.withActivity(ActivityPdf.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).withListener(new MultiplePermissionsListener()
+            // On older versions, WRITE_EXTERNAL_STORAGE is sometimes still needed
+            // if you are writing to a public directory *without* using SAF,
+            // but it is entirely REMOVED here to encourage the use of SAF for Downloads.
+            // We only keep the CAMERA permission.
+            Dexter.withActivity(ActivityPdf.this)
+                    .withPermissions(Manifest.permission.CAMERA) // Removed WRITE/READ_EXTERNAL_STORAGE
+                    .withListener(new MultiplePermissionsListener()
                     {
                         @Override
                         public void onPermissionsChecked(MultiplePermissionsReport report)
                         {
-
                             if (report.areAllPermissionsGranted())
                             {
                                 init();
                             } else
                             {
-                                Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ActivityPdf.this, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
                             }
-
 
                             if (report.isAnyPermissionPermanentlyDenied())
                             {
+                                // Same as above: recommend reviewing if init() should run here.
                                 init();
                                 openSettingsDialog();
                             }
                         }
-
 
                         @Override
                         public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
@@ -181,20 +180,18 @@ public class ActivityPdf extends AppCompatActivity
                             token.continuePermissionRequest();
                         }
 
-                    }).
-                    withErrorListener(new PermissionRequestErrorListener()
+                    })
+                    .withErrorListener(new PermissionRequestErrorListener()
                     {
                         @Override
                         public void onError(DexterError error)
                         {
-                            Toast.makeText(context, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ActivityPdf.this, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .onSameThread()
                     .check();
         }
-
-
     }
 
     private void openSettingsDialog()

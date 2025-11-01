@@ -3,13 +3,19 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        jcenter()
+        //jcenter()
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
         maven { url "https://jitpack.io" }
         maven { url "https://jitpack.io" }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/spring' }
+        maven { url 'https://maven.aliyun.com/repository/releases' }
         /*maven {
             url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
         }*/
@@ -24,7 +30,13 @@ dependencyResolutionManagement {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        jcenter()
+        //jcenter()
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/spring' }
+        maven { url 'https://maven.aliyun.com/repository/releases' }
         maven { url "https://jitpack.io" }
         maven { url "https://jitpack.io" }
         maven {
@@ -37,5 +49,5 @@ rootProject.name = "MMT ACADEMY"
 include ':app'
 // include ':commonlib'
 
-include ':commonlib'
-include ':mobilertc'
+//include ':commonlib'
+//include ':mobilertc'

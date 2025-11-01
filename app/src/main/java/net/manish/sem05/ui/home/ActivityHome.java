@@ -48,7 +48,7 @@ import net.manish.sem05.ui.galary.galleryvideos.ExoplayerVideos;
 import net.manish.sem05.ui.home.adapter.HomeAdapter;
 import net.manish.sem05.ui.library.ActivityPdf;
 
-import net.manish.sem05.ui.live.ActivityLive;
+//import net.manish.sem05.ui.live.ActivityLive;
 import net.manish.sem05.ui.live.JitsiActivity;
 import net.manish.sem05.ui.login.ActivityLogin;
 import net.manish.sem05.ui.mcq.practicepaper.ActivityPracticePaper;
@@ -629,13 +629,13 @@ public class ActivityHome extends BaseActivity {
                                     public void onClick(View view) {
 
 
-                                        if (!numberMeeting.isEmpty()) {
+                                        /*if (!numberMeeting.isEmpty()) {
                                             mContext.startActivity(new Intent(mContext, ActivityLive.class).
                                                     putExtra("meetingId", "" + numberMeeting).putExtra("meetingPassword", "" + passwordMeeting).putExtra("sdkKey", "" + sdkKey)
                                                     .putExtra("sdkSecret", "" + secretKey));
-                                        }else{
+                                        }else{*/
                                             Toast.makeText(mContext, mContext.getResources().getString(R.string.NoClassAvailable), Toast.LENGTH_SHORT).show();
-                                        }
+                                        //}
                                     }
                                 });
                             }

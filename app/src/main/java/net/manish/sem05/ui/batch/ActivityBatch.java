@@ -82,24 +82,6 @@ public class ActivityBatch extends AppCompatActivity {
         sharedPref = SharedPref.getInstance(context);
         context = ActivityBatch.this;
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-        {
-            if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED)
-            {
-                Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                requestPermission();
-            }
-        }
-        else
-        {
-            if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
-            {
-                Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                requestPermission();
-            }
-        }
-
-
         siteSettings();
         init();
     }
@@ -180,81 +162,7 @@ public class ActivityBatch extends AppCompatActivity {
 
     }
 
-    private void requestPermission()
-    {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-        {
-            Dexter.withActivity(ActivityBatch.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO, Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.POST_NOTIFICATIONS).withListener(new MultiplePermissionsListener()
-                    {
-                        @Override
-                        public void onPermissionsChecked(MultiplePermissionsReport report)
-                        {
-
-                            if (report.isAnyPermissionPermanentlyDenied())
-                            {
-                                openSettingsDialog();
-                            }
-                        }
-
-
-                        @Override
-                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
-                        {
-                            token.continuePermissionRequest();
-                        }
-
-                    }).
-                    withErrorListener(new PermissionRequestErrorListener()
-                    {
-                        @Override
-                        public void onError(DexterError error)
-                        {
-                            Toast.makeText(context, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .onSameThread()
-                    .check();
-        }
-        else
-        {
-            Dexter.withActivity(ActivityBatch.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).withListener(new MultiplePermissionsListener()
-                    {
-                        @Override
-                        public void onPermissionsChecked(MultiplePermissionsReport report)
-                        {
-                            if (report.isAnyPermissionPermanentlyDenied())
-                            {
-                                openSettingsDialog();
-                            }
-                        }
-
-
-                        @Override
-                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
-                        {
-                            token.continuePermissionRequest();
-                        }
-
-                    }).
-                    withErrorListener(new PermissionRequestErrorListener()
-                    {
-                        @Override
-                        public void onError(DexterError error)
-                        {
-                            Toast.makeText(context, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .onSameThread()
-                    .check();
-        }
-
-
-    }
-
     void getBatchDetails() {
-
-
-
         AndroidNetworking.get(AppConsts.BASE_URL + AppConsts.API_GET_BATCH_FEE_OLD)
                 .build().getAsObject(ModelBatchDetailsOld.class, new ParsedRequestListener<ModelBatchDetailsOld>() {
             @Override
@@ -468,62 +376,15 @@ public class ActivityBatch extends AppCompatActivity {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-                    {
-                        if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED)
-                        {
-                            Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                            requestPermission();
-                        }
-                        else
-                        {
-                            if (ProjectUtils.checkConnection(context)) {
-                                startActivity(new Intent(context, ActivityBatchDetails.class).putExtra("dataBatch",
-                                        list.get(position)));
-
-                            } else {
-                                Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
-                            }
-
-                        }
-                    }
-                    else
-                    {
-                        if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
-                        {
-                            Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                            requestPermission();
-                        }
-                        else
-                        {
-                            if (ProjectUtils.checkConnection(context)) {
-                                startActivity(new Intent(context, ActivityBatchDetails.class).putExtra("dataBatch",
-                                        list.get(position)));
-
-                            } else {
-                                Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
-                            }
-
-                        }
-                    }
-
-                    /*if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                            != PackageManager.PERMISSION_GRANTED) {
-
-                        Toast.makeText(context, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                        requestPermission();
+                    if (ProjectUtils.checkConnection(context)) {
+                        startActivity(new Intent(context, ActivityBatchDetails.class).putExtra("dataBatch",
+                                list.get(position)));
 
                     } else {
-                        if (ProjectUtils.checkConnection(context)) {
-                            startActivity(new Intent(context, ActivityBatchDetails.class).putExtra("dataBatch",
-                                    list.get(position)));
+                        Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
+                    }
 
-                        } else {
-                            Toast.makeText(context, getResources().getString(R.string.NoInternetConnection), Toast.LENGTH_SHORT).show();
-                        }
 
-                    }*/
                 }
             });
 

@@ -27,7 +27,7 @@ import net.manish.sem05.ui.extraclass.ActivityExtraClass;
 import net.manish.sem05.ui.galary.galleryvideos.ActivityGalleryVideos;
 import net.manish.sem05.ui.library.ActivityLibrary;
 
-import net.manish.sem05.ui.live.ActivityLive;
+//import net.manish.sem05.ui.live.ActivityLive;
 import net.manish.sem05.ui.live.JitsiActivity;
 import net.manish.sem05.ui.mcq.ActivityMCQDashboard;
 import net.manish.sem05.ui.noticeAnnouncement.ActivityForFragments;
@@ -125,13 +125,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HolderHomeAdap
                     mContext.startActivity(new Intent(mContext, ActivityForFragments.class));
                 } else if ( holder.tvTittle.getText().equals(mContext.getResources().getString(R.string.Live_class))) {
 
-                    if (!numberMeeting.isEmpty()) {
+                    /*if (!numberMeeting.isEmpty()) {
                         mContext.startActivity(new Intent(mContext, ActivityLive.class).
                                 putExtra("meetingId", "" + numberMeeting).putExtra("meetingPassword", "" + passwordMeeting).putExtra("sdkKey", "" + sdkKey)
                                 .putExtra("sdkSecret", "" + secretKey));
-                    } else {
+                    } else {*/
                         Toast.makeText(mContext, mContext.getResources().getString(R.string.NoClassAvailable), Toast.LENGTH_SHORT).show();
-                    }
+                    //}
                 } else if (holder.tvTittle.getText().equals(mContext.getResources().getString(R.string.mcq))) {
                     mContext.startActivity(new Intent(mContext, ActivityMCQDashboard.class));
                 } if (holder.tvTittle.getText().equals(mContext.getResources().getString(R.string.jitsi_class))) {

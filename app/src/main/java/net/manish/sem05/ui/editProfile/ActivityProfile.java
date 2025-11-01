@@ -203,28 +203,7 @@ public class ActivityProfile extends BaseActivity
         });
         changeProfile.setOnClickListener(v ->
         {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-            {
-                if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED)
-                {
-                    Toast.makeText(mContext, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                    requestPermission();
-                } else
-                {
-                    selectImage();
-                }
-            } else
-            {
-                if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
-                {
-                    Toast.makeText(mContext, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                    requestPermission();
-                } else
-                {
-                    selectImage();
-                }
-            }
-
+            Toast.makeText(mContext, "NOT ALLOWED TO CHANGE PROFILE PICTURE", Toast.LENGTH_SHORT).show();
         });
         profile.setOnClickListener(view -> showDialog("" + modelLogin.getStudentData().getImage()));
     }
@@ -510,78 +489,4 @@ public class ActivityProfile extends BaseActivity
         }
         return "";
     }
-
-
-    private void requestPermission()
-    {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-        {
-            Dexter.withActivity(ActivityProfile.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO, Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.POST_NOTIFICATIONS).withListener(new MultiplePermissionsListener()
-                    {
-                        @Override
-                        public void onPermissionsChecked(MultiplePermissionsReport report)
-                        {
-
-                            if (report.areAllPermissionsGranted())
-                            {
-                                selectImage();
-                            }
-                            else
-                            {
-                                Toast.makeText(mContext, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                            }
-
-                            if (report.isAnyPermissionPermanentlyDenied())
-                            {
-                                openSettingsDialog();
-                            }
-                        }
-
-                        @Override
-                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
-                        {
-                            token.continuePermissionRequest();
-                        }
-
-                    }).
-                    withErrorListener(error -> Toast.makeText(mContext, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show())
-                    .onSameThread()
-                    .check();
-        }
-        else
-        {
-            Dexter.withActivity(ActivityProfile.this).withPermissions(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).withListener(new MultiplePermissionsListener()
-                    {
-                        @Override
-                        public void onPermissionsChecked(MultiplePermissionsReport report)
-                        {
-
-                            if (report.areAllPermissionsGranted())
-                            {
-                                selectImage();
-                            } else
-                            {
-                                Toast.makeText(mContext, getResources().getString(R.string.Please_allow_permissions), Toast.LENGTH_SHORT).show();
-                            }
-
-                            if (report.isAnyPermissionPermanentlyDenied())
-                            {
-                                openSettingsDialog();
-                            }
-                        }
-
-                        @Override
-                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token)
-                        {
-                            token.continuePermissionRequest();
-                        }
-
-                    }).
-                    withErrorListener(error -> Toast.makeText(mContext, getResources().getString(R.string.ErrorOccurred), Toast.LENGTH_SHORT).show())
-                    .onSameThread()
-                    .check();
-        }
-
-    }
-
 }
